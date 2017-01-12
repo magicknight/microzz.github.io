@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>涵月天-microzz.com</title>
-  
+  <subtitle>IT技术分享</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
