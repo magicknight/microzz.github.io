@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+    
+  <url>
+    <loc>http://microzz.com/2017/01/12/iterator/</loc>
+    <lastmod>2017-01-12T08:22:07.898Z</lastmod>
+    <data>
+        <display>
+        <title>Iterator和for...of循环</title>
+        <pubTime>2017-01-12T07:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Iterator</tag>
+         
+        <tag>for</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2017/01/11/reflect/</loc>
+    <lastmod>2017-01-12T08:19:34.606Z</lastmod>
+    <data>
+        <display>
+        <title>Reflect</title>
+        <pubTime>2017-01-11T00:25:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Reflect</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2017/01/09/proxy/</loc>
+    <lastmod>2017-01-12T08:18:16.019Z</lastmod>
+    <data>
+        <display>
+        <title>Proxy</title>
+        <pubTime>2017-01-09T02:40:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Proxy</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2017/01/05/set-map/</loc>
+    <lastmod>2017-01-12T08:16:10.816Z</lastmod>
+    <data>
+        <display>
+        <title>Set和Map数据结构</title>
+        <pubTime>2017-01-05T03:40:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Set</tag>
+         
+        <tag>Map</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2017/01/01/symbol/</loc>
+    <lastmod>2017-01-12T08:14:04.571Z</lastmod>
+    <data>
+        <display>
+        <title>Symbol</title>
+        <pubTime>2017-01-01T05:43:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Symbol</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/12/25/object/</loc>
+    <lastmod>2017-01-12T08:11:32.965Z</lastmod>
+    <data>
+        <display>
+        <title>对象的扩展(Object)</title>
+        <pubTime>2016-12-25T04:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Object</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/30/array/</loc>
+    <lastmod>2017-01-12T08:08:33.306Z</lastmod>
+    <data>
+        <display>
+        <title>数组的扩展(Array)</title>
+        <pubTime>2016-11-30T04:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Array</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/12/10/function/</loc>
+    <lastmod>2017-01-12T08:08:02.539Z</lastmod>
+    <data>
+        <display>
+        <title>函数的扩展(Function)</title>
+        <pubTime>2016-12-10T07:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Function</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/25/number/</loc>
+    <lastmod>2017-01-12T07:59:12.253Z</lastmod>
+    <data>
+        <display>
+        <title>数值的扩展</title>
+        <pubTime>2016-11-25T09:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Number</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/20/regex/</loc>
+    <lastmod>2017-01-12T07:58:47.546Z</lastmod>
+    <data>
+        <display>
+        <title>正则的扩展(RegExp)</title>
+        <pubTime>2016-11-20T07:57:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>RegExp</tag>
+         
+        <tag>正则表达式</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/15/string/</loc>
+    <lastmod>2017-01-12T07:49:44.276Z</lastmod>
+    <data>
+        <display>
+        <title>字符串的扩展</title>
+        <pubTime>2016-11-15T07:45:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Unicode</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/13/destructuring/</loc>
+    <lastmod>2017-01-12T07:47:46.995Z</lastmod>
+    <data>
+        <display>
+        <title>变量的解构赋值(Destructuring)</title>
+        <pubTime>2016-11-13T07:16:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Destructuring</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://microzz.com/2016/11/12/let/</loc>
+    <lastmod>2017-01-12T07:47:17.355Z</lastmod>
+    <data>
+        <display>
+        <title>let和const命令</title>
+        <pubTime>2016-11-12T07:16:19.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>const</tag>
+         
+        <tag>let</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
