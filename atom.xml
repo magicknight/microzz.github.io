@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-01-15T07:03:55.183Z</updated>
+  <updated>2017-01-15T07:09:00.870Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/01/15/async/"/>
     <id>http://microzz.com/2017/01/15/async/</id>
     <published>2017-01-15T06:58:52.000Z</published>
-    <updated>2017-01-15T07:03:55.183Z</updated>
+    <updated>2017-01-15T07:09:00.870Z</updated>
     
     <content type="html"><![CDATA[<h1 id="异步操作和Async函数"><a href="#异步操作和Async函数" class="headerlink" title="异步操作和Async函数"></a>异步操作和Async函数</h1><p>异步编程对 JavaScript 语言太重要。Javascript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍如何 Generator 函数完成异步操作。</p>
 <p>ES6诞生以前，异步编程的方法，大概有下面四种。</p>
@@ -334,13 +334,13 @@
     </summary>
     
     
+      <category term="ECMAScript6" scheme="http://microzz.com/tags/ECMAScript6/"/>
+    
       <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
     
       <category term="JS" scheme="http://microzz.com/tags/JS/"/>
     
       <category term="ES6" scheme="http://microzz.com/tags/ES6/"/>
-    
-      <category term="ECMAScript 6" scheme="http://microzz.com/tags/ECMAScript-6/"/>
     
       <category term="Async" scheme="http://microzz.com/tags/Async/"/>
     
