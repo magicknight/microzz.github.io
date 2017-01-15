@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/01/14/promise/</loc>
+    <lastmod>2017-01-15T07:06:34.860Z</lastmod>
+    <data>
+        <display>
+        <title>Promise对象</title>
+        <pubTime>2017-01-14T06:11:38.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Promise</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/01/15/async/</loc>
     <lastmod>2017-01-15T07:03:55.183Z</lastmod>
     <data>
@@ -20,31 +45,6 @@
         <tag>ECMAScript 6</tag>
          
         <tag>Async</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://microzz.com/2017/01/14/promise/</loc>
-    <lastmod>2017-01-14T06:17:38.769Z</lastmod>
-    <data>
-        <display>
-        <title>Promise对象</title>
-        <pubTime>2017-01-14T06:11:38.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>JS</tag>
-         
-        <tag>ES6</tag>
-         
-        <tag>ECMAScript</tag>
-         
-        <tag>Promise</tag>
          
          
            
