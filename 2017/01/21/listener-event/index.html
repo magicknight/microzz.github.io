@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>listener-event | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,JS,事件,event,原型">
+    <meta name="description" content="JavaScript通过原型设计一个事件对象实现以下功能：
+
+添加监听者
+移除监听者
+清空监听者
+发起事件信号
+
+
+设计思路如下：
+定义一个对象，包含一个实例成员listeners，用于记录所有的监听者为对象的原型增加，新增、删除、清空和执行四个成员具体代码可以参见右侧示例
+
+代码实现123456789101112131415161718192021222324252627282930313233">
+<meta property="og:type" content="article">
+<meta property="og:title" content="listener-event">
+<meta property="og:url" content="http://microzz.com/2017/01/21/listener-event/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="JavaScript通过原型设计一个事件对象实现以下功能：
+
+添加监听者
+移除监听者
+清空监听者
+发起事件信号
+
+
+设计思路如下：
+定义一个对象，包含一个实例成员listeners，用于记录所有的监听者为对象的原型增加，新增、删除、清空和执行四个成员具体代码可以参见右侧示例
+
+代码实现123456789101112131415161718192021222324252627282930313233">
+<meta property="og:updated_time" content="2017-01-21T14:17:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="listener-event">
+<meta name="twitter:description" content="JavaScript通过原型设计一个事件对象实现以下功能：
+
+添加监听者
+移除监听者
+清空监听者
+发起事件信号
+
+
+设计思路如下：
+定义一个对象，包含一个实例成员listeners，用于记录所有的监听者为对象的原型增加，新增、删除、清空和执行四个成员具体代码可以参见右侧示例
+
+代码实现123456789101112131415161718192021222324252627282930313233">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/zhaohui1995" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">listener-event</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">listener-event</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-21T14:13:02.000Z" itemprop="datePublished" class="page-time">
+  2017-01-21
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JavaScript通过原型设计一个事件对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">JavaScript通过原型设计一个事件对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现以下功能："><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">实现以下功能：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计思路如下："><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">设计思路如下：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">代码实现</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-listener-event"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">listener-event</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月21日 22:13" datetime="2017-01-21T14:13:02.000Z"  itemprop="datePublished">2017-01-21</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="JavaScript通过原型设计一个事件对象"><a href="#JavaScript通过原型设计一个事件对象" class="headerlink" title="JavaScript通过原型设计一个事件对象"></a>JavaScript通过原型设计一个事件对象</h1><h3 id="实现以下功能："><a href="#实现以下功能：" class="headerlink" title="实现以下功能："></a>实现以下功能：</h3><blockquote>
+<ol>
+<li>添加监听者</li>
+<li>移除监听者</li>
+<li>清空监听者</li>
+<li>发起事件信号</li>
+</ol>
+</blockquote>
+<h3 id="设计思路如下："><a href="#设计思路如下：" class="headerlink" title="设计思路如下："></a>设计思路如下：</h3><blockquote>
+<p>定义一个对象，包含一个实例成员listeners，用于记录所有的监听者<br>为对象的原型增加，新增、删除、清空和执行四个成员<br>具体代码可以参见右侧示例</p>
+</blockquote>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">function myEvent()&#123;</div><div class="line">	this.listeners = [];	//监听者列表</div><div class="line">&#125;</div><div class="line">//添加一个监听者</div><div class="line">myEvent.prototype.addListener = function(fn)&#123;</div><div class="line">	this.listeners.push(fn);</div><div class="line">&#125;;</div><div class="line">//除移一个监听者</div><div class="line">myEvent.prototype.removeListener = function(fn)&#123;</div><div class="line">	var index = this.listeners.indexOf(fn);</div><div class="line">    this.listeners.splice(index,1);</div><div class="line">&#125;;</div><div class="line">//清除所有监听者</div><div class="line">myEvent.prototype.clearListeners = function()&#123;</div><div class="line">	this.listeners = [];</div><div class="line">&#125;;</div><div class="line">//发出执行信号，并告之所有监听者</div><div class="line">myEvent.prototype.raise = function(e)&#123;</div><div class="line">	var l = this.listeners.length;</div><div class="line">    for(var i = 0; i &lt; l; i++)&#123;</div><div class="line">    	this.listeners[i](e);	//执行所有监听方法</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var me = new myEvent();</div><div class="line"></div><div class="line">//事件fun1</div><div class="line">function fun1(e) &#123;</div><div class="line">	console.log(&apos;fun1: &apos; + e);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//事件fun2</div><div class="line">function fun2(e) &#123;</div><div class="line">	console.log(&apos;fun2: &apos; + e);</div><div class="line">&#125;</div><div class="line"></div><div class="line">／／调用相关方法进行测试</div><div class="line">me.addListener(fun1);</div><div class="line">me.addListener(fun2);</div><div class="line">me.removeListener(fun1)</div><div class="line">//me.clearListeners();</div><div class="line">me.raise(&quot;a&quot;);</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-21T14:17:08.000Z" itemprop="dateUpdated">2017年1月21日 22:17</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/01/21/listener-event/" target="_blank" rel="external">http://microzz.com/2017/01/21/listener-event/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件/">事件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/21/listener-event/&title=《listener-event》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/21/listener-event/&title=《listener-event》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/21/listener-event/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《listener-event》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/21/listener-event/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/21/listener-event/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/18/module/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES6 Module</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="listener-event" data-title="listener-event" data-url="http://microzz.com/2017/01/21/listener-event/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/21/listener-event/&title=《listener-event》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/21/listener-event/&title=《listener-event》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/21/listener-event/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《listener-event》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/21/listener-event/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/21/listener-event/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3awY6DMAxFUf7/pxlpVl0Uep8NVYlvVgi1IScLK7azbXjs/+P1+fXN+e+P/rWfju2OIUOGjMcyyHRHz+QNWdb5txBVhgwZAxh86k4kTDeFrE2GDBkyyFJI0KwtUYYMGTI60wUfAIe8DlWGDBlzGGRqEnbT4h0P9Jfl4jJkyHggo9YY+M7z7f0NGTJk/Dxjbw9+iLxvyJAhY20GvzzRaT3Wfh8fQ2XIkDGAkU6X4vmVCz7zm4ArQ4aM5Ridy16dYhlvgqJtkiFDxgBGJ+28ajvInIckGTJkLM0gYZG0MPttgNrXZciQMYHRKXid7w1PRznvMEDLkCFjDIMHVn5JK21tpgdHGTJkTGDwhPbaolu/wFfMy2XIkPFABjl+1fLEPiloc8qQIWNpBgm7912SSHnBxTUZMmQsxEjL+mnpLT6f1maWIUPGGAYPgrz1SEp1KVKGDBnTGLyIzxfUD838CpoMGTLmMNIF8YXyJmiaeb/ZDhkyZAxgkHZmGlKDq12NKx0yZMiYxuCNzFpJrlbPR29kyJCxNKP2yTQp5Qltq10qQ4aM5Rh7ODqlMd7m5IU2GTJkTGCkYa5zJeIXgrUMGTKey0iDLG89ooJ+2Iv8kL7KkCFjaQavtAfF+vAyB09fP1QNZciQMZ6RRrla2S5uZ8qQIUPGRaW09BDJ38uQIWMCgySxJFzy61xk/uAQKUOGjKUZnRS01mJM0+B0g2TIkLEQ4w9xUNsZKRkxBQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
