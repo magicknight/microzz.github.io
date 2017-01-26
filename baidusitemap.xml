@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/01/26/deep-copy/</loc>
+    <lastmod>2017-01-26T11:25:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>自定义方法实现复杂对象的深拷贝</title>
+        <pubTime>2017-01-26T11:11:02.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>深拷贝</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/01/24/destructuringTest/</loc>
     <lastmod>2017-01-24T11:51:37.000Z</lastmod>
     <data>
