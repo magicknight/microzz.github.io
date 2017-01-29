@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/01/29/iterators-test/</loc>
+    <lastmod>2017-01-29T13:06:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript中手动模拟创建Iterators迭代器(遍历器)</title>
+        <pubTime>2017-01-29T12:58:35.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Iterators</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/01/26/deep-copy/</loc>
     <lastmod>2017-01-26T12:02:27.000Z</lastmod>
     <data>
