@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://microzz.com/2017/02/06/code-style/</loc>
+    <loc>http://microzz.com/2017/02/06/es6-style/</loc>
     
-    <lastmod>2017-02-06T10:02:16.000Z</lastmod>
+    <lastmod>2017-02-06T10:05:11.000Z</lastmod>
     
   </url>
   
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://microzz.com/watch.json</loc>
+    <loc>http://microzz.com/start.js</loc>
     
     <lastmod>2017-01-11T09:28:32.873Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://microzz.com/start.js</loc>
+    <loc>http://microzz.com/watch.json</loc>
     
     <lastmod>2017-01-11T09:28:32.873Z</lastmod>
     

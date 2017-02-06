@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-06T10:02:16.000Z</updated>
+  <updated>2017-02-06T10:05:11.000Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>编程风格</title>
-    <link href="http://microzz.com/2017/02/06/code-style/"/>
-    <id>http://microzz.com/2017/02/06/code-style/</id>
+    <title>ES6编程风格</title>
+    <link href="http://microzz.com/2017/02/06/es6-style/"/>
+    <id>http://microzz.com/2017/02/06/es6-style/</id>
     <published>2017-02-06T10:00:23.000Z</published>
-    <updated>2017-02-06T10:02:16.000Z</updated>
+    <updated>2017-02-06T10:05:11.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="编程风格"><a href="#编程风格" class="headerlink" title="编程风格"></a>编程风格</h1><p>本章探讨如何将ES6的新语法，运用到编码实践之中，与传统的JavaScript语法结合在一起，写出合理的、易于阅读和维护的代码。</p>
 <p>多家公司和组织已经公开了它们的风格规范，具体可参阅<a href="http://jscs.info/" target="_blank" rel="external">jscs.info</a>，下面的内容主要参考了<a href="https://github.com/airbnb/javascript" target="_blank" rel="external">Airbnb</a>的JavaScript风格规范。</p>
