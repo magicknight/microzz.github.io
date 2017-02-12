@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-12T11:06:43.266Z</updated>
+  <updated>2017-02-12T11:07:56.766Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/02/12/mac-shell/"/>
     <id>http://microzz.com/2017/02/12/mac-shell/</id>
     <published>2017-02-12T10:24:35.000Z</published>
-    <updated>2017-02-12T11:06:43.266Z</updated>
+    <updated>2017-02-12T11:07:56.766Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Mac-终端命令大全"><a href="#Mac-终端命令大全" class="headerlink" title="Mac 终端命令大全"></a>Mac 终端命令大全</h1><h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><table>
 <thead>
@@ -413,9 +413,23 @@
 <td>列出最近执行过的几条命令及编号</td>
 <td>history</td>
 </tr>
+<tr>
+<td>r</td>
+<td>重复执行最近执行过的某条命令</td>
+<td>r -2</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>给某个命令定义别名</td>
+<td>alias del=rm -i</td>
+</tr>
+<tr>
+<td>unalias</td>
+<td>取消对某个别名的定义</td>
+<td>unalias del</td>
+</tr>
 </tbody>
 </table>
-<p>r |     重复执行最近执行过的某条命令 |     r -2 |<br> | alias |     给某个命令定义别名     | alias del=rm -i |<br> | unalias |     取消对某个别名的定义     | unalias del | </p>
 <h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><table>
 <thead>
 <tr>
