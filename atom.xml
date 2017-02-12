@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-10T10:40:25.830Z</updated>
+  <updated>2017-02-12T11:01:38.984Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,209 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 终端命令大全 (Shell)</title>
+    <link href="http://microzz.com/2017/02/12/mac-shell/"/>
+    <id>http://microzz.com/2017/02/12/mac-shell/</id>
+    <published>2017-02-12T10:24:35.000Z</published>
+    <updated>2017-02-12T11:01:38.984Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mac-终端命令大全"><a href="#Mac-终端命令大全" class="headerlink" title="Mac 终端命令大全"></a>Mac 终端命令大全</h1><h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdir</td>
+<td>创建一个目录</td>
+<td>mkdir dirname</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除一个目录</td>
+<td>rmdir dirname</td>
+</tr>
+<tr>
+<td>mvdir</td>
+<td>移动或重命名一个目录</td>
+<td>mvdir dir1 dir2</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>改变当前目录</td>
+<td>cd dirname</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录的路径名</td>
+<td>pwd</td>
+</tr>
+</tbody>
+</table>
+<p>ls    |显示当前目录的内容 |    ls -la |<br>dircmp    | 比较两个目录的内容    | dircmp dir1 dir2 |</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cat</td>
+<td>显示或连接文件</td>
+<td>cat filename</td>
+</tr>
+</tbody>
+</table>
+<p>pg     | 分页格式化显示文件内容     | pg filename |<br>more     | 分屏显示文件内容     | more filename |<br>od     | 显示非文本文件的内容     | od -c filename |<br>cp     | 复制文件或目录     | cp file1 file2 |<br>rm     | 删除文件或目录     | rm filename |<br>mv     | 改变文件名或所在目录 |     mv file1 file2 |<br>ln     | 联接文件 |     ln -s file1 file2 |<br>find     | 使用匹配表达式查找文件     | find . -name “*.c” -print |<br>file     | 显示文件类型     | file filename |<br>open     | 使用默认的程序打开文件     | open filename | </p>
+<h2 id="选择操作"><a href="#选择操作" class="headerlink" title="选择操作"></a>选择操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>head</td>
+<td>显示文件的最初几行</td>
+<td>head -20 filename</td>
+</tr>
+</tbody>
+</table>
+<p>tail     | 显示文件的最后几行     | tail -15 filename |<br>cut     | 显示文件每行中的某些域     | cut -f1,7 -d: /etc/passwd |<br>colrm     | 从标准输入中删除若干列     | colrm 8 20 file2 |<br>paste     | 横向连接文件     | paste file1 file2 |<br>diff     | 比较并显示两个文件的差异     | diff file1 file2 |<br>sed     | 非交互方式流编辑器 |     sed “s/red/green/g” filename |<br>grep     | 在文件中按模式查找     | grep “^[a-zA-Z]” filename |<br>awk     | 在文件中查找并处理模式 |     awk ‘{print $1 $1}’ filename |<br>sort     | 排序或归并文件     | sort -d -f -u file1 |<br>uniq     | 去掉文件中的重复行     | uniq file1 file2 |<br>comm |     显示两有序文件的公共和非公共行 |     comm file1 file2 |<br>wc     | 统计文件的字符数、词数和行数 |     wc filename |<br>nl     | 给文件加上行号 |     nl file1 &gt;file2 | </p>
+<h2 id="安全操作"><a href="#安全操作" class="headerlink" title="安全操作"></a>安全操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>passwd |     修改用户密码 |     passwd<br>chmod |     改变文件或目录的权限     | chmod ug+x filename |<br>umask     | 定义创建文件的权限掩码 |     umask 027 |<br>chown     | 改变文件或目录的属主     | chown newowner filename |<br>chgrp |     改变文件或目录的所属组 |     chgrp staff filename |<br>xlock     | 给终端上锁     | xlock -remote | </p>
+<h2 id="编程操作"><a href="#编程操作" class="headerlink" title="编程操作"></a>编程操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>make |     维护可执行程序的最新版本 |     make |<br>touch     | 更新文件的访问和修改时间     | touch -m 05202400 filename |<br>dbx |     命令行界面调试工具 |     dbx a.out |<br>xde     | 图形用户界面调试工具     | xde a.out | </p>
+<h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>ps     | 显示进程当前状态 |     ps u |<br>kill |     终止进程 |     kill -9 30142 |<br>nice     | 改变待执行命令的优先级 |     nice cc -c *.c |<br>renice |     改变已运行进程的优先级 |     renice +20 32768 | </p>
+<h2 id="时间操作"><a href="#时间操作" class="headerlink" title="时间操作"></a>时间操作</h2><table>
+<thead>
+<tr>
+<th>命令名    功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>date     | 显示系统的当前日期和时间     | date |<br>cal     | 显示日历 |     cal 8 1996 |<br>time     | 统计程序的执行时间     | time a.out | </p>
+<h2 id="网络与通信操作"><a href="#网络与通信操作" class="headerlink" title="网络与通信操作"></a>网络与通信操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>telnet     | 远程登录     | telnet hpc.sp.net.edu.cn |<br>rlogin |     远程登录 |     rlogin hostname -l username |<br>rsh |     在远程主机执行指定命令 |     rsh f01n03 date |<br>ftp |     在本地主机与远程主机之间传输文件 |     ftp ftp.sp.net.edu.cn |<br>rcp |     在本地主机与远程主机之间复制文件 |     rcp file1 host1:file2 |<br>ping |     给一个网络主机发送回应请求 |     ping hpc.sp.net.edu.cn |<br>mail |     阅读和发送电子邮件 |     mail |<br>write     | 给另一用户发送报文 |     write username pts/1 |<br>mesg     | 允许或拒绝接收报文 |     mesg n | </p>
+<h2 id="Korn-Shell-命令"><a href="#Korn-Shell-命令" class="headerlink" title="Korn Shell 命令"></a>Korn Shell 命令</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>history |     列出最近执行过的几条命令及编号 |     history |<br>r |     重复执行最近执行过的某条命令 |     r -2 |<br>alias |     给某个命令定义别名     | alias del=rm -i |<br>unalias |     取消对某个别名的定义     | unalias del | </p>
+<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>uname     | 显示操作系统的有关信息 |     uname -a |<br>clear |     清除屏幕或窗口内容 |     clear |<br>env     | 显示当前所有设置过的环境变量 |     env |<br>who     | 列出当前登录的所有用户     | who |<br>whoami     | 显示当前正进行操作的用户名 |     whoami |<br>tty     | 显示终端或伪终端的名称 |     tty |<br>stty     | 显示或重置控制键定义     | stty -a |<br>du     | 查询磁盘使用情况 |     du -k subdir |<br>df |     显示文件系统的总空间和可用空间 |     df /tmp |<br>w     | 显示当前系统活动的总信息     | w | </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Mac-终端命令大全&quot;&gt;&lt;a href=&quot;#Mac-终端命令大全&quot; class=&quot;headerlink&quot; title=&quot;Mac 终端命令大全&quot;&gt;&lt;/a&gt;Mac 终端命令大全&lt;/h1&gt;&lt;h2 id=&quot;目录操作&quot;&gt;&lt;a href=&quot;#目录操作&quot; class=&quot;head
+    
+    </summary>
+    
+    
+      <category term="开发者" scheme="http://microzz.com/tags/%E5%BC%80%E5%8F%91%E8%80%85/"/>
+    
+      <category term="Shell" scheme="http://microzz.com/tags/Shell/"/>
+    
+      <category term="Mac" scheme="http://microzz.com/tags/Mac/"/>
+    
+      <category term="Linux" scheme="http://microzz.com/tags/Linux/"/>
+    
+      <category term="Unix" scheme="http://microzz.com/tags/Unix/"/>
+    
+  </entry>
   
   <entry>
     <title>前端开发面试题集锦</title>

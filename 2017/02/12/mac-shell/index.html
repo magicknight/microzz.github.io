@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Mac 终端命令大全 (Shell) | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="开发者,Shell,Mac,Linux,Unix">
+    <meta name="description" content="Mac 终端命令大全目录操作
+
+
+命令名
+功能描述
+使用举例
+
+
+
+
+mkdir
+创建一个目录
+mkdir dirname
+
+
+rmdir
+删除一个目录
+rmdir dirname
+
+
+mvdir
+移动或重命名一个目录
+mvdir dir1 dir2
+
+
+cd
+改变当前目录
+cd dirname
+
+
+pwd
+显示当前目录的路径名
+pwd
+
+
+
+ls    |显示当前目录的内容 |    ls -l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 终端命令大全 (Shell)">
+<meta property="og:url" content="http://microzz.com/2017/02/12/mac-shell/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="Mac 终端命令大全目录操作
+
+
+命令名
+功能描述
+使用举例
+
+
+
+
+mkdir
+创建一个目录
+mkdir dirname
+
+
+rmdir
+删除一个目录
+rmdir dirname
+
+
+mvdir
+移动或重命名一个目录
+mvdir dir1 dir2
+
+
+cd
+改变当前目录
+cd dirname
+
+
+pwd
+显示当前目录的路径名
+pwd
+
+
+
+ls    |显示当前目录的内容 |    ls -l">
+<meta property="og:updated_time" content="2017-02-12T11:01:38.984Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac 终端命令大全 (Shell)">
+<meta name="twitter:description" content="Mac 终端命令大全目录操作
+
+
+命令名
+功能描述
+使用举例
+
+
+
+
+mkdir
+创建一个目录
+mkdir dirname
+
+
+rmdir
+删除一个目录
+rmdir dirname
+
+
+mvdir
+移动或重命名一个目录
+mvdir dir1 dir2
+
+
+cd
+改变当前目录
+cd dirname
+
+
+pwd
+显示当前目录的路径名
+pwd
+
+
+
+ls    |显示当前目录的内容 |    ls -l">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Mac 终端命令大全 (Shell)</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Mac 终端命令大全 (Shell)</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-12T10:24:35.000Z" itemprop="datePublished" class="page-time">
+  2017-02-12
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Mac-终端命令大全"><span class="post-toc-number">1.</span> <span class="post-toc-text">Mac 终端命令大全</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#目录操作"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">目录操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件操作"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">文件操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#选择操作"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">选择操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安全操作"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">安全操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编程操作"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">编程操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程操作"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">进程操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#时间操作"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">时间操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络与通信操作"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">网络与通信操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Korn-Shell-命令"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Korn Shell 命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它命令"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">其它命令</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-mac-shell"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Mac 终端命令大全 (Shell)</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年02月12日 18:24" datetime="2017-02-12T10:24:35.000Z"  itemprop="datePublished">2017-02-12</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Mac-终端命令大全"><a href="#Mac-终端命令大全" class="headerlink" title="Mac 终端命令大全"></a>Mac 终端命令大全</h1><h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mkdir</td>
+<td>创建一个目录</td>
+<td>mkdir dirname</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除一个目录</td>
+<td>rmdir dirname</td>
+</tr>
+<tr>
+<td>mvdir</td>
+<td>移动或重命名一个目录</td>
+<td>mvdir dir1 dir2</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>改变当前目录</td>
+<td>cd dirname</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前目录的路径名</td>
+<td>pwd</td>
+</tr>
+</tbody>
+</table>
+<p>ls    |显示当前目录的内容 |    ls -la |<br>dircmp    | 比较两个目录的内容    | dircmp dir1 dir2 |</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cat</td>
+<td>显示或连接文件</td>
+<td>cat filename</td>
+</tr>
+</tbody>
+</table>
+<p>pg     | 分页格式化显示文件内容     | pg filename |<br>more     | 分屏显示文件内容     | more filename |<br>od     | 显示非文本文件的内容     | od -c filename |<br>cp     | 复制文件或目录     | cp file1 file2 |<br>rm     | 删除文件或目录     | rm filename |<br>mv     | 改变文件名或所在目录 |     mv file1 file2 |<br>ln     | 联接文件 |     ln -s file1 file2 |<br>find     | 使用匹配表达式查找文件     | find . -name “*.c” -print |<br>file     | 显示文件类型     | file filename |<br>open     | 使用默认的程序打开文件     | open filename | </p>
+<h2 id="选择操作"><a href="#选择操作" class="headerlink" title="选择操作"></a>选择操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>head</td>
+<td>显示文件的最初几行</td>
+<td>head -20 filename</td>
+</tr>
+</tbody>
+</table>
+<p>tail     | 显示文件的最后几行     | tail -15 filename |<br>cut     | 显示文件每行中的某些域     | cut -f1,7 -d: /etc/passwd |<br>colrm     | 从标准输入中删除若干列     | colrm 8 20 file2 |<br>paste     | 横向连接文件     | paste file1 file2 |<br>diff     | 比较并显示两个文件的差异     | diff file1 file2 |<br>sed     | 非交互方式流编辑器 |     sed “s/red/green/g” filename |<br>grep     | 在文件中按模式查找     | grep “^[a-zA-Z]” filename |<br>awk     | 在文件中查找并处理模式 |     awk ‘{print $1 $1}’ filename |<br>sort     | 排序或归并文件     | sort -d -f -u file1 |<br>uniq     | 去掉文件中的重复行     | uniq file1 file2 |<br>comm |     显示两有序文件的公共和非公共行 |     comm file1 file2 |<br>wc     | 统计文件的字符数、词数和行数 |     wc filename |<br>nl     | 给文件加上行号 |     nl file1 &gt;file2 | </p>
+<h2 id="安全操作"><a href="#安全操作" class="headerlink" title="安全操作"></a>安全操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>passwd |     修改用户密码 |     passwd<br>chmod |     改变文件或目录的权限     | chmod ug+x filename |<br>umask     | 定义创建文件的权限掩码 |     umask 027 |<br>chown     | 改变文件或目录的属主     | chown newowner filename |<br>chgrp |     改变文件或目录的所属组 |     chgrp staff filename |<br>xlock     | 给终端上锁     | xlock -remote | </p>
+<h2 id="编程操作"><a href="#编程操作" class="headerlink" title="编程操作"></a>编程操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>make |     维护可执行程序的最新版本 |     make |<br>touch     | 更新文件的访问和修改时间     | touch -m 05202400 filename |<br>dbx |     命令行界面调试工具 |     dbx a.out |<br>xde     | 图形用户界面调试工具     | xde a.out | </p>
+<h2 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>ps     | 显示进程当前状态 |     ps u |<br>kill |     终止进程 |     kill -9 30142 |<br>nice     | 改变待执行命令的优先级 |     nice cc -c *.c |<br>renice |     改变已运行进程的优先级 |     renice +20 32768 | </p>
+<h2 id="时间操作"><a href="#时间操作" class="headerlink" title="时间操作"></a>时间操作</h2><table>
+<thead>
+<tr>
+<th>命令名    功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>date     | 显示系统的当前日期和时间     | date |<br>cal     | 显示日历 |     cal 8 1996 |<br>time     | 统计程序的执行时间     | time a.out | </p>
+<h2 id="网络与通信操作"><a href="#网络与通信操作" class="headerlink" title="网络与通信操作"></a>网络与通信操作</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>telnet     | 远程登录     | telnet hpc.sp.net.edu.cn |<br>rlogin |     远程登录 |     rlogin hostname -l username |<br>rsh |     在远程主机执行指定命令 |     rsh f01n03 date |<br>ftp |     在本地主机与远程主机之间传输文件 |     ftp ftp.sp.net.edu.cn |<br>rcp |     在本地主机与远程主机之间复制文件 |     rcp file1 host1:file2 |<br>ping |     给一个网络主机发送回应请求 |     ping hpc.sp.net.edu.cn |<br>mail |     阅读和发送电子邮件 |     mail |<br>write     | 给另一用户发送报文 |     write username pts/1 |<br>mesg     | 允许或拒绝接收报文 |     mesg n | </p>
+<h2 id="Korn-Shell-命令"><a href="#Korn-Shell-命令" class="headerlink" title="Korn Shell 命令"></a>Korn Shell 命令</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>history |     列出最近执行过的几条命令及编号 |     history |<br>r |     重复执行最近执行过的某条命令 |     r -2 |<br>alias |     给某个命令定义别名     | alias del=rm -i |<br>unalias |     取消对某个别名的定义     | unalias del | </p>
+<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><table>
+<thead>
+<tr>
+<th>命令名</th>
+<th>功能描述</th>
+<th>使用举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>uname     | 显示操作系统的有关信息 |     uname -a |<br>clear |     清除屏幕或窗口内容 |     clear |<br>env     | 显示当前所有设置过的环境变量 |     env |<br>who     | 列出当前登录的所有用户     | who |<br>whoami     | 显示当前正进行操作的用户名 |     whoami |<br>tty     | 显示终端或伪终端的名称 |     tty |<br>stty     | 显示或重置控制键定义     | stty -a |<br>du     | 查询磁盘使用情况 |     du -k subdir |<br>df |     显示文件系统的总空间和可用空间 |     df /tmp |<br>w     | 显示当前系统活动的总信息     | w | </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-12T11:01:38.984Z" itemprop="dateUpdated">2017年2月12日 19:01</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/02/12/mac-shell/" target="_blank" rel="external">http://microzz.com/2017/02/12/mac-shell/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell/">Shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unix/">Unix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发者/">开发者</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/12/mac-shell/&title=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/12/mac-shell/&title=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/12/mac-shell/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/12/mac-shell/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/12/mac-shell/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/10/interview/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端开发面试题集锦</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="mac-shell" data-title="Mac 终端命令大全 (Shell)" data-url="http://microzz.com/2017/02/12/mac-shell/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/12/mac-shell/&title=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/12/mac-shell/&title=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/12/mac-shell/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Mac 终端命令大全 (Shell)》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/12/mac-shell/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/12/mac-shell/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABy0lEQVR42u3aQW7DMAwEwPz/0y3Qa2NlKcpMAoxPQeNWox4IaqnHI35+/p6rz1fP/3eufnL4wcXFbXPzJau/u4ZWt42LizvPTYpX8ua68K1LW/KXcXFxP42bNEDr7a1bJVxc3G/kRi3Isg2q/jtwcXHfy60eWtbopCW6/ayGi4vb4PYD0/7n0XwXFxe3MZVICkoSf+y1TU9Wx8XFHeHmy+Sj1jwSrb6Pi4s7zz3VlPSvXxTOari4uDdw96LPZHxSHaxGJQ8XF3eEe2rg0cku8lAVFxd3hptcpqwek5Jytt7YJRoXF3eQmzcuhRNVcVhSngbj4uIOcqNu6GhgWrhmgYuLO8jdO8asl+wHLk+2iouLO8itDk7yMDQ/2ODi4n4yNw8984X3yuKLyQ8uLu5t3L1hZ/nQsnVVqzBQwcXFPcrdiz/2mp7OFQ1cXNx5bp5MVstWNYR9Uf5wcXEHuf3rU3vhaWvyg4uLexu3WlCSDVcPNnvf4uLi3s3No8y9hiaPUKMCh4uLO8g9dfUqCT46969wcXE/jZuXsByUNE+4uLjfyC0PRRqlEBcXd5KbX5mqHpaqccmxWAQXF/dMXSoPTfeGK4XBKi4u7jT3F9IaBhysGPA4AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
