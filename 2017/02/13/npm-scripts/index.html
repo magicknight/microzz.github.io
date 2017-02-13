@@ -39,7 +39,7 @@
 
 一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
 123456&amp;#123;  // ...  &quot;scripts&quot;: &amp;#123;">
-<meta property="og:updated_time" content="2017-02-13T12:13:25.113Z">
+<meta property="og:updated_time" content="2017-02-13T12:23:32.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm scripts 使用指南">
 <meta name="twitter:description" content="npm scripts 使用指南
@@ -192,9 +192,9 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // ...</div><div class="line">  "scripts": &#123;</div><div class="line">    "build": "node build.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面代码是package.json文件的一个片段，里面的scripts字段是一个对象。它的每一个属性，对应一段脚本。比如，<code>build</code>命令对应的脚本是<code>node build.js</code>。<br>命令行下使用<code>npm run</code>命令，就可以执行这段脚本。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm run build</div><div class="line"># 等同于执行</div><div class="line">$ node build.js</div></pre></td></tr></table></figure>
-<p>这些定义在package.json里面的脚本，就称为 npm 脚本。它的优点很多。<br>项目的相关脚本，可以集中在一个地方。<br>不同项目的脚本命令，只要功能相同，就可以有同样的对外接口。用户不需要知道怎么测试你的项目，只要运行npm run test即可。<br>可以利用 npm 提供的很多辅助功能。<br>查看当前项目的所有 npm 脚本命令，可以使用不带任何参数的npm run命令。</p>
+<p>这些定义在package.json里面的脚本，就称为 npm 脚本。它的优点很多。<br>项目的相关脚本，可以集中在一个地方。<br>不同项目的脚本命令，只要功能相同，就可以有同样的对外接口。用户不需要知道怎么测试你的项目，只要运行<code>npm run test</code>即可。<br>可以利用 npm 提供的很多辅助功能。<br>查看当前项目的所有 npm 脚本命令，可以使用不带任何参数的<code>npm run</code>命令。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run</div></pre></td></tr></table></figure>
-<h2 id="二、原理"><a href="#二、原理" class="headerlink" title="二、原理"></a>二、原理</h2><p>npm 脚本的原理非常简单。每当执行npm run，就会自动新建一个 Shell，在这个 Shell 里面执行指定的脚本命令。因此，只要是 Shell（一般是 Bash）可以运行的命令，就可以写在 npm 脚本里面。<br>比较特别的是，npm run新建的这个 Shell，会将当前目录的node_modules/.bin子目录加入PATH变量，执行结束后，再将PATH变量恢复原样。<br>这意味着，当前目录的node_modules/.bin子目录里面的所有脚本，都可以直接用脚本名调用，而不必加上路径。比如，当前项目的依赖里面有 Mocha，只要直接写mocha test就可以了。</p>
+<h2 id="二、原理"><a href="#二、原理" class="headerlink" title="二、原理"></a>二、原理</h2><p>npm 脚本的原理非常简单。每当执行<code>npm run</code>，就会自动新建一个 Shell，在这个 Shell 里面执行指定的脚本命令。因此，只要是 Shell（一般是 Bash）可以运行的命令，就可以写在 npm 脚本里面。<br>比较特别的是，npm run新建的这个 Shell，会将当前目录的node_modules/.bin子目录加入PATH变量，执行结束后，再将PATH变量恢复原样。<br>这意味着，当前目录的node_modules/.bin子目录里面的所有脚本，都可以直接用脚本名调用，而不必加上路径。比如，当前项目的依赖里面有 Mocha，只要直接写<code>mocha test</code>就可以了。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "mocha test"</div></pre></td></tr></table></figure>
 <p>而不用写成下面这样。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "./node_modules/.bin/mocha test"</div></pre></td></tr></table></figure>
@@ -205,7 +205,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "tap test/\*.js"</div></pre></td></tr></table></figure>
 <h2 id="四、传参"><a href="#四、传参" class="headerlink" title="四、传参"></a>四、传参</h2><p>向 npm 脚本传入参数，要使用–标明。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"lint": "jshint **.js"</div></pre></td></tr></table></figure>
-<p>向上面的npm run lint命令传入参数，必须写成下面这样。</p>
+<p>向上面的<code>npm run lint</code>命令传入参数，必须写成下面这样。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run lint --  --reporter checkstyle &gt; checkstyle.xml</div></pre></td></tr></table></figure>
 <p>也可以在package.json里面再封装一个命令。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"lint": "jshint **.js",</div><div class="line">"lint:checkstyle": "npm run lint -- --reporter checkstyle &gt; checkstyle.xml"</div></pre></td></tr></table></figure>
@@ -216,8 +216,8 @@
 <p>这两个符号是 Bash 的功能。此外，还可以使用 node 的任务管理模块：script-runner、npm-run-all、redrun。</p>
 <h2 id="六、默认值"><a href="#六、默认值" class="headerlink" title="六、默认值"></a>六、默认值</h2><p>一般来说，npm 脚本由用户提供。但是，npm 对两个脚本提供了默认值。也就是说，这两个脚本不用定义，就可以直接使用。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"start": "node server.js"，</div><div class="line">"install": "node-gyp rebuild"</div></pre></td></tr></table></figure>
-<p>上面代码中，<code>npm run start</code>的默认值是node server.js，前提是项目根目录下有server.js这个脚本；<code>npm run install</code>的默认值是<code>node-gyp rebuild</code>，前提是项目根目录下有binding.gyp文件。</p>
-<h2 id="七、钩子"><a href="#七、钩子" class="headerlink" title="七、钩子"></a>七、钩子</h2><p>npm 脚本有pre和post两个钩子。举例来说，build脚本命令的钩子就是prebuild和postbuild。</p>
+<p>上面代码中，<code>npm run start</code>的默认值是<code>node server.js</code>，前提是项目根目录下有server.js这个脚本；<code>npm run install</code>的默认值是<code>node-gyp rebuild</code>，前提是项目根目录下有binding.gyp文件。</p>
+<h2 id="七、钩子"><a href="#七、钩子" class="headerlink" title="七、钩子"></a>七、钩子</h2><p>npm 脚本有pre和post两个钩子。举例来说，<code>build</code>脚本命令的钩子就是prebuild和postbuild。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"prebuild": "echo I run before the build script",</div><div class="line">"build": "cross-env NODE_ENV=production webpack",</div><div class="line">"postbuild": "echo I run after the build script"</div></pre></td></tr></table></figure>
 <p>用户执行<code>npm run build</code>的时候，会自动按照下面的顺序执行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run prebuild &amp;&amp; npm run build &amp;&amp; npm run postbuild</div></pre></td></tr></table></figure>
@@ -227,20 +227,21 @@
 <blockquote>
 <p>prepublish，postpublish<br>preinstall，postinstall<br>preuninstall，postuninstall<br>preversion，postversion<br>pretest，posttest<br>prestop，poststop<br>prestart，poststart<br>prerestart，postrestart</p>
 </blockquote>
-<p>自定义的脚本命令也可以加上pre和post钩子。比如，myscript这个脚本命令，也有premyscript和postmyscript钩子。不过，双重的pre和post无效，比如prepretest和postposttest是无效的。<br>npm 提供一个npm_lifecycle_event变量，返回当前正在运行的脚本名称，比如pretest、test、posttest等等。所以，可以利用这个变量，在同一个脚本文件里面，为不同的npm scripts命令编写代码。请看下面的例子。</p>
+<p>自定义的脚本命令也可以加上pre和post钩子。比如，<code>myscript</code>这个脚本命令，也有premyscript和postmyscript钩子。不过，双重的pre和post无效，比如prepretest和postposttest是无效的。<br>npm 提供一个npm_lifecycle_event变量，返回当前正在运行的脚本名称，比如pretest、test、posttest等等。所以，可以利用这个变量，在同一个脚本文件里面，为不同的npm scripts命令编写代码。请看下面的例子。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> TARGET = process.env.npm_lifecycle_event;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'test'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the test task!`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'pretest'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the pretest task!`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'posttest'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the posttest task!`</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意，prepublish这个钩子不仅会在npm publish命令之前运行，还会在npm install（不带任何参数）命令之前运行。这种行为很容易让用户感到困惑，所以 npm 4 引入了一个新的钩子prepare，行为等同于prepublish，而从 npm 5 开始，prepublish将只在npm publish命令之前运行。</p>
-<h2 id="八、简写形式"><a href="#八、简写形式" class="headerlink" title="八、简写形式"></a>八、简写形式</h2><p>四个常用的 npm 脚本有简写形式。<br>npm start是npm run start<br>npm stop是npm run stop的简写<br>npm test是npm run test的简写<br>npm restart是npm run stop &amp;&amp; npm run restart &amp;&amp; npm run start的简写<br>npm start、npm stop和npm restart都比较好理解，而npm restart是一个复合命令，实际上会执行三个脚本命令：stop、restart、start。具体的执行顺序如下。<br>prerestart<br>prestop<br>stop<br>poststop<br>restart<br>prestart<br>start<br>poststart<br>postrestart</p>
-<h2 id="九、变量"><a href="#九、变量" class="headerlink" title="九、变量"></a>九、变量</h2><p>npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变量。<br>首先，通过npm<em>package</em>前缀，npm 脚本可以拿到package.json里面的字段。比如，下面是一个package.json。</p>
+<p>注意，prepublish这个钩子不仅会在npm publish命令之前运行，还会在<code>npm install</code>（不带任何参数）命令之前运行。这种行为很容易让用户感到困惑，所以 npm 4 引入了一个新的钩子prepare，行为等同于prepublish，而从 npm 5 开始，prepublish将只在npm publish命令之前运行。</p>
+<h2 id="八、简写形式"><a href="#八、简写形式" class="headerlink" title="八、简写形式"></a>八、简写形式</h2><p>四个常用的 npm 脚本有简写形式。<br><code>npm start</code>是<code>npm run start</code><br><code>npm stop</code>是<code>npm run stop</code>的简写<br><code>npm test</code>是<code>npm run test</code>的简写<br><code>npm restart</code>是<code>npm run stop &amp;&amp; npm run restart &amp;&amp; npm run start</code>的简写<br><code>npm start</code>、<code>npm stop</code>和<code>npm test</code>都比较好理解，而<code>npm restart</code>是一个复合命令，实际上会执行三个脚本命令：<code>stop</code>、<code>restart</code>、<code>start</code>。具体的执行顺序如下。<br><code>prerestart</code><br><code>prestop</code><br><code>stop</code><br><code>poststop</code><br><code>restart</code><br><code>prestart</code><br><code>start</code><br><code>poststart</code><br><code>postrestart</code></p>
+<h2 id="九、变量"><a href="#九、变量" class="headerlink" title="九、变量"></a>九、变量</h2><p><code>npm</code> 脚本有一个非常强大的功能，就是可以使用 npm 的内部变量。<br>首先，通过npm<em>package</em>前缀，npm 脚本可以拿到package.json里面的字段。比如，下面是一个package.json。</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"foo"</span>, </div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.2.5"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"view"</span>: <span class="string">"node view.js"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>那么，变量npm_package_name返回foo，变量npm_package_version返回1.2.5。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// view.js</span></div><div class="line"><span class="built_in">console</span>.log(process.env.npm_package_name); <span class="comment">// foo</span></div><div class="line"><span class="built_in">console</span>.log(process.env.npm_package_version); <span class="comment">// 1.2.5</span></div></pre></td></tr></table></figure>
-<p>上面代码中，我们通过环境变量process.env对象，拿到package.json的字段值。如果是 Bash 脚本，可以用\$npm_package_name和$npm_package_version取到这两个值。<br>npm<em>package</em>前缀也支持嵌套的package.json字段。</p>
+<p>上面代码中，我们通过环境变量<code>process.env</code>对象，拿到package.json的字段值。如果是 Bash 脚本，可以用\$npm_package_name和$npm_package_version取到这两个值。<br>npm<em>package</em>前缀也支持嵌套的package.json字段。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">"repository": &#123;</div><div class="line">  "type": "git",</div><div class="line">  "url": "xxx"</div><div class="line">&#125;,</div><div class="line">scripts: &#123;</div><div class="line">  "view": "echo $npm_package_repository_type"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面代码中，repository字段的type属性，可以通过npm_package_repository_type取到。<br>下面是另外一个例子。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"scripts": &#123;</div><div class="line">  "install": "foo.js"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>上面代码中，npm_package_scripts_install变量的值等于foo.js。<br>然后，npm 脚本还可以通过npm<em>config</em>前缀，拿到 npm 的配置变量，即npm config get xxx命令返回的值。比如，当前模块的发行标签，可以通过npm_config_tag取到。</p>
-<p>“view”: “echo $npm_config_tag”,<br>注意，package.json里面的config对象，可以被环境变量覆盖。</p>
+<p>上面代码中，npm_package_scripts_install变量的值等于foo.js。<br>然后，npm 脚本还可以通过npm<em>config</em>前缀，拿到 npm 的配置变量，即<code>npm config get xxx</code>命令返回的值。比如，当前模块的发行标签，可以通过npm_config_tag取到。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"view": "echo $npm_config_tag",</div></pre></td></tr></table></figure>
+<p>注意，package.json里面的config对象，可以被环境变量覆盖。</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123; </div><div class="line">  <span class="attr">"name"</span> : <span class="string">"foo"</span>,</div><div class="line">  <span class="attr">"config"</span> : &#123; <span class="attr">"port"</span> : <span class="string">"8080"</span> &#125;,</div><div class="line">  <span class="attr">"scripts"</span> : &#123; <span class="attr">"start"</span> : <span class="string">"node server.js"</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面代码中，npm_package_config_port变量返回的是8080。这个值可以用下面的方法覆盖。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm config set foo:port 80</div></pre></td></tr></table></figure>
@@ -254,7 +255,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-13T12:13:25.113Z" itemprop="dateUpdated">2017年2月13日 20:13</time>
+    最后更新时间：<time datetime="2017-02-13T12:23:32.975Z" itemprop="dateUpdated">2017年2月13日 20:23</time>
 </span><br>
 
 
