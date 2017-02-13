@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-13T12:09:21.786Z</updated>
+  <updated>2017-02-13T12:11:33.706Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://microzz.com/2017/02/13/npm-scripts/"/>
     <id>http://microzz.com/2017/02/13/npm-scripts/</id>
     <published>2017-02-13T11:51:28.000Z</published>
-    <updated>2017-02-13T12:09:21.786Z</updated>
+    <updated>2017-02-13T12:11:33.706Z</updated>
     
-    <content type="html"><![CDATA[<p>#npm scripts 使用指南</p>
-<blockquote>
+    <content type="html"><![CDATA[<h1 id="npm-scripts-使用指南"><a href="#npm-scripts-使用指南" class="headerlink" title="npm scripts 使用指南"></a>npm scripts 使用指南</h1><blockquote>
 <p>&nbsp;&nbsp;&nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。<br>本文介绍如何使用 npm 脚本（npm scripts）。</p>
 </blockquote>
 <h2 id="一、什么是-npm-脚本？"><a href="#一、什么是-npm-脚本？" class="headerlink" title="一、什么是 npm 脚本？"></a>一、什么是 npm 脚本？</h2><p>npm 允许在package.json文件里面，使用scripts字段定义脚本命令。</p>
@@ -89,10 +88,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;#npm scripts 使用指南&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。&lt;br&gt;本文介绍如何使用 npm 脚本（npm scripts）。&lt;/p&gt;
-&lt;/bl
+      &lt;h1 id=&quot;npm-scripts-使用指南&quot;&gt;&lt;a href=&quot;#npm-scripts-使用指南&quot; class=&quot;headerlink&quot; title=&quot;npm scripts 使用指南&quot;&gt;&lt;/a&gt;npm scripts 使用指南&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;
     
     </summary>
     
