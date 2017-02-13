@@ -39,7 +39,7 @@
 
 一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
 123456&amp;#123;  // ...  &quot;scripts&quot;: &amp;#123;">
-<meta property="og:updated_time" content="2017-02-13T12:11:33.706Z">
+<meta property="og:updated_time" content="2017-02-13T12:13:25.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm scripts 使用指南">
 <meta name="twitter:description" content="npm scripts 使用指南
@@ -188,9 +188,9 @@
             <h1 id="npm-scripts-使用指南"><a href="#npm-scripts-使用指南" class="headerlink" title="npm scripts 使用指南"></a>npm scripts 使用指南</h1><blockquote>
 <p>&nbsp;&nbsp;&nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。<br>本文介绍如何使用 npm 脚本（npm scripts）。</p>
 </blockquote>
-<h2 id="一、什么是-npm-脚本？"><a href="#一、什么是-npm-脚本？" class="headerlink" title="一、什么是 npm 脚本？"></a>一、什么是 npm 脚本？</h2><p>npm 允许在package.json文件里面，使用scripts字段定义脚本命令。</p>
+<h2 id="一、什么是-npm-脚本？"><a href="#一、什么是-npm-脚本？" class="headerlink" title="一、什么是 npm 脚本？"></a>一、什么是 npm 脚本？</h2><p><code>npm</code> 允许在package.json文件里面，使用scripts字段定义脚本命令。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // ...</div><div class="line">  "scripts": &#123;</div><div class="line">    "build": "node build.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>上面代码是package.json文件的一个片段，里面的scripts字段是一个对象。它的每一个属性，对应一段脚本。比如，build命令对应的脚本是node build.js。<br>命令行下使用npm run命令，就可以执行这段脚本。</p>
+<p>上面代码是package.json文件的一个片段，里面的scripts字段是一个对象。它的每一个属性，对应一段脚本。比如，<code>build</code>命令对应的脚本是<code>node build.js</code>。<br>命令行下使用<code>npm run</code>命令，就可以执行这段脚本。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm run build</div><div class="line"># 等同于执行</div><div class="line">$ node build.js</div></pre></td></tr></table></figure>
 <p>这些定义在package.json里面的脚本，就称为 npm 脚本。它的优点很多。<br>项目的相关脚本，可以集中在一个地方。<br>不同项目的脚本命令，只要功能相同，就可以有同样的对外接口。用户不需要知道怎么测试你的项目，只要运行npm run test即可。<br>可以利用 npm 提供的很多辅助功能。<br>查看当前项目的所有 npm 脚本命令，可以使用不带任何参数的npm run命令。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run</div></pre></td></tr></table></figure>
@@ -254,7 +254,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-13T12:11:33.706Z" itemprop="dateUpdated">2017年2月13日 20:11</time>
+    最后更新时间：<time datetime="2017-02-13T12:13:25.113Z" itemprop="dateUpdated">2017年2月13日 20:13</time>
 </span><br>
 
 
