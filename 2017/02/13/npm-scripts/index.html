@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>npm scripts 使用指南 | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,npm,Nodejs,js">
+    <meta name="description" content="#npm scripts 使用指南
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。本文介绍如何使用 npm 脚本（npm scripts）。
+
+一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
+123456&amp;#123;  // ...  &quot;scripts&quot;: &amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm scripts 使用指南">
+<meta property="og:url" content="http://microzz.com/2017/02/13/npm-scripts/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="#npm scripts 使用指南
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。本文介绍如何使用 npm 脚本（npm scripts）。
+
+一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
+123456&amp;#123;  // ...  &quot;scripts&quot;: &amp;#12">
+<meta property="og:updated_time" content="2017-02-13T12:09:21.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="npm scripts 使用指南">
+<meta name="twitter:description" content="#npm scripts 使用指南
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。本文介绍如何使用 npm 脚本（npm scripts）。
+
+一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
+123456&amp;#123;  // ...  &quot;scripts&quot;: &amp;#12">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">npm scripts 使用指南</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">npm scripts 使用指南</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-13T11:51:28.000Z" itemprop="datePublished" class="page-time">
+  2017-02-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、什么是-npm-脚本？"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、什么是 npm 脚本？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、原理"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、通配符"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、通配符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、传参"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、传参</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、执行顺序"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、执行顺序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#六、默认值"><span class="post-toc-number">6.</span> <span class="post-toc-text">六、默认值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#七、钩子"><span class="post-toc-number">7.</span> <span class="post-toc-text">七、钩子</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#八、简写形式"><span class="post-toc-number">8.</span> <span class="post-toc-text">八、简写形式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#九、变量"><span class="post-toc-number">9.</span> <span class="post-toc-text">九、变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#十、常用脚本示例"><span class="post-toc-number">10.</span> <span class="post-toc-text">十、常用脚本示例</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-npm-scripts"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">npm scripts 使用指南</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年02月13日 19:51" datetime="2017-02-13T11:51:28.000Z"  itemprop="datePublished">2017-02-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>#npm scripts 使用指南</p>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。<br>本文介绍如何使用 npm 脚本（npm scripts）。</p>
+</blockquote>
+<h2 id="一、什么是-npm-脚本？"><a href="#一、什么是-npm-脚本？" class="headerlink" title="一、什么是 npm 脚本？"></a>一、什么是 npm 脚本？</h2><p>npm 允许在package.json文件里面，使用scripts字段定义脚本命令。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  // ...</div><div class="line">  "scripts": &#123;</div><div class="line">    "build": "node build.js"</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码是package.json文件的一个片段，里面的scripts字段是一个对象。它的每一个属性，对应一段脚本。比如，build命令对应的脚本是node build.js。<br>命令行下使用npm run命令，就可以执行这段脚本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm run build</div><div class="line"># 等同于执行</div><div class="line">$ node build.js</div></pre></td></tr></table></figure>
+<p>这些定义在package.json里面的脚本，就称为 npm 脚本。它的优点很多。<br>项目的相关脚本，可以集中在一个地方。<br>不同项目的脚本命令，只要功能相同，就可以有同样的对外接口。用户不需要知道怎么测试你的项目，只要运行npm run test即可。<br>可以利用 npm 提供的很多辅助功能。<br>查看当前项目的所有 npm 脚本命令，可以使用不带任何参数的npm run命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run</div></pre></td></tr></table></figure>
+<h2 id="二、原理"><a href="#二、原理" class="headerlink" title="二、原理"></a>二、原理</h2><p>npm 脚本的原理非常简单。每当执行npm run，就会自动新建一个 Shell，在这个 Shell 里面执行指定的脚本命令。因此，只要是 Shell（一般是 Bash）可以运行的命令，就可以写在 npm 脚本里面。<br>比较特别的是，npm run新建的这个 Shell，会将当前目录的node_modules/.bin子目录加入PATH变量，执行结束后，再将PATH变量恢复原样。<br>这意味着，当前目录的node_modules/.bin子目录里面的所有脚本，都可以直接用脚本名调用，而不必加上路径。比如，当前项目的依赖里面有 Mocha，只要直接写mocha test就可以了。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "mocha test"</div></pre></td></tr></table></figure>
+<p>而不用写成下面这样。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "./node_modules/.bin/mocha test"</div></pre></td></tr></table></figure>
+<p>由于 npm 脚本的唯一要求就是可以在 Shell 执行，因此它不一定是 Node 脚本，任何可执行文件都可以写在里面。<br>npm 脚本的退出码，也遵守 Shell 脚本规则。如果退出码不是0，npm 就认为这个脚本执行失败。</p>
+<h2 id="三、通配符"><a href="#三、通配符" class="headerlink" title="三、通配符"></a>三、通配符</h2><p>由于 npm 脚本就是 Shell 脚本，因此可以使用 Shell 通配符。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"lint": "jshint *.js"</div><div class="line">"lint": "jshint **/*.js"</div></pre></td></tr></table></figure>
+<p>上面代码中，<em>表示任意文件名，*</em>表示任意一层子目录。<br>如果要将通配符传入原始命令，防止被 Shell 转义，要将星号转义。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"test": "tap test/\*.js"</div></pre></td></tr></table></figure>
+<h2 id="四、传参"><a href="#四、传参" class="headerlink" title="四、传参"></a>四、传参</h2><p>向 npm 脚本传入参数，要使用–标明。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">"lint": "jshint **.js"</div></pre></td></tr></table></figure>
+<p>向上面的npm run lint命令传入参数，必须写成下面这样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run lint --  --reporter checkstyle &gt; checkstyle.xml</div></pre></td></tr></table></figure>
+<p>也可以在package.json里面再封装一个命令。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"lint": "jshint **.js",</div><div class="line">"lint:checkstyle": "npm run lint -- --reporter checkstyle &gt; checkstyle.xml"</div></pre></td></tr></table></figure>
+<h2 id="五、执行顺序"><a href="#五、执行顺序" class="headerlink" title="五、执行顺序"></a>五、执行顺序</h2><p>如果 npm 脚本里面需要执行多个任务，那么需要明确它们的执行顺序。<br>如果是并行执行（即同时的平行执行），可以使用&amp;符号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run script1.js &amp; npm run script2.js</div></pre></td></tr></table></figure>
+<p>如果是继发执行（即只有前一个任务成功，才执行下一个任务），可以使用&amp;&amp;符号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run script1.js &amp;&amp; npm run script2.js</div></pre></td></tr></table></figure>
+<p>这两个符号是 Bash 的功能。此外，还可以使用 node 的任务管理模块：script-runner、npm-run-all、redrun。</p>
+<h2 id="六、默认值"><a href="#六、默认值" class="headerlink" title="六、默认值"></a>六、默认值</h2><p>一般来说，npm 脚本由用户提供。但是，npm 对两个脚本提供了默认值。也就是说，这两个脚本不用定义，就可以直接使用。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"start": "node server.js"，</div><div class="line">"install": "node-gyp rebuild"</div></pre></td></tr></table></figure>
+<p>上面代码中，<code>npm run start</code>的默认值是node server.js，前提是项目根目录下有server.js这个脚本；<code>npm run install</code>的默认值是<code>node-gyp rebuild</code>，前提是项目根目录下有binding.gyp文件。</p>
+<h2 id="七、钩子"><a href="#七、钩子" class="headerlink" title="七、钩子"></a>七、钩子</h2><p>npm 脚本有pre和post两个钩子。举例来说，build脚本命令的钩子就是prebuild和postbuild。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"prebuild": "echo I run before the build script",</div><div class="line">"build": "cross-env NODE_ENV=production webpack",</div><div class="line">"postbuild": "echo I run after the build script"</div></pre></td></tr></table></figure>
+<p>用户执行<code>npm run build</code>的时候，会自动按照下面的顺序执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run prebuild &amp;&amp; npm run build &amp;&amp; npm run postbuild</div></pre></td></tr></table></figure>
+<p>因此，可以在这两个钩子里面，完成一些准备工作和清理工作。下面是一个例子。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"clean": "rimraf ./dist &amp;&amp; mkdir dist",</div><div class="line">"prebuild": "npm run clean",</div><div class="line">"build": "cross-env NODE_ENV=production webpack"</div></pre></td></tr></table></figure>
+<p>npm 默认提供下面这些钩子。</p>
+<blockquote>
+<p>prepublish，postpublish<br>preinstall，postinstall<br>preuninstall，postuninstall<br>preversion，postversion<br>pretest，posttest<br>prestop，poststop<br>prestart，poststart<br>prerestart，postrestart</p>
+</blockquote>
+<p>自定义的脚本命令也可以加上pre和post钩子。比如，myscript这个脚本命令，也有premyscript和postmyscript钩子。不过，双重的pre和post无效，比如prepretest和postposttest是无效的。<br>npm 提供一个npm_lifecycle_event变量，返回当前正在运行的脚本名称，比如pretest、test、posttest等等。所以，可以利用这个变量，在同一个脚本文件里面，为不同的npm scripts命令编写代码。请看下面的例子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> TARGET = process.env.npm_lifecycle_event;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'test'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the test task!`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'pretest'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the pretest task!`</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (TARGET === <span class="string">'posttest'</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">`Running the posttest task!`</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，prepublish这个钩子不仅会在npm publish命令之前运行，还会在npm install（不带任何参数）命令之前运行。这种行为很容易让用户感到困惑，所以 npm 4 引入了一个新的钩子prepare，行为等同于prepublish，而从 npm 5 开始，prepublish将只在npm publish命令之前运行。</p>
+<h2 id="八、简写形式"><a href="#八、简写形式" class="headerlink" title="八、简写形式"></a>八、简写形式</h2><p>四个常用的 npm 脚本有简写形式。<br>npm start是npm run start<br>npm stop是npm run stop的简写<br>npm test是npm run test的简写<br>npm restart是npm run stop &amp;&amp; npm run restart &amp;&amp; npm run start的简写<br>npm start、npm stop和npm restart都比较好理解，而npm restart是一个复合命令，实际上会执行三个脚本命令：stop、restart、start。具体的执行顺序如下。<br>prerestart<br>prestop<br>stop<br>poststop<br>restart<br>prestart<br>start<br>poststart<br>postrestart</p>
+<h2 id="九、变量"><a href="#九、变量" class="headerlink" title="九、变量"></a>九、变量</h2><p>npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变量。<br>首先，通过npm<em>package</em>前缀，npm 脚本可以拿到package.json里面的字段。比如，下面是一个package.json。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"foo"</span>, </div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.2.5"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"view"</span>: <span class="string">"node view.js"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那么，变量npm_package_name返回foo，变量npm_package_version返回1.2.5。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// view.js</span></div><div class="line"><span class="built_in">console</span>.log(process.env.npm_package_name); <span class="comment">// foo</span></div><div class="line"><span class="built_in">console</span>.log(process.env.npm_package_version); <span class="comment">// 1.2.5</span></div></pre></td></tr></table></figure>
+<p>上面代码中，我们通过环境变量process.env对象，拿到package.json的字段值。如果是 Bash 脚本，可以用\$npm_package_name和$npm_package_version取到这两个值。<br>npm<em>package</em>前缀也支持嵌套的package.json字段。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">"repository": &#123;</div><div class="line">  "type": "git",</div><div class="line">  "url": "xxx"</div><div class="line">&#125;,</div><div class="line">scripts: &#123;</div><div class="line">  "view": "echo $npm_package_repository_type"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码中，repository字段的type属性，可以通过npm_package_repository_type取到。<br>下面是另外一个例子。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">"scripts": &#123;</div><div class="line">  "install": "foo.js"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码中，npm_package_scripts_install变量的值等于foo.js。<br>然后，npm 脚本还可以通过npm<em>config</em>前缀，拿到 npm 的配置变量，即npm config get xxx命令返回的值。比如，当前模块的发行标签，可以通过npm_config_tag取到。</p>
+<p>“view”: “echo $npm_config_tag”,<br>注意，package.json里面的config对象，可以被环境变量覆盖。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123; </div><div class="line">  <span class="attr">"name"</span> : <span class="string">"foo"</span>,</div><div class="line">  <span class="attr">"config"</span> : &#123; <span class="attr">"port"</span> : <span class="string">"8080"</span> &#125;,</div><div class="line">  <span class="attr">"scripts"</span> : &#123; <span class="attr">"start"</span> : <span class="string">"node server.js"</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码中，npm_package_config_port变量返回的是8080。这个值可以用下面的方法覆盖。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm config set foo:port 80</div></pre></td></tr></table></figure>
+<p>最后，env命令可以列出所有环境变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"env"</span>: <span class="string">"env"</span></div></pre></td></tr></table></figure>
+<h2 id="十、常用脚本示例"><a href="#十、常用脚本示例" class="headerlink" title="十、常用脚本示例"></a>十、常用脚本示例</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// 删除目录</div><div class="line">"clean": "rimraf dist/*",</div><div class="line"></div><div class="line">// 本地搭建一个 HTTP 服务</div><div class="line">"serve": "http-server -p 9090 dist/",</div><div class="line"></div><div class="line">// 打开浏览器</div><div class="line">"open:dev": "opener http://localhost:9090",</div><div class="line"></div><div class="line">// 实时刷新</div><div class="line"> "livereload": "live-reload --port 9091 dist/",</div><div class="line"></div><div class="line">// 构建 HTML 文件</div><div class="line">"build:html": "jade index.jade &gt; dist/index.html",</div><div class="line"></div><div class="line">// 只要 CSS 文件有变动，就重新执行构建</div><div class="line">"watch:css": "watch 'npm run build:css' assets/styles/",</div><div class="line"></div><div class="line">// 只要 HTML 文件有变动，就重新执行构建</div><div class="line">"watch:html": "watch 'npm run build:html' assets/html",</div><div class="line"></div><div class="line">// 部署到 Amazon S3</div><div class="line">"deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",</div><div class="line"></div><div class="line">// 构建 favicon</div><div class="line">"build:favicon": "node scripts/favicon.js",</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-13T12:09:21.786Z" itemprop="dateUpdated">2017年2月13日 20:09</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/02/13/npm-scripts/" target="_blank" rel="external">http://microzz.com/2017/02/13/npm-scripts/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/13/npm-scripts/&title=《npm scripts 使用指南》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/13/npm-scripts/&title=《npm scripts 使用指南》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/13/npm-scripts/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《npm scripts 使用指南》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/13/npm-scripts/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/13/npm-scripts/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/12/mac-shell/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Mac 终端命令大全 (Shell)</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="npm-scripts" data-title="npm scripts 使用指南" data-url="http://microzz.com/2017/02/13/npm-scripts/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/13/npm-scripts/&title=《npm scripts 使用指南》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/13/npm-scripts/&title=《npm scripts 使用指南》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/13/npm-scripts/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《npm scripts 使用指南》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/13/npm-scripts/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/13/npm-scripts/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aS27DMAwFwN7/0uk2QGH1kbQUBxitgkSwxlkQ/OjnJ16vi/X31/dv1r++f3PzwsXFHXNfy7U+YA3NdyYGXFzc89yrA6qBqbpyAy4u7rdw18nKVeBbf8bFxf1GbjWVqaY7uLi4z+HmKUieuPQaK7fVari4uANu3qXc93lLfxcXF7fFnbQw9jVKLk/HxcU9ws0DSl6u9AJifi4uLu4Zbq/8SAqk3vWLqPjBxcXdxk3amsn1i/me6C/DxcU9wk2SiXygkjwhH8P8kwzh4uJu4+ZpSm8Em7/eej8uLu5Jbl7S3Ht5q/dMXFzcz3Lng9jqnt6L4eLi7uAmiUU16OSlTv4cXFzcp3GTAFQYjk6GLri4uEe4eUDpHTyvWQrFDy4u7q3cavqStDgLiUswdIkuYeDi4h7hVo/ZV0Th4uJ+ipsMP6pj1C2NV1xc3M3cV3ElgWa9v1pc4eLinudWg0teAk3apvkTcHFx93GrKU4epKql0Q2JDi4u7q3c3pikGuAml7dwcXGfzK1C5+1UXFzc53Orl7TmbdPmTBgXF3fMzYPRpMGaJz24uLif5fYGn720ZjJuwcXFPcL9BYwRmnnlisOMAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
