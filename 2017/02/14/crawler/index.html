@@ -44,7 +44,7 @@ https
 
 
 
-123456789101112131415161718192021222324252627282930313233343536373839// 引入模块const https">
+代码实现1234567891011121314151617181920212223242526272829303132333435363738394041// 引入模块con">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js实现一个小爬虫">
 <meta property="og:url" content="http://microzz.com/2017/02/14/crawler/index.html">
@@ -68,8 +68,8 @@ https
 
 
 
-123456789101112131415161718192021222324252627282930313233343536373839// 引入模块const https">
-<meta property="og:updated_time" content="2017-02-14T08:57:45.365Z">
+代码实现1234567891011121314151617181920212223242526272829303132333435363738394041// 引入模块con">
+<meta property="og:updated_time" content="2017-02-14T09:01:53.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js实现一个小爬虫">
 <meta name="twitter:description" content="Node.js实现一个小爬虫分析本示例采用ES6写法。我们需要引入如下模块：
@@ -91,7 +91,7 @@ https
 
 
 
-123456789101112131415161718192021222324252627282930313233343536373839// 引入模块const https">
+代码实现1234567891011121314151617181920212223242526272829303132333435363738394041// 引入模块con">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -205,7 +205,7 @@ https
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>快捷导航</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Node-js实现一个小爬虫"><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js实现一个小爬虫</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">分析</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Node-js实现一个小爬虫"><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js实现一个小爬虫</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">代码实现</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -249,7 +249,7 @@ https
 </tr>
 </tbody>
 </table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 引入模块</span></div><div class="line"><span class="keyword">const</span> https = <span class="built_in">require</span>(<span class="string">'https'</span>);</div><div class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 爬取目标网站URL</span></div><div class="line"><span class="keyword">let</span> url = <span class="string">'https://microzz.com'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 使用get方法访问</span></div><div class="line">https.get(url, res =&gt; &#123;</div><div class="line">  <span class="keyword">let</span> html = <span class="string">''</span>;</div><div class="line"></div><div class="line">  res.on(<span class="string">'data'</span>, data =&gt; &#123;</div><div class="line">    html += data;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  res.on(<span class="string">'end'</span>, () =&gt; &#123;</div><div class="line">    <span class="keyword">let</span> titles = filterData(html);</div><div class="line">    <span class="built_in">console</span>.log(titles);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;).on(<span class="string">'error'</span>, e =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(e.message);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用cheerio模块对内容进行筛选过滤</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterData</span>(<span class="params">html</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> $ = cheerio.load(html);</div><div class="line">  <span class="keyword">let</span> oTitles = $(<span class="string">'.post-title-link'</span>);</div><div class="line">  <span class="keyword">let</span> titles = <span class="string">''</span>;</div><div class="line"></div><div class="line">  oTitles.each( <span class="function">(<span class="params">index, item</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> title = $(item).text();</div><div class="line">    <span class="keyword">let</span> end = index == (oTitles.length - <span class="number">1</span>) ? <span class="string">''</span> : <span class="string">'\n'</span>;</div><div class="line">    titles += <span class="string">'【'</span> + (index+<span class="number">1</span>) + <span class="string">'】'</span> + title + end;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> titles;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 引入模块</span></div><div class="line"><span class="keyword">const</span> https = <span class="built_in">require</span>(<span class="string">'https'</span>);</div><div class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 爬取目标网站URL</span></div><div class="line"><span class="keyword">let</span> url = <span class="string">'https://microzz.com'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 使用get方法访问</span></div><div class="line">https.get(url, res =&gt; &#123;</div><div class="line">  <span class="keyword">let</span> html = <span class="string">''</span>;</div><div class="line">  </div><div class="line">  <span class="comment">// 监听data事件获取html源码</span></div><div class="line">  res.on(<span class="string">'data'</span>, data =&gt; &#123;</div><div class="line">    html += data;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line"> <span class="comment">// 监听end事件，同时把获取到的数据传给filterData方法进行过滤</span></div><div class="line">  res.on(<span class="string">'end'</span>, () =&gt; &#123;</div><div class="line">    <span class="keyword">let</span> titles = filterData(html);</div><div class="line">    <span class="built_in">console</span>.log(titles);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;).on(<span class="string">'error'</span>, e =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(e.message);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用cheerio模块对内容进行筛选过滤</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterData</span>(<span class="params">html</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> $ = cheerio.load(html);</div><div class="line">  <span class="keyword">let</span> oTitles = $(<span class="string">'.post-title-link'</span>);</div><div class="line">  <span class="keyword">let</span> titles = <span class="string">''</span>;</div><div class="line"></div><div class="line">  oTitles.each( <span class="function">(<span class="params">index, item</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> title = $(item).text();</div><div class="line">    <span class="keyword">let</span> end = index == (oTitles.length - <span class="number">1</span>) ? <span class="string">''</span> : <span class="string">'\n'</span>;</div><div class="line">    titles += <span class="string">'【'</span> + (index+<span class="number">1</span>) + <span class="string">'】'</span> + title + end;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> titles;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
         </div>
 
@@ -257,7 +257,7 @@ https
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-14T08:57:45.365Z" itemprop="dateUpdated">2017年2月14日 16:57</time>
+    最后更新时间：<time datetime="2017-02-14T09:01:53.694Z" itemprop="dateUpdated">2017年2月14日 17:01</time>
 </span><br>
 
 
