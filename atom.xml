@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-13T12:23:32.975Z</updated>
+  <updated>2017-02-14T08:52:56.769Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.js实现一个小爬虫</title>
+    <link href="http://microzz.com/2017/02/14/crawler/"/>
+    <id>http://microzz.com/2017/02/14/crawler/</id>
+    <published>2017-02-14T08:33:13.000Z</published>
+    <updated>2017-02-14T08:52:56.769Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js实现一个小爬虫"><a href="#Node-js实现一个小爬虫" class="headerlink" title="Node.js实现一个小爬虫"></a>Node.js实现一个小爬虫</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>本示例采用ES6写法。我们需要引入如下模块：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模块名</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cheerio</td>
+<td style="text-align:center">类似jQuery，方便对DOM内容操作</td>
+</tr>
+<tr>
+<td style="text-align:center">https</td>
+<td style="text-align:center">针对https协议，http模块用法类似</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> https = <span class="built_in">require</span>(<span class="string">'https'</span>);</div><div class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</div><div class="line"><span class="keyword">let</span> url = <span class="string">'https://microzz.com'</span>;</div><div class="line"></div><div class="line">https.get(url, res =&gt; &#123;</div><div class="line">  <span class="keyword">let</span> html = <span class="string">''</span>;</div><div class="line"></div><div class="line">  res.on(<span class="string">'data'</span>, data =&gt; &#123;</div><div class="line">    html += data;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  res.on(<span class="string">'end'</span>, () =&gt; &#123;</div><div class="line">    <span class="keyword">let</span> titles = filterData(html);</div><div class="line">    <span class="built_in">console</span>.log(titles);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;).on(<span class="string">'error'</span>, e =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(e.message);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterData</span>(<span class="params">html</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> $ = cheerio.load(html);</div><div class="line">  <span class="keyword">let</span> oTitles = $(<span class="string">'.post-title-link'</span>);</div><div class="line">  <span class="keyword">let</span> titles = <span class="string">''</span>;</div><div class="line"></div><div class="line">  oTitles.each( <span class="function">(<span class="params">index, item</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> title = $(item).text();</div><div class="line">    <span class="keyword">let</span> end = index == (oTitles.length - <span class="number">1</span>) ? <span class="string">''</span> : <span class="string">'\n'</span>;</div><div class="line">    titles += <span class="string">'【'</span> + (index+<span class="number">1</span>) + <span class="string">'】'</span> + title + end;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> titles;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Node-js实现一个小爬虫&quot;&gt;&lt;a href=&quot;#Node-js实现一个小爬虫&quot; class=&quot;headerlink&quot; title=&quot;Node.js实现一个小爬虫&quot;&gt;&lt;/a&gt;Node.js实现一个小爬虫&lt;/h1&gt;&lt;h2 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot;
+    
+    </summary>
+    
+    
+      <category term="ECMAScript6" scheme="http://microzz.com/tags/ECMAScript6/"/>
+    
+      <category term="ES6" scheme="http://microzz.com/tags/ES6/"/>
+    
+      <category term="nodejs" scheme="http://microzz.com/tags/nodejs/"/>
+    
+      <category term="爬虫" scheme="http://microzz.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="js" scheme="http://microzz.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>npm scripts 使用指南</title>
@@ -97,11 +145,11 @@
     
       <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
     
+      <category term="js" scheme="http://microzz.com/tags/js/"/>
+    
       <category term="npm" scheme="http://microzz.com/tags/npm/"/>
     
       <category term="Nodejs" scheme="http://microzz.com/tags/Nodejs/"/>
-    
-      <category term="js" scheme="http://microzz.com/tags/js/"/>
     
   </entry>
   

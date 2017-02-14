@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Node.js实现一个小爬虫 | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="ECMAScript6,ES6,nodejs,爬虫,js">
+    <meta name="description" content="Node.js实现一个小爬虫分析本示例采用ES6写法。我们需要引入如下模块：
+
+
+
+模块名
+作用
+
+
+
+
+cheerio
+类似jQuery，方便对DOM内容操作
+
+
+https
+针对https协议，http模块用法类似
+
+
+
+12345678910111213141516171819202122232425262728293031323334const https = require(&apos;https">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js实现一个小爬虫">
+<meta property="og:url" content="http://microzz.com/2017/02/14/crawler/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="Node.js实现一个小爬虫分析本示例采用ES6写法。我们需要引入如下模块：
+
+
+
+模块名
+作用
+
+
+
+
+cheerio
+类似jQuery，方便对DOM内容操作
+
+
+https
+针对https协议，http模块用法类似
+
+
+
+12345678910111213141516171819202122232425262728293031323334const https = require(&apos;https">
+<meta property="og:updated_time" content="2017-02-14T08:52:56.769Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js实现一个小爬虫">
+<meta name="twitter:description" content="Node.js实现一个小爬虫分析本示例采用ES6写法。我们需要引入如下模块：
+
+
+
+模块名
+作用
+
+
+
+
+cheerio
+类似jQuery，方便对DOM内容操作
+
+
+https
+针对https协议，http模块用法类似
+
+
+
+12345678910111213141516171819202122232425262728293031323334const https = require(&apos;https">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Node.js实现一个小爬虫</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Node.js实现一个小爬虫</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-14T08:33:13.000Z" itemprop="datePublished" class="page-time">
+  2017-02-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Node-js实现一个小爬虫"><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js实现一个小爬虫</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">分析</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-crawler"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Node.js实现一个小爬虫</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年02月14日 16:33" datetime="2017-02-14T08:33:13.000Z"  itemprop="datePublished">2017-02-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Node-js实现一个小爬虫"><a href="#Node-js实现一个小爬虫" class="headerlink" title="Node.js实现一个小爬虫"></a>Node.js实现一个小爬虫</h1><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>本示例采用ES6写法。我们需要引入如下模块：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模块名</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cheerio</td>
+<td style="text-align:center">类似jQuery，方便对DOM内容操作</td>
+</tr>
+<tr>
+<td style="text-align:center">https</td>
+<td style="text-align:center">针对https协议，http模块用法类似</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> https = <span class="built_in">require</span>(<span class="string">'https'</span>);</div><div class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</div><div class="line"><span class="keyword">let</span> url = <span class="string">'https://microzz.com'</span>;</div><div class="line"></div><div class="line">https.get(url, res =&gt; &#123;</div><div class="line">  <span class="keyword">let</span> html = <span class="string">''</span>;</div><div class="line"></div><div class="line">  res.on(<span class="string">'data'</span>, data =&gt; &#123;</div><div class="line">    html += data;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  res.on(<span class="string">'end'</span>, () =&gt; &#123;</div><div class="line">    <span class="keyword">let</span> titles = filterData(html);</div><div class="line">    <span class="built_in">console</span>.log(titles);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;).on(<span class="string">'error'</span>, e =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(e.message);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterData</span>(<span class="params">html</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> $ = cheerio.load(html);</div><div class="line">  <span class="keyword">let</span> oTitles = $(<span class="string">'.post-title-link'</span>);</div><div class="line">  <span class="keyword">let</span> titles = <span class="string">''</span>;</div><div class="line"></div><div class="line">  oTitles.each( <span class="function">(<span class="params">index, item</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> title = $(item).text();</div><div class="line">    <span class="keyword">let</span> end = index == (oTitles.length - <span class="number">1</span>) ? <span class="string">''</span> : <span class="string">'\n'</span>;</div><div class="line">    titles += <span class="string">'【'</span> + (index+<span class="number">1</span>) + <span class="string">'】'</span> + title + end;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> titles;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-14T08:52:56.769Z" itemprop="dateUpdated">2017年2月14日 16:52</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/02/14/crawler/" target="_blank" rel="external">http://microzz.com/2017/02/14/crawler/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/爬虫/">爬虫</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/14/crawler/&title=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/14/crawler/&title=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/14/crawler/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/14/crawler/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/14/crawler/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/13/npm-scripts/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">npm scripts 使用指南</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="crawler" data-title="Node.js实现一个小爬虫" data-url="http://microzz.com/2017/02/14/crawler/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/14/crawler/&title=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/14/crawler/&title=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/14/crawler/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js实现一个小爬虫》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/14/crawler/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/14/crawler/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB0UlEQVR42u3aQW7DMAwF0dz/0u62QCp1PmkqbjFaGWlqPWVBUCRfL7yut/X9c/K8/+TmJVeu3Db32i7+nXfoapf9kfbvlytX7knuaoM0MK0OQH6OvUGuXLnP5/LwlL5Trly5/4O7T2XSdEeuXLnP4fIUhGzDrzeDdzW5cuU2uLxKOfc8Ut+VK1duiXuFi6csnV2Wu8uVK/cIlweUNCkhjZbavnLlyp3mpi0QPpDRGb/4JYTJlSt3mEtKGP0LTAeKhjDkypU7wO1cfnjYSoe3lm+QK1fuMDcdk9oHo05QI4mUXLlyz3Br7U+emnQuP/H4hVy5cm/i1v4tCDpk0IoXWeTKlXuEmzZL0uImOUBalJErV+40t5Z2FKsvpRD5Q9yVK1fuMJcXQDvlj/SvwTflypU7xuWpCW+x1PKsoGAqV67cI1w+YJEWWPklCh1Mrly5B7m1Aax0SOu2LEyuXLlj3CtcZBteeE3fL1eu3DPcNLjsryvpwBYPlPFh5MqV2+aS4FV75i3YoCwrV67cg9xOK3SuDYPqu3Llyn0AtxZV+o0ZuXLl/i0uH+uslU1vDmRy5crFXN46TZuptaRHrly5n+XWGp98RIOENv4zyZUrd5j7Bee9mnkeGqXFAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
