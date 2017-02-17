@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>【瀑布流布局】原生JavaScript实现瀑布流布局 | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,JS,waterfall,瀑布流">
+    <meta name="description" content="【瀑布流布局】原生JavaScript实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【瀑布流布局】原生JavaScript实现瀑布流布局">
+<meta property="og:url" content="http://microzz.com/2017/02/17/waterfalljs/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="【瀑布流布局】原生JavaScript实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯">
+<meta property="og:updated_time" content="2017-02-17T09:46:35.727Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【瀑布流布局】原生JavaScript实现瀑布流布局">
+<meta name="twitter:description" content="【瀑布流布局】原生JavaScript实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【瀑布流布局】原生JavaScript实现瀑布流布局</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【瀑布流布局】原生JavaScript实现瀑布流布局</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-17T09:35:03.000Z" itemprop="datePublished" class="page-time">
+  2017-02-17
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#【瀑布流布局】原生JavaScript实现一个瀑布流布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">【瀑布流布局】原生JavaScript实现一个瀑布流布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">瀑布流布局概念</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局特点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">瀑布流布局特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">代码实现</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果预览"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">效果预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局优缺点"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">瀑布流布局优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局优点"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">布局优点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局缺点"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">布局缺点</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-waterfalljs"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【瀑布流布局】原生JavaScript实现瀑布流布局</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年02月17日 17:35" datetime="2017-02-17T09:35:03.000Z"  itemprop="datePublished">2017-02-17</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="【瀑布流布局】原生JavaScript实现一个瀑布流布局"><a href="#【瀑布流布局】原生JavaScript实现一个瀑布流布局" class="headerlink" title="【瀑布流布局】原生JavaScript实现一个瀑布流布局"></a>【瀑布流布局】原生JavaScript实现一个瀑布流布局</h1><h2 id="瀑布流布局概念"><a href="#瀑布流布局概念" class="headerlink" title="瀑布流布局概念"></a>瀑布流布局概念</h2><p>瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。</p>
+<h2 id="瀑布流布局特点"><a href="#瀑布流布局特点" class="headerlink" title="瀑布流布局特点"></a>瀑布流布局特点</h2><ol>
+<li>琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。</li>
+<li>唯美：图片的风格以唯美的图片为主。</li>
+<li>操作简单：在浏览网站的时候只需要轻轻滑动一下鼠标滚轮，一切的美妙的图片精彩便可呈现在你面前。</li>
+</ol>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>源代码地址：🔗<a href="https://github.com/microzz/waterfall-js" target="_blank" rel="external">https://github.com/microzz/waterfall-js</a></p>
+<h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p> 在线预览地址1： 🔗<a href="http://microzz.cn/waterfall/" target="_blank" rel="external">http://microzz.cn/waterfall/</a><br> 在线预览地址2： 🔗<a href="https://microzz.github.io/waterfall-js/" target="_blank" rel="external">https://microzz.github.io/waterfall-js/</a></p>
+<h2 id="瀑布流布局优缺点"><a href="#瀑布流布局优缺点" class="headerlink" title="瀑布流布局优缺点"></a>瀑布流布局优缺点</h2><h3 id="布局优点"><a href="#布局优点" class="headerlink" title="布局优点"></a>布局优点</h3><ol>
+<li>有效的降低了界面复杂度，节省了空间：我们不再需要臃肿复杂的页码导航链接或按钮了。</li>
+<li>对触屏设备来说，交互方式更符合直觉：在移动应用的交互环境当中，通过向上滑动进行滚屏的操作已经成为最基本的用户习惯，而且所需要的操作精准程度远远低于点击链接或按钮。</li>
+<li>更高的参与度：以上两点所带来的交互便捷性可以使用户将注意力更多的集中在内容而不是操作上，从而让他们更乐于沉浸在探索与浏览当中。<h3 id="布局缺点"><a href="#布局缺点" class="headerlink" title="布局缺点"></a>布局缺点</h3></li>
+<li>有限的用例：<br>无限滚动的方式只适用于某些特定类型产品当中一部分特定类型的内容。<br>例如，在电商网站当中，用户时常需要在商品列表与详情页面之间切换，这种情况下，传统的、带有页码导航的方式可以帮助用户更稳妥和准确的回到某个特定的列表页面当中。</li>
+<li>额外的复杂度：<br>那些用来打造无限滚动的JS库虽然都自称很容易使用，但你总会需要在自己的产品中进行不同程度的定制化处理，以满足你们自己的需求;另外这些JS库在浏览器和设备兼容性等方面的表现也参差不齐，你必须做好充分的测试与调整工作。</li>
+<li>再见了，页脚：<br>如果使用了比较典型的无限滚动加载模式，这就意味着你可以和页脚说拜拜了。<br>最好考虑一下页脚对于你的网站，特别是用户的重要性;如果其中确实有比较重要的内容或链接，那么最好换一种更传统和稳妥的方式。<br>千万不要耍弄你的用户，当他们一次次的浏览到页面底部，看到页脚，却因为自动加载的内容突然出现而无论如何都无法点击页脚中的链接时，他们会变的越发愤怒。</li>
+<li>SEO：<br>集中在一页当中动态加载数据，与一页一页的输出相比，究竟那种方式更利于SEO，这是你必须考虑的问题。对于某些以类型网站来说，在这方面进行冒险是很不划算的。</li>
+<li>关于页面数量的印象：<br>其实站在用户的角度来看，这一点并非负面;不过，如果对于你的网站来说，通过更多的内容页面展示更多的相关信息(包括广告)是很重要的策略，那么单页无限滚动的方式对你并不适用。</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-17T09:46:35.727Z" itemprop="dateUpdated">2017年2月17日 17:46</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/02/17/waterfalljs/" target="_blank" rel="external">http://microzz.com/2017/02/17/waterfalljs/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/waterfall/">waterfall</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瀑布流/">瀑布流</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/17/waterfalljs/&title=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/17/waterfalljs/&title=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/17/waterfalljs/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/17/waterfalljs/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/17/waterfalljs/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/14/crawler/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Node.js实现一个小爬虫</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="waterfalljs" data-title="【瀑布流布局】原生JavaScript实现瀑布流布局" data-url="http://microzz.com/2017/02/17/waterfalljs/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/02/17/waterfalljs/&title=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/02/17/waterfalljs/&title=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/02/17/waterfalljs/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【瀑布流布局】原生JavaScript实现瀑布流布局》 — 涵月天-microzz.com&url=http://microzz.com/2017/02/17/waterfalljs/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/02/17/waterfalljs/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABz0lEQVR42u3aQY7DIBAEwPz/015pryucbjAkKxWnyBa4yGEEM/N6xeP6HaMn12D8fTt68vDAxcVd5l63o+WO1myfD7eEi4t7kHsfvEaT74PR/az7v2P4HBcX98u4+dt2Fi4u7v/lFgeROJzh4uJ+MzdPbSTcdgNb7mq4uLgL3DZhuuP3xvwuLi5uyb3KkaywXoAZfh0XF/cIN1k0iSR5caUtxtT1Xlxc3Ee5ScEjPwCttF8UdzVcXNwN3KQxog1McytEIQ8XF/cgd64layW12l6r6swuLi7uMnfu2NEeffK0yBCNi4t7kJuHqpUL0lyVpL6l4eLiLnOL3ElwXZkrq0xuGBcXdxs3SYvkDRM5dC7liouLe4abh7M8SOWFk+RbuLi457n55/PEx1wbVhQKcXFxj3BX2iPaGJkXaYr6Dy4u7gbuSkm1Lb6utGjg4uKe5+ZBp222WC+64OLifoo71z61Y6uTlVhcXNxHuW1AaQuucyu0qRlcXNwd3DyV2TZRtetE6+Pi4h7kridGk8NK24pRvMbFxf0Qt23JyouvxZq4uLhfyZ1rz8qD45vDEy4u7kFu3jKVF0fzuUWww8XFPcKdO5TMJVDqwiouLu5p7g9YMbR71F6OOgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-14T09:11:46.450Z</updated>
+  <updated>2017-02-17T09:46:35.727Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【瀑布流布局】原生JavaScript实现瀑布流布局</title>
+    <link href="http://microzz.com/2017/02/17/waterfalljs/"/>
+    <id>http://microzz.com/2017/02/17/waterfalljs/</id>
+    <published>2017-02-17T09:35:03.000Z</published>
+    <updated>2017-02-17T09:46:35.727Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="【瀑布流布局】原生JavaScript实现一个瀑布流布局"><a href="#【瀑布流布局】原生JavaScript实现一个瀑布流布局" class="headerlink" title="【瀑布流布局】原生JavaScript实现一个瀑布流布局"></a>【瀑布流布局】原生JavaScript实现一个瀑布流布局</h1><h2 id="瀑布流布局概念"><a href="#瀑布流布局概念" class="headerlink" title="瀑布流布局概念"></a>瀑布流布局概念</h2><p>瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。</p>
+<h2 id="瀑布流布局特点"><a href="#瀑布流布局特点" class="headerlink" title="瀑布流布局特点"></a>瀑布流布局特点</h2><ol>
+<li>琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。</li>
+<li>唯美：图片的风格以唯美的图片为主。</li>
+<li>操作简单：在浏览网站的时候只需要轻轻滑动一下鼠标滚轮，一切的美妙的图片精彩便可呈现在你面前。</li>
+</ol>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>源代码地址：🔗<a href="https://github.com/microzz/waterfall-js" target="_blank" rel="external">https://github.com/microzz/waterfall-js</a></p>
+<h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p> 在线预览地址1： 🔗<a href="http://microzz.cn/waterfall/" target="_blank" rel="external">http://microzz.cn/waterfall/</a><br> 在线预览地址2： 🔗<a href="https://microzz.github.io/waterfall-js/" target="_blank" rel="external">https://microzz.github.io/waterfall-js/</a></p>
+<h2 id="瀑布流布局优缺点"><a href="#瀑布流布局优缺点" class="headerlink" title="瀑布流布局优缺点"></a>瀑布流布局优缺点</h2><h3 id="布局优点"><a href="#布局优点" class="headerlink" title="布局优点"></a>布局优点</h3><ol>
+<li>有效的降低了界面复杂度，节省了空间：我们不再需要臃肿复杂的页码导航链接或按钮了。</li>
+<li>对触屏设备来说，交互方式更符合直觉：在移动应用的交互环境当中，通过向上滑动进行滚屏的操作已经成为最基本的用户习惯，而且所需要的操作精准程度远远低于点击链接或按钮。</li>
+<li>更高的参与度：以上两点所带来的交互便捷性可以使用户将注意力更多的集中在内容而不是操作上，从而让他们更乐于沉浸在探索与浏览当中。<h3 id="布局缺点"><a href="#布局缺点" class="headerlink" title="布局缺点"></a>布局缺点</h3></li>
+<li>有限的用例：<br>无限滚动的方式只适用于某些特定类型产品当中一部分特定类型的内容。<br>例如，在电商网站当中，用户时常需要在商品列表与详情页面之间切换，这种情况下，传统的、带有页码导航的方式可以帮助用户更稳妥和准确的回到某个特定的列表页面当中。</li>
+<li>额外的复杂度：<br>那些用来打造无限滚动的JS库虽然都自称很容易使用，但你总会需要在自己的产品中进行不同程度的定制化处理，以满足你们自己的需求;另外这些JS库在浏览器和设备兼容性等方面的表现也参差不齐，你必须做好充分的测试与调整工作。</li>
+<li>再见了，页脚：<br>如果使用了比较典型的无限滚动加载模式，这就意味着你可以和页脚说拜拜了。<br>最好考虑一下页脚对于你的网站，特别是用户的重要性;如果其中确实有比较重要的内容或链接，那么最好换一种更传统和稳妥的方式。<br>千万不要耍弄你的用户，当他们一次次的浏览到页面底部，看到页脚，却因为自动加载的内容突然出现而无论如何都无法点击页脚中的链接时，他们会变的越发愤怒。</li>
+<li>SEO：<br>集中在一页当中动态加载数据，与一页一页的输出相比，究竟那种方式更利于SEO，这是你必须考虑的问题。对于某些以类型网站来说，在这方面进行冒险是很不划算的。</li>
+<li>关于页面数量的印象：<br>其实站在用户的角度来看，这一点并非负面;不过，如果对于你的网站来说，通过更多的内容页面展示更多的相关信息(包括广告)是很重要的策略，那么单页无限滚动的方式对你并不适用。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;【瀑布流布局】原生JavaScript实现一个瀑布流布局&quot;&gt;&lt;a href=&quot;#【瀑布流布局】原生JavaScript实现一个瀑布流布局&quot; class=&quot;headerlink&quot; title=&quot;【瀑布流布局】原生JavaScript实现一个瀑布流布局&quot;&gt;&lt;/a&gt;【瀑
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="waterfall" scheme="http://microzz.com/tags/waterfall/"/>
+    
+      <category term="瀑布流" scheme="http://microzz.com/tags/%E7%80%91%E5%B8%83%E6%B5%81/"/>
+    
+  </entry>
   
   <entry>
     <title>Node.js实现一个小爬虫</title>
@@ -58,11 +102,11 @@
     
       <category term="ES6" scheme="http://microzz.com/tags/ES6/"/>
     
+      <category term="Nodejs" scheme="http://microzz.com/tags/Nodejs/"/>
+    
       <category term="爬虫" scheme="http://microzz.com/tags/%E7%88%AC%E8%99%AB/"/>
     
       <category term="js" scheme="http://microzz.com/tags/js/"/>
-    
-      <category term="Nodejs" scheme="http://microzz.com/tags/Nodejs/"/>
     
   </entry>
   
@@ -148,11 +192,11 @@
     
       <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
     
+      <category term="Nodejs" scheme="http://microzz.com/tags/Nodejs/"/>
+    
       <category term="js" scheme="http://microzz.com/tags/js/"/>
     
       <category term="npm" scheme="http://microzz.com/tags/npm/"/>
-    
-      <category term="Nodejs" scheme="http://microzz.com/tags/Nodejs/"/>
     
   </entry>
   
