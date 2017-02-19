@@ -37,7 +37,7 @@
 瀑布流布局特点
 琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
 唯美：图片的风格以唯美的图片为主">
-<meta property="og:updated_time" content="2017-02-19T11:50:06.615Z">
+<meta property="og:updated_time" content="2017-02-19T11:54:41.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3实现一个瀑布流布局">
 <meta name="twitter:description" content="CSS3实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>快捷导航</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS3实现一个瀑布流布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">CSS3实现一个瀑布流布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">瀑布流布局概念</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局特点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">瀑布流布局特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果预览"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">效果预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">代码实现</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果预览-1"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">效果预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局优缺点"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">瀑布流布局优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局优点"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">布局优点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局缺点"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">布局缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关链接"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">相关链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原生JavaScript实现瀑布流布局"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">原生JavaScript实现瀑布流布局</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CSS3实现一个瀑布流布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">CSS3实现一个瀑布流布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">瀑布流布局概念</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局特点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">瀑布流布局特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果预览"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">效果预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">代码实现</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#瀑布流布局优缺点"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">瀑布流布局优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局优点"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">布局优点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局缺点"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">布局缺点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关链接"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">相关链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原生JavaScript实现瀑布流布局"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">原生JavaScript实现瀑布流布局</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -189,8 +189,7 @@
 <li>操作简单：在浏览网站的时候只需要轻轻滑动一下鼠标滚轮，一切的美妙的图片精彩便可呈现在你面前。</li>
 </ol>
 <h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p> 在线预览地址1： 🔗<a href="http://microzz.cn/waterfall-css3/" target="_blank" rel="external">http://microzz.cn/waterfall-css3/</a><br> 在线预览地址2： 🔗<a href="https://microzz.github.io/waterfall-css3/" target="_blank" rel="external">https://microzz.github.io/waterfall-css3/</a></p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>源代码地址：🔗<a href="https://github.com/microzz/waterfall-js" target="_blank" rel="external">https://github.com/microzz/waterfall-js</a></p>
-<h2 id="效果预览-1"><a href="#效果预览-1" class="headerlink" title="效果预览"></a>效果预览</h2><p> 在线预览地址1： 🔗<a href="http://microzz.cn/waterfall/" target="_blank" rel="external">http://microzz.cn/waterfall/</a><br> 在线预览地址2： 🔗<a href="https://github.com/microzz/waterfall-css3" target="_blank" rel="external">https://github.com/microzz/waterfall-css3</a></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>源代码地址：🔗<a href="https://github.com/microzz/waterfall-css3" target="_blank" rel="external">https://github.com/microzz/waterfall-css3</a></p>
 <h2 id="瀑布流布局优缺点"><a href="#瀑布流布局优缺点" class="headerlink" title="瀑布流布局优缺点"></a>瀑布流布局优缺点</h2><h3 id="布局优点"><a href="#布局优点" class="headerlink" title="布局优点"></a>布局优点</h3><ol>
 <li>有效的降低了界面复杂度，节省了空间：我们不再需要臃肿复杂的页码导航链接或按钮了。</li>
 <li>对触屏设备来说，交互方式更符合直觉：在移动应用的交互环境当中，通过向上滑动进行滚屏的操作已经成为最基本的用户习惯，而且所需要的操作精准程度远远低于点击链接或按钮。</li>
@@ -208,7 +207,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-19T11:50:06.615Z" itemprop="dateUpdated">2017年2月19日 19:50</time>
+    最后更新时间：<time datetime="2017-02-19T11:54:41.745Z" itemprop="dateUpdated">2017年2月19日 19:54</time>
 </span><br>
 
 
