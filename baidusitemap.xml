@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/02/17/waterfalljs/</loc>
+    <lastmod>2017-02-20T14:11:36.711Z</lastmod>
+    <data>
+        <display>
+        <title>原生JavaScript实现瀑布流布局</title>
+        <pubTime>2017-02-17T09:35:03.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>waterfall</tag>
+         
+        <tag>瀑布流</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/02/19/waterfallcss3/</loc>
     <lastmod>2017-02-20T14:10:38.466Z</lastmod>
     <data>
@@ -45,29 +68,6 @@
         <tag>瀑布流</tag>
          
         <tag>jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://microzz.com/2017/02/17/waterfalljs/</loc>
-    <lastmod>2017-02-19T11:57:59.495Z</lastmod>
-    <data>
-        <display>
-        <title>原生JavaScript实现瀑布流布局</title>
-        <pubTime>2017-02-17T09:35:03.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>JS</tag>
-         
-        <tag>waterfall</tag>
-         
-        <tag>瀑布流</tag>
          
          
            

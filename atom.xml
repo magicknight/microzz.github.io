@@ -114,7 +114,7 @@
     <link href="http://microzz.com/2017/02/17/waterfalljs/"/>
     <id>http://microzz.com/2017/02/17/waterfalljs/</id>
     <published>2017-02-17T09:35:03.000Z</published>
-    <updated>2017-02-19T11:57:59.495Z</updated>
+    <updated>2017-02-20T14:11:36.711Z</updated>
     
     <content type="html"><![CDATA[<h1 id="原生JavaScript实现一个瀑布流布局"><a href="#原生JavaScript实现一个瀑布流布局" class="headerlink" title="原生JavaScript实现一个瀑布流布局"></a>原生JavaScript实现一个瀑布流布局</h1><h2 id="瀑布流布局概念"><a href="#瀑布流布局概念" class="headerlink" title="瀑布流布局概念"></a>瀑布流布局概念</h2><p>瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。</p>
 <h2 id="瀑布流布局特点"><a href="#瀑布流布局特点" class="headerlink" title="瀑布流布局特点"></a>瀑布流布局特点</h2><ol>
@@ -134,7 +134,7 @@
 <li>SEO：<br>集中在一页当中动态加载数据，与一页一页的输出相比，究竟那种方式更利于SEO，这是你必须考虑的问题。对于某些以类型网站来说，在这方面进行冒险是很不划算的。</li>
 <li>关于页面数量的印象：<br>其实站在用户的角度来看，这一点并非负面;不过，如果对于你的网站来说，通过更多的内容页面展示更多的相关信息(包括广告)是很重要的策略，那么单页无限滚动的方式对你并不适用。</li>
 </ol>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p> <a href="https://microzz.com/2017/02/19/waterfallcss3/">CSS3实现一个瀑布流布局</a></p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p> <a href="https://microzz.com/2017/02/19/waterfallcss3/">CSS3实现一个瀑布流布局</a><br><a href="https://microzz.com/2017/02/20/waterfalljq/">jQuery实现一个瀑布流布局</a></p>
 ]]></content>
     
     <summary type="html">
