@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-21T13:55:17.290Z</updated>
+  <updated>2017-02-21T13:56:22.564Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://microzz.com/2017/02/21/react-mind-map/"/>
     <id>http://microzz.com/2017/02/21/react-mind-map/</id>
     <published>2017-02-21T13:41:34.000Z</published>
-    <updated>2017-02-21T13:55:17.290Z</updated>
+    <updated>2017-02-21T13:56:22.564Z</updated>
     
     <content type="html"><![CDATA[<h1 id="React-JS学习思维导图"><a href="#React-JS学习思维导图" class="headerlink" title="React.JS学习思维导图"></a>React.JS学习思维导图</h1><h2 id="ReactJS简介"><a href="#ReactJS简介" class="headerlink" title="ReactJS简介"></a>ReactJS简介</h2><p>React 是一个用于构建用户界面的 JAVASCRIPT 库。<br>React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。<br>React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。<br>React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。</p>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><h3 id="在线预览地址1"><a href="#在线预览地址1" class="headerlink" title="在线预览地址1"></a>在线预览地址1</h3><figure class="image-bubble">
+<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><h3 id="在线预览地址"><a href="#在线预览地址" class="headerlink" title="在线预览地址"></a>在线预览地址</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="http://microzz.cn/images/mind-map-for-react.png" alt="mind-map-for-react" title="">
