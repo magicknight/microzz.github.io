@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-21T13:56:22.564Z</updated>
+  <updated>2017-02-22T02:31:44.566Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>原生JS实现轮播图</title>
+    <link href="http://microzz.com/2017/02/22/carousel/"/>
+    <id>http://microzz.com/2017/02/22/carousel/</id>
+    <published>2017-02-22T02:05:02.000Z</published>
+    <updated>2017-02-22T02:31:44.566Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="原生JS实现轮播图"><a href="#原生JS实现轮播图" class="headerlink" title="原生JS实现轮播图"></a>原生JS实现轮播图</h1><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/microzz/carousel/master/preview.gif" alt="原生JS实现定时自动切换轮播图" title="">
+                </div>
+                <div class="image-caption">原生JS实现定时自动切换轮播图</div>
+            </figure>
+<h2 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h2><h3 id="在线预览地址1"><a href="#在线预览地址1" class="headerlink" title="在线预览地址1"></a>在线预览地址1</h3><p> 🔗<a href="http://microzz.cn/Carousel/" target="_blank" rel="external">http://microzz.cn/Carousel/</a></p>
+<h3 id="在线预览地址2"><a href="#在线预览地址2" class="headerlink" title="在线预览地址2"></a>在线预览地址2</h3><p> 🔗<a href="https://microzz.github.io/carousel/" target="_blank" rel="external">https://microzz.github.io/carousel/</a></p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>源代码地址：🔗<a href="https://github.com/microzz/carousel" target="_blank" rel="external">https://github.com/microzz/carousel</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;原生JS实现轮播图&quot;&gt;&lt;a href=&quot;#原生JS实现轮播图&quot; class=&quot;headerlink&quot; title=&quot;原生JS实现轮播图&quot;&gt;&lt;/a&gt;原生JS实现轮播图&lt;/h1&gt;&lt;h2 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="Carousel" scheme="http://microzz.com/tags/Carousel/"/>
+    
+  </entry>
   
   <entry>
     <title>React.JS学习思维导图</title>
