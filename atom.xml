@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-23T07:33:32.203Z</updated>
+  <updated>2017-02-23T07:34:39.230Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/02/23/lazy-func/"/>
     <id>http://microzz.com/2017/02/23/lazy-func/</id>
     <published>2017-02-23T06:55:16.000Z</published>
-    <updated>2017-02-23T07:33:32.203Z</updated>
+    <updated>2017-02-23T07:34:39.230Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JS惰性函数实现Ajax封装"><a href="#JS惰性函数实现Ajax封装" class="headerlink" title="JS惰性函数实现Ajax封装"></a>JS惰性函数实现Ajax封装</h1><h2 id="JavaScript惰性函数"><a href="#JavaScript惰性函数" class="headerlink" title="JavaScript惰性函数"></a>JavaScript惰性函数</h2><blockquote>
 <p>&nbsp;&nbsp;&nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。</p>
