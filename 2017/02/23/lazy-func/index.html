@@ -27,20 +27,26 @@
     <meta name="keywords" content="JavaScript,JS,Function,Ajax,性能优化">
     <meta name="description" content="JS惰性函数实现Ajax封装JavaScript惰性函数
 &amp;nbsp;&amp;nbsp;&amp;nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。
-Ajax&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应">
+
+Ajax
+&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS惰性函数实现Ajax封装">
 <meta property="og:url" content="http://microzz.com/2017/02/23/lazy-func/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
 <meta property="og:description" content="JS惰性函数实现Ajax封装JavaScript惰性函数
 &amp;nbsp;&amp;nbsp;&amp;nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。
-Ajax&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应">
-<meta property="og:updated_time" content="2017-02-23T07:32:04.382Z">
+
+Ajax
+&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网">
+<meta property="og:updated_time" content="2017-02-23T07:33:32.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS惰性函数实现Ajax封装">
 <meta name="twitter:description" content="JS惰性函数实现Ajax封装JavaScript惰性函数
 &amp;nbsp;&amp;nbsp;&amp;nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。
-Ajax&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应">
+
+Ajax
+&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -181,7 +187,9 @@ Ajax&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”�
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="JS惰性函数实现Ajax封装"><a href="#JS惰性函数实现Ajax封装" class="headerlink" title="JS惰性函数实现Ajax封装"></a>JS惰性函数实现Ajax封装</h1><h2 id="JavaScript惰性函数"><a href="#JavaScript惰性函数" class="headerlink" title="JavaScript惰性函数"></a>JavaScript惰性函数</h2><blockquote>
 <p>&nbsp;&nbsp;&nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。</p>
-<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>&nbsp;&nbsp;&nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。<br>AJAX = 异步 JavaScript和XML。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+</blockquote>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><blockquote>
+<p>&nbsp;&nbsp;&nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。<br>AJAX = 异步 JavaScript和XML。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 </blockquote>
 <h2 id="惰性函数实现Ajax封装"><a href="#惰性函数实现Ajax封装" class="headerlink" title="惰性函数实现Ajax封装"></a>惰性函数实现Ajax封装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 惰性函数</div><div class="line"> */</div><div class="line">function createXHR() &#123;</div><div class="line">  var xhr = null;</div><div class="line">  if ( typeof XMLHttpRequest !== &apos;undefined&apos;) &#123;</div><div class="line">    xhr = new XMLHttpRequest();</div><div class="line">    createXHR = function () &#123;</div><div class="line">      return new XMLHttpRequest();</div><div class="line">    &#125;;</div><div class="line">  &#125; else &#123;</div><div class="line">    try &#123;</div><div class="line">      xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</div><div class="line">      createXHR = function () &#123;</div><div class="line">        return new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</div><div class="line">      &#125;;</div><div class="line">    &#125; catch (e) &#123;</div><div class="line">      try &#123;</div><div class="line">        xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">        createXHR = function () &#123;</div><div class="line">          return ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">        &#125;;</div><div class="line">      &#125; catch (e) &#123;</div><div class="line">        createXHR = function () &#123;</div><div class="line">          return null;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return xhr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -191,7 +199,7 @@ Ajax&amp;nbsp;&amp;nbsp;&amp;nbsp;AJAX即“Asynchronous Javascript And XML”�
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-02-23T07:32:04.382Z" itemprop="dateUpdated">2017年2月23日 15:32</time>
+    最后更新时间：<time datetime="2017-02-23T07:33:32.203Z" itemprop="dateUpdated">2017年2月23日 15:33</time>
 </span><br>
 
 
