@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-22T02:31:44.566Z</updated>
+  <updated>2017-02-23T07:32:04.382Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS惰性函数实现Ajax封装</title>
+    <link href="http://microzz.com/2017/02/23/lazy-func/"/>
+    <id>http://microzz.com/2017/02/23/lazy-func/</id>
+    <published>2017-02-23T06:55:16.000Z</published>
+    <updated>2017-02-23T07:32:04.382Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS惰性函数实现Ajax封装"><a href="#JS惰性函数实现Ajax封装" class="headerlink" title="JS惰性函数实现Ajax封装"></a>JS惰性函数实现Ajax封装</h1><h2 id="JavaScript惰性函数"><a href="#JavaScript惰性函数" class="headerlink" title="JavaScript惰性函数"></a>JavaScript惰性函数</h2><blockquote>
+<p>&nbsp;&nbsp;&nbsp;惰性函数，即只在第一次执行，第一次执行后再调用得到的结果都是一样的。这对于前端性能优化有一定的帮助，有助于开发健壮的项目。</p>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>&nbsp;&nbsp;&nbsp;AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。<br>AJAX = 异步 JavaScript和XML。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+</blockquote>
+<h2 id="惰性函数实现Ajax封装"><a href="#惰性函数实现Ajax封装" class="headerlink" title="惰性函数实现Ajax封装"></a>惰性函数实现Ajax封装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 惰性函数</div><div class="line"> */</div><div class="line">function createXHR() &#123;</div><div class="line">  var xhr = null;</div><div class="line">  if ( typeof XMLHttpRequest !== &apos;undefined&apos;) &#123;</div><div class="line">    xhr = new XMLHttpRequest();</div><div class="line">    createXHR = function () &#123;</div><div class="line">      return new XMLHttpRequest();</div><div class="line">    &#125;;</div><div class="line">  &#125; else &#123;</div><div class="line">    try &#123;</div><div class="line">      xhr = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</div><div class="line">      createXHR = function () &#123;</div><div class="line">        return new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);</div><div class="line">      &#125;;</div><div class="line">    &#125; catch (e) &#123;</div><div class="line">      try &#123;</div><div class="line">        xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">        createXHR = function () &#123;</div><div class="line">          return ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">        &#125;;</div><div class="line">      &#125; catch (e) &#123;</div><div class="line">        createXHR = function () &#123;</div><div class="line">          return null;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return xhr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JS惰性函数实现Ajax封装&quot;&gt;&lt;a href=&quot;#JS惰性函数实现Ajax封装&quot; class=&quot;headerlink&quot; title=&quot;JS惰性函数实现Ajax封装&quot;&gt;&lt;/a&gt;JS惰性函数实现Ajax封装&lt;/h1&gt;&lt;h2 id=&quot;JavaScript惰性函数&quot;&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="Function" scheme="http://microzz.com/tags/Function/"/>
+    
+      <category term="Ajax" scheme="http://microzz.com/tags/Ajax/"/>
+    
+      <category term="性能优化" scheme="http://microzz.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>原生JS实现轮播图</title>
