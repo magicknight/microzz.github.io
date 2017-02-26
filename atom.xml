@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-26T12:06:51.964Z</updated>
+  <updated>2017-02-26T12:09:18.585Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/02/26/interview2/"/>
     <id>http://microzz.com/2017/02/26/interview2/</id>
     <published>2017-02-26T12:02:20.000Z</published>
-    <updated>2017-02-26T12:06:51.964Z</updated>
+    <updated>2017-02-26T12:09:18.585Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前端工作面试问题"><a href="#前端工作面试问题" class="headerlink" title="前端工作面试问题"></a>前端工作面试问题</h1><p>本文包含了一些用于考查候选者的前端面试问题。不建议对单个候选者问及每个问题 (那需要好几个小时)。只要从列表里挑选一些，就能帮助你考查候选者是否具备所需要的技能。</p>
 <p><strong>备注：</strong> 这些问题中很多都是开放性的，可以引发有趣的讨论。这比直接的答案更能体现此人的能力。</p>
@@ -161,6 +161,7 @@
 <li>你最爱的 IE 特性是什么？</li>
 <li>你对咖啡有没有什么喜好？</li>
 </ul>
+<h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h4><p>本文收集自网络，不用作商业用途，感谢贡献者。</p>
 ]]></content>
     
     <summary type="html">
