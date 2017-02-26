@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-26T12:03:35.078Z</updated>
+  <updated>2017-02-26T12:05:00.828Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -16,20 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>前端工作面试问题</title>
     <link href="http://microzz.com/2017/02/26/interview2/"/>
     <id>http://microzz.com/2017/02/26/interview2/</id>
-    <published>2017-02-26T12:03:35.078Z</published>
-    <updated>2017-02-26T12:03:35.078Z</updated>
+    <published>2017-02-26T12:02:20.000Z</published>
+    <updated>2017-02-26T12:05:00.828Z</updated>
     
-    <content type="html"><![CDATA[<p>— 前端工作面试问题<br>title: interview2<br>date: 2017-02-26 20:02:20<br>tags:</p>
-<ul>
-<li>面试</li>
-<li>前端</li>
-<li>web</li>
-</ul>
-<hr>
-<h1 id="前端工作面试问题"><a href="#前端工作面试问题" class="headerlink" title="前端工作面试问题"></a>前端工作面试问题</h1><p>本文包含了一些用于考查候选者的前端面试问题。不建议对单个候选者问及每个问题 (那需要好几个小时)。只要从列表里挑选一些，就能帮助你考查候选者是否具备所需要的技能。</p>
+    <content type="html"><![CDATA[<h1 id="前端工作面试问题"><a href="#前端工作面试问题" class="headerlink" title="前端工作面试问题"></a>前端工作面试问题</h1><p>本文包含了一些用于考查候选者的前端面试问题。不建议对单个候选者问及每个问题 (那需要好几个小时)。只要从列表里挑选一些，就能帮助你考查候选者是否具备所需要的技能。</p>
 <p><strong>备注：</strong> 这些问题中很多都是开放性的，可以引发有趣的讨论。这比直接的答案更能体现此人的能力。</p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a name="toc">目录</a></h2><ol>
 <li><a href="#general-questions">常见问题</a></li>
@@ -183,17 +176,16 @@
     
     <summary type="html">
     
-      &lt;p&gt;— 前端工作面试问题&lt;br&gt;title: interview2&lt;br&gt;date: 2017-02-26 20:02:20&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;面试&lt;/li&gt;
-&lt;li&gt;前端&lt;/li&gt;
-&lt;li&gt;web&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;前端
+      &lt;h1 id=&quot;前端工作面试问题&quot;&gt;&lt;a href=&quot;#前端工作面试问题&quot; class=&quot;headerlink&quot; title=&quot;前端工作面试问题&quot;&gt;&lt;/a&gt;前端工作面试问题&lt;/h1&gt;&lt;p&gt;本文包含了一些用于考查候选者的前端面试问题。不建议对单个候选者问及每个问题 (那需要好几个小
     
     </summary>
     
+    
+      <category term="面试" scheme="http://microzz.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="前端" scheme="http://microzz.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="web" scheme="http://microzz.com/tags/web/"/>
     
   </entry>
   
