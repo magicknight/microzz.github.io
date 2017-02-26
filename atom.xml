@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-26T12:05:00.828Z</updated>
+  <updated>2017-02-26T12:06:51.964Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,21 +20,10 @@
     <link href="http://microzz.com/2017/02/26/interview2/"/>
     <id>http://microzz.com/2017/02/26/interview2/</id>
     <published>2017-02-26T12:02:20.000Z</published>
-    <updated>2017-02-26T12:05:00.828Z</updated>
+    <updated>2017-02-26T12:06:51.964Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前端工作面试问题"><a href="#前端工作面试问题" class="headerlink" title="前端工作面试问题"></a>前端工作面试问题</h1><p>本文包含了一些用于考查候选者的前端面试问题。不建议对单个候选者问及每个问题 (那需要好几个小时)。只要从列表里挑选一些，就能帮助你考查候选者是否具备所需要的技能。</p>
 <p><strong>备注：</strong> 这些问题中很多都是开放性的，可以引发有趣的讨论。这比直接的答案更能体现此人的能力。</p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a name="toc">目录</a></h2><ol>
-<li><a href="#general-questions">常见问题</a></li>
-<li><a href="#html-questions">HTML 相关问题</a></li>
-<li><a href="#css-questions">CSS 相关问题</a></li>
-<li><a href="#js-questions">JS 相关问题</a></li>
-<li><a href="#testing-questions">测试相关问题</a></li>
-<li><a href="#performance-questions">效能相关问题</a></li>
-<li><a href="#network-questions">网络相关问题</a></li>
-<li><a href="#coding-questions">代码相关问题</a></li>
-<li><a href="#fun-questions">趣味问题</a></li>
-</ol>
 <h4 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a><a name="general-questions">常见问题：</a></h4><ul>
 <li>你在昨天/本周学到了什么？</li>
 <li>编写代码的哪些方面能够使你兴奋或感兴趣？</li>
@@ -185,7 +174,9 @@
     
       <category term="前端" scheme="http://microzz.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="web" scheme="http://microzz.com/tags/web/"/>
+      <category term="Web" scheme="http://microzz.com/tags/Web/"/>
+    
+      <category term="求职" scheme="http://microzz.com/tags/%E6%B1%82%E8%81%8C/"/>
     
   </entry>
   
