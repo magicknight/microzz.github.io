@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-02-26T12:09:18.585Z</updated>
+  <updated>2017-03-01T07:53:52.412Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS实现文字信息无缝滚动效果</title>
+    <link href="http://microzz.com/2017/03/01/flow-info/"/>
+    <id>http://microzz.com/2017/03/01/flow-info/</id>
+    <published>2017-03-01T07:42:04.000Z</published>
+    <updated>2017-03-01T07:53:52.412Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS实现文字信息无缝滚动效果"><a href="#JS实现文字信息无缝滚动效果" class="headerlink" title="JS实现文字信息无缝滚动效果"></a>JS实现文字信息无缝滚动效果</h1><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://microzz.cn/flow-info/preview.gif" alt="JS实现文字信息无缝滚动效果" title="">
+                </div>
+                <div class="image-caption">JS实现文字信息无缝滚动效果</div>
+            </figure>
+<h3 id="在线预览1"><a href="#在线预览1" class="headerlink" title="在线预览1"></a>在线预览1</h3><p>在线预览地址1: 🔗<a href="http://microzz.cn/flow-info/" target="_blank" rel="external">http://microzz.cn/flow-info/</a></p>
+<h3 id="在线预览2"><a href="#在线预览2" class="headerlink" title="在线预览2"></a>在线预览2</h3><p>在线预览地址2: 🔗<a href="https://microzz.github.io/flow-info-by-js/" target="_blank" rel="external">https://microzz.github.io/flow-info-by-js/</a></p>
+<h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><p>源代码地址：🔗<a href="https://github.com/microzz/flow-info-by-js" target="_blank" rel="external">https://github.com/microzz/flow-info-by-js</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JS实现文字信息无缝滚动效果&quot;&gt;&lt;a href=&quot;#JS实现文字信息无缝滚动效果&quot; class=&quot;headerlink&quot; title=&quot;JS实现文字信息无缝滚动效果&quot;&gt;&lt;/a&gt;JS实现文字信息无缝滚动效果&lt;/h1&gt;&lt;h2 id=&quot;预览&quot;&gt;&lt;a href=&quot;#预览&quot;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>前端工作面试问题</title>
