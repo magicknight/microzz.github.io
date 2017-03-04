@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/03/04/WebReader/</loc>
+    <lastmod>2017-03-04T12:25:08.225Z</lastmod>
+    <data>
+        <display>
+        <title>基于HTML5的Web阅读器</title>
+        <pubTime>2017-03-04T12:11:26.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>WebApp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/03/02/responsive/</loc>
     <lastmod>2017-03-03T13:47:40.778Z</lastmod>
     <data>
@@ -76,9 +97,9 @@
         <title>React.JS学习思维导图</title>
         <pubTime>2017-02-21T13:41:34.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -101,9 +122,9 @@
         <title>Node.js实现一个小爬虫</title>
         <pubTime>2017-02-14T08:33:13.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -316,9 +337,9 @@
         <title>ES6编程风格</title>
         <pubTime>2017-02-06T10:00:23.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -360,9 +381,9 @@
         <title>JavaScript中手动模拟创建Iterators迭代器(遍历器)</title>
         <pubTime>2017-01-29T12:58:35.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -385,9 +406,9 @@
         <title>JavaScript自定义方法实现复杂对象的深拷贝</title>
         <pubTime>2017-01-26T11:11:02.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -410,9 +431,9 @@
         <title>ES6中嵌套的对象如何解构(Destructuring)</title>
         <pubTime>2017-01-24T11:17:51.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -460,9 +481,9 @@
         <title>ES6 Module</title>
         <pubTime>2017-01-18T09:01:23.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -485,9 +506,9 @@
         <title>ES6中Decorator修饰器</title>
         <pubTime>2017-01-17T08:00:53.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -510,9 +531,9 @@
         <title>ES6中的Class</title>
         <pubTime>2017-01-16T08:40:45.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -535,9 +556,9 @@
         <title>异步操作和Async函数</title>
         <pubTime>2017-01-15T06:58:52.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -560,9 +581,9 @@
         <title>Promise对象</title>
         <pubTime>2017-01-14T06:11:38.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -585,9 +606,9 @@
         <title>Generator 函数</title>
         <pubTime>2017-01-13T06:51:58.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -613,9 +634,9 @@
         <title>Iterator和for...of循环</title>
         <pubTime>2017-01-12T07:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -640,9 +661,9 @@
         <title>Reflect</title>
         <pubTime>2017-01-11T00:25:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -665,9 +686,9 @@
         <title>Proxy</title>
         <pubTime>2017-01-09T02:40:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -690,9 +711,9 @@
         <title>Set和Map数据结构</title>
         <pubTime>2017-01-05T03:40:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -717,9 +738,9 @@
         <title>Symbol</title>
         <pubTime>2017-01-01T05:43:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -742,9 +763,9 @@
         <title>对象的扩展(Object)</title>
         <pubTime>2016-12-25T04:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -767,9 +788,9 @@
         <title>数组的扩展(Array)</title>
         <pubTime>2016-11-30T04:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -792,9 +813,9 @@
         <title>函数的扩展(Function)</title>
         <pubTime>2016-12-10T07:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -817,9 +838,9 @@
         <title>数值的扩展</title>
         <pubTime>2016-11-25T09:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -842,9 +863,9 @@
         <title>正则的扩展(RegExp)</title>
         <pubTime>2016-11-20T07:57:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -869,9 +890,9 @@
         <title>字符串的扩展</title>
         <pubTime>2016-11-15T07:45:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -894,9 +915,9 @@
         <title>变量的解构赋值(Destructuring)</title>
         <pubTime>2016-11-13T07:16:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
@@ -919,9 +940,9 @@
         <title>let和const命令</title>
         <pubTime>2016-11-12T07:16:19.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
          
