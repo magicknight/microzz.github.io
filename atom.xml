@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-09T15:22:11.281Z</updated>
+  <updated>2017-03-10T00:22:07.409Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue.js初体验</title>
+    <title>Vue.js初体验-TodoList</title>
     <link href="http://microzz.com/2017/03/09/vue-begin/"/>
     <id>http://microzz.com/2017/03/09/vue-begin/</id>
     <published>2017-03-09T14:51:14.000Z</published>
-    <updated>2017-03-09T15:22:11.281Z</updated>
+    <updated>2017-03-10T00:22:07.409Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue-js初体验"><a href="#Vue-js初体验" class="headerlink" title="Vue.js初体验"></a>Vue.js初体验</h1><blockquote>
 <p>&nbsp;&nbsp;&nbsp;之前学了React.js，今天简单上手了Vue.js，感受到了Vue.js的一些独特魅力。双向的数据绑定让人开发起来很“爽”，于是动手简单写了一个Todo List小demo，Vue上手的确比较简单，方便不少。期待后续的学习😄</p>
