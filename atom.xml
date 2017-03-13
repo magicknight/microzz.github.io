@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-12T10:12:59.831Z</updated>
+  <updated>2017-03-13T01:37:03.201Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/03/12/select-plugin/"/>
     <id>http://microzz.com/2017/03/12/select-plugin/</id>
     <published>2017-03-12T09:03:01.000Z</published>
-    <updated>2017-03-12T10:12:59.831Z</updated>
+    <updated>2017-03-13T01:37:03.201Z</updated>
     
     <content type="html"><![CDATA[<h1 id="三级联动的生成器插件"><a href="#三级联动的生成器插件" class="headerlink" title="三级联动的生成器插件"></a>三级联动的生成器插件</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个三级联动的生成器插件，默认生成中国地区🇨🇳的三级联动数据，也可以自定义数据。<br>npm地址：<a href="https://www.npmjs.com/package/select-plugin" target="_blank" rel="external">https://www.npmjs.com/package/select-plugin</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>输入 <code>npm install select-plugin</code> .  </p>
@@ -36,7 +36,7 @@
                 <div class="image-caption">select-plugin</div>
             </figure>
 <h3 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h3><p><a href="https://microzz.github.io/select-plugin/" target="_blank" rel="external">在线预览地址1</a><br><a href="http://microzz.cn/select-plugin/" target="_blank" rel="external">在线预览地址2</a></p>
-<h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>GitHub： <a href="https://github.com/microzz" target="_blank" rel="external">https://github.com/microzz</a>  <br><br>个人网站：<a href="https://microzz.com/">https://microzz.com/</a></p>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>GitHub： <a href="https://github.com/microzz" target="_blank" rel="external">https://github.com/microzz</a>  <br><br>个人网站：<a href="https://microzz.com/">https://microzz.com/</a></p>
 ]]></content>
     
     <summary type="html">
