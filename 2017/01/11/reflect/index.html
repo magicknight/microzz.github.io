@@ -6,11 +6,6 @@
     
 
     
-<!-- Baidu Tongji -->
-<script>var _hmt = _hmt || []</script>
-<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
-<!-- End Baidu Tongji -->
-
 
 
 
@@ -20,8 +15,6 @@
     
     <title>Reflect | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Reflect">
@@ -39,9 +32,7 @@
 <meta name="twitter:description" content="Reflect概述Reflect对象与Proxy对象一样，也是 ES6 为了操作对象而提供的新 API。Reflect对象的设计目的有这样几个。
 （1） 将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上。现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。也就是说，从Re">
     
-        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -49,7 +40,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu"  >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -57,44 +48,16 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+          <img src="/">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                文章
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/microzz" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                GitHub
-              </a>
-            </li>
         
       </ul>
     </div>
@@ -109,20 +72,6 @@
         </a>
         <div class="flex-col header-title ellipsis">Reflect</div>
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -148,13 +97,6 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>快捷导航</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Reflect"><span class="post-toc-number">1.</span> <span class="post-toc-text">Reflect</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#静态方法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">静态方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-get-target-name-receiver"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Reflect.get(target, name, receiver)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-set-target-name-value-receiver"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Reflect.set(target, name, value, receiver)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-has-obj-name"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Reflect.has(obj, name)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-deleteProperty-obj-name"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Reflect.deleteProperty(obj, name)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-construct-target-args"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">Reflect.construct(target, args)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-getPrototypeOf-obj"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">Reflect.getPrototypeOf(obj)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-setPrototypeOf-obj-newProto"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">Reflect.setPrototypeOf(obj, newProto)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-apply-func-thisArg-args"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">Reflect.apply(func, thisArg, args)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-defineProperty-target-propertyKey-attributes"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">Reflect.defineProperty(target, propertyKey, attributes)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-getOwnPropertyDescriptor-target-propertyKey"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">Reflect.getOwnPropertyDescriptor(target, propertyKey)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-isExtensible-target"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">Reflect.isExtensible (target)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-preventExtensions-target"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">Reflect.preventExtensions(target)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect-ownKeys-target"><span class="post-toc-number">1.2.13.</span> <span class="post-toc-text">Reflect.ownKeys (target)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实例：使用-Proxy-实现观察者模式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">实例：使用 Proxy 实现观察者模式</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-    
 <article id="post-reflect"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -167,10 +109,6 @@
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
 
             
 
@@ -266,26 +204,18 @@
         <blockquote class="post-copyright">
     <div class="content">
         
-<span class="post-time">
-    最后更新时间：<time datetime="2017-01-12T08:19:34.606Z" itemprop="dateUpdated">2017年1月12日 16:19</time>
-</span><br>
 
-
-        转载请注明出处：<a href="http://microzz.com/2017/01/11/reflect/" target="_blank" rel="external">http://microzz.com/2017/01/11/reflect/</a>
+        
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/img/avatar.jpg" alt="Microzz">
+            <img src="/" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
 
 
         <div class="post-footer">
@@ -294,51 +224,6 @@
 
 
             
-<div class="page-share-wrap">
-    
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/11/reflect/&title=《Reflect》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/11/reflect/&title=《Reflect》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/11/reflect/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Reflect》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/11/reflect/&via=http://microzz.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/11/reflect/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
 
 
         </div>
@@ -369,18 +254,6 @@
 
     
 
-<div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="reflect" data-title="Reflect" data-url="http://microzz.com/2017/01/11/reflect/"></div>
-</div>
-<script>
-lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
-
-var duoshuoQuery = {short_name:'microzz', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.5');
-
-
-</script>
-
 
 
 
@@ -389,30 +262,6 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
 
 </article>
 
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        请我吃辣条~
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <ul class="reward-items">
-        
-        <li>
-            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
-        
-
-        
-        <li>
-            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
-</div>
-
 
 
 </div>
@@ -420,18 +269,12 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
         <footer class="footer">
     <div class="top">
         
-<p>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2015 - 2017</span>
+            <span>&copy; 2017</span>
         </p>
     </div>
 </footer>
@@ -439,52 +282,6 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/11/reflect/&title=《Reflect》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/11/reflect/&title=《Reflect》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/11/reflect/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Reflect》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/11/reflect/&via=http://microzz.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/11/reflect/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aS44CMQwFQO5/aWaLNKL72U4CM6qsUKshFRaWP3k84vV8Wa9Pfr/z7vP1k8ULFxd3zH1erusN3r1fPXBiwMXFPc99t0E1MFVXbsDFxf1b3ORbyW/i4uL+J261sPmKuIuLixtw8xSk19TIi6tltRouLu6Am2+27/OW/i4uLm6LO2lhVMuh+cLFxT3DzQPK5Bh50yQpk3Bxcc9zJ2PUPMxVA1+5I4uLizvmVpukvY3nyRAuLu5JbpKI9MYq+ZPkT8HFxT3JTUYd+TbXASsZn9wUP7i4uEe41ULlTIM1ui2Ci4u7jbv7ulWyfbm4wsXF3cZNio08S5of9eaQuLi4R7iF0eagPdpry+ZHxcXF3cGdjzfyBkr1smaUi+Hi4m7jToYf+ca9oUth8oOLi7uUmxQ/82IpT3puZsK4uLhHuIXaKE5HVv1O4WS4uLhj7rO48nSket0zOhguLu4RbjW4TEC9axbNw+Di4o65k5ZoXiZVi6JmooOLi7uU2xuFTq5ZNIsxXFzcr+RWGyJ5ICtUbLi4uF/GrV6pnLdNl8VdXFzcInfS+EiKomqRg4uL+1nuKKy0hrWrWq64uLgbuD/IC1LBERJLNQAAAABJRU5ErkJggg==" alt="微信分享二维码">
-</div>
-
-
 
 
 <script>
@@ -504,7 +301,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 
 
 
@@ -513,31 +310,9 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

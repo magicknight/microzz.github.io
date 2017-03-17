@@ -6,11 +6,6 @@
     
 
     
-<!-- Baidu Tongji -->
-<script>var _hmt = _hmt || []</script>
-<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
-<!-- End Baidu Tongji -->
-
 
 
 
@@ -20,8 +15,6 @@
     
     <title>Proxy | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Proxy">
@@ -39,9 +32,7 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 <meta name="twitter:description" content="Proxy概述Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。
 Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”">
     
-        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -49,7 +40,7 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu"  >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -57,44 +48,16 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+          <img src="/">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                文章
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/microzz" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                GitHub
-              </a>
-            </li>
         
       </ul>
     </div>
@@ -109,20 +72,6 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
         </a>
         <div class="flex-col header-title ellipsis">Proxy</div>
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -148,13 +97,6 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>快捷导航</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Proxy"><span class="post-toc-number">1.</span> <span class="post-toc-text">Proxy</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Proxy-实例的方法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Proxy 实例的方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">get()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#set"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">set()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#apply"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">apply()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#has"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">has()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#construct"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">construct()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#deleteProperty"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">deleteProperty()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#defineProperty"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">defineProperty()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#getOwnPropertyDescriptor"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">getOwnPropertyDescriptor()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#getPrototypeOf"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">getPrototypeOf()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#isExtensible"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">isExtensible()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ownKeys"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">ownKeys()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#preventExtensions"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">preventExtensions()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setPrototypeOf"><span class="post-toc-number">1.2.13.</span> <span class="post-toc-text">setPrototypeOf()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Proxy-revocable"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Proxy.revocable()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#this-问题"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">this 问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实例：Web-服务的客户端"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">实例：Web 服务的客户端</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-    
 <article id="post-proxy"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -167,10 +109,6 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
 
             
 
@@ -384,26 +322,18 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
         <blockquote class="post-copyright">
     <div class="content">
         
-<span class="post-time">
-    最后更新时间：<time datetime="2017-01-12T08:18:16.019Z" itemprop="dateUpdated">2017年1月12日 16:18</time>
-</span><br>
 
-
-        转载请注明出处：<a href="http://microzz.com/2017/01/09/proxy/" target="_blank" rel="external">http://microzz.com/2017/01/09/proxy/</a>
+        
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/img/avatar.jpg" alt="Microzz">
+            <img src="/" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
 
 
         <div class="post-footer">
@@ -412,51 +342,6 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 
 
             
-<div class="page-share-wrap">
-    
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/09/proxy/&title=《Proxy》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/09/proxy/&title=《Proxy》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/09/proxy/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Proxy》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/09/proxy/&via=http://microzz.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/09/proxy/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
 
 
         </div>
@@ -487,18 +372,6 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
 
     
 
-<div class="comments" id="comments">
-    <div class="ds-thread" data-thread-key="proxy" data-title="Proxy" data-url="http://microzz.com/2017/01/09/proxy/"></div>
-</div>
-<script>
-lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
-
-var duoshuoQuery = {short_name:'microzz', theme: 'none'};
-lazyScripts.push('/js/embed.min.js?v=1.4.5');
-
-
-</script>
-
 
 
 
@@ -507,30 +380,6 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
 
 </article>
 
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        请我吃辣条~
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <ul class="reward-items">
-        
-        <li>
-            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
-        
-
-        
-        <li>
-            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
-</div>
-
 
 
 </div>
@@ -538,18 +387,12 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
         <footer class="footer">
     <div class="top">
         
-<p>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2015 - 2017</span>
+            <span>&copy; 2017</span>
         </p>
     </div>
 </footer>
@@ -557,52 +400,6 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/09/proxy/&title=《Proxy》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/09/proxy/&title=《Proxy》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Angular Node.js ES6 JS" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/09/proxy/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Proxy》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/09/proxy/&via=http://microzz.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/09/proxy/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwklEQVR42u3ay46DMAwF0P7/TzPbkTql13EMjHSyqhCFQxaWH3m94nW8rd/X3+9M/vX+320LFxe3zT1O1/kL8heff2piwMXFvZ776QXn9+SsZDvODbi4uE/m9gNfvh24uLj/kVtOUIJ0BxcX9zncPAXJPyN5y2CthouL240tUUkz93ukv4uLi7vEPYorL2zWnv/l7bi4uJdw84CyKzWpBjJcXNx7uUkYSpop1TZKvjW4uLj3cgvty+B6v3XyJZDh4uIOcDsj1WSMmgfBwuEMXFzcMW41rckzjbz4ST4eFxf3Su41w9G1RCc6foGLizvArQaj/ohlLbn5Y/KDi4s7xt1b3iTlU6fBiouLey937eBUf9S6GMhwcXEHuNXkozN0qW7ExztxcXGHuWuNjPxYVf6ExYYpLi7uMDdviVYHJNWkp1yr4eLiDnDXCp61xKX1HFxc3GHuUVzVtsja9XLfBRcXdyu30ww9v2fDqZB4DIOLizvBzQ9XJS2MfG+qBRUuLu713E5RlCcr/TYrLi7uk7m7At9ixYaLi/t4bjX1qbZNNwcyXFzcrcVPtQ1aLXJwcXGfw50YoHZaq3nLFRcXd4D7Aw6SmnlhKjg8AAAAAElFTkSuQmCC" alt="微信分享二维码">
-</div>
-
-
 
 
 <script>
@@ -622,7 +419,7 @@ lazyScripts.push('/js/embed.min.js?v=1.4.5');
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 
 
 
@@ -631,31 +428,9 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>
