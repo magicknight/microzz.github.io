@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>Vue.js写一个音乐播放器 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,HTML5,ECMAScript6,JS,ES6,Vue.js">
@@ -40,7 +47,9 @@
 介绍学习Vue.js后">
 <meta name="twitter:image" content="http://omratag7g.bkt.clouddn.com/red.png">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -48,7 +57,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -56,16 +65,58 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -80,6 +131,20 @@
         </a>
         <div class="flex-col header-title ellipsis">Vue.js写一个音乐播放器</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -105,6 +170,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue-js写一个音乐播放器"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue.js写一个音乐播放器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在线预览"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">在线预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源代码"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">源代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#技术栈"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">技术栈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vue-js"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">Vue.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ES6"><span class="post-toc-number">1.3.1.2.</span> <span class="post-toc-text">ES6</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML5"><span class="post-toc-number">1.3.1.3.</span> <span class="post-toc-text">HTML5</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS3"><span class="post-toc-number">1.3.1.4.</span> <span class="post-toc-text">CSS3</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新记录"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">更新记录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2017-03-13"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">2017.03.13</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#后续完善"><span class="post-toc-number">1.4.1.1.</span> <span class="post-toc-text">后续完善</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2017-03-14"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">2017.03.14</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#后续完善-1"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">后续完善</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2017-03-15"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">2017.03.15</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#About"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">About</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-vue-music"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -117,6 +189,10 @@
 
 
             
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
             
 
@@ -182,18 +258,26 @@
         <blockquote class="post-copyright">
     <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-15T14:54:38.426Z" itemprop="dateUpdated">2017年3月15日 22:54</time>
+</span><br>
 
-        
+
+        转载请注明出处：<a href="http://microzz.com/2017/03/15/vue-music/" target="_blank" rel="external">http://microzz.com/2017/03/15/vue-music/</a>
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/" alt="Microzz">
+            <img src="/img/avatar.jpg" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
 
 
         <div class="post-footer">
@@ -202,6 +286,51 @@
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/15/vue-music/&title=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/15/vue-music/&title=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/15/vue-music/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/15/vue-music/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/15/vue-music/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -225,6 +354,18 @@
 
     
 
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="vue-music" data-title="Vue.js写一个音乐播放器" data-url="http://microzz.com/2017/03/15/vue-music/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
 
 
 
@@ -233,6 +374,30 @@
 
 </article>
 
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
 
 
 </div>
@@ -240,12 +405,18 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -253,6 +424,52 @@
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/15/vue-music/&title=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/15/vue-music/&title=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/15/vue-music/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js写一个音乐播放器》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/15/vue-music/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/15/vue-music/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aS27DMAwFwNz/0u62QGHnkZRlFxitjCSwRlkQ/OjzidfxayXf/n2+/mTxwsXFHXOPy3X9m7O3TY70ZRdcXNyN3OuNJ4Ep/zuiw+Pi4r6eW01Trt+Ji4v737mTwuaBQIaLi9viVlOQamjrFVe4uLhPcVelJpPnW/q7uLi4Le5RXNdBrdcWKeyOi4u7hZsHlDNQPjjpBTJcXNw3cKtlSXVA2wt8n6TqwsXFXcTNN5iEtmXjWFxc3C3cJHz0QlV+gNyAi4u7h9trfEzyqeSPOA2XuLi427n5JYlJsVQNfKfFDy4u7m3cfDRyHezycWkvufnS38XFxV3KzcNNtf2Rj2Dzpi0uLu4ebjWQJc9JgKu+ARcXdz+3NwiZj2EmKREuLu7d3DyJqSYueXDMQyouLu5Obq8UqW6ZJz3l4gcXF/cGbj7yrFKqK8rCcHFxb+MexVU9cD4miY6Ki4u7hVsNLvlliwXXLFolFi4u7ipu3gadjF6q6dGo+MHFxV3E7Y1C7xiilKc9uLi4L+D2mqpJICtUbLi4uC/jTli9tumCFAcXF7fFnTQ9k0KoeskDFxf3WW5v8FltnvaONOrv4uLidrg/YNm5aF738UEAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -272,7 +489,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
@@ -281,9 +498,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

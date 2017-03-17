@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>ES6中Decorator修饰器 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Decorator">
@@ -35,7 +42,9 @@
 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。
 12345678function testable(target) &amp;#123;  target.isTestable = true;&amp;#125;@testableclass">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -43,7 +52,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -51,16 +60,58 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -75,6 +126,20 @@
         </a>
         <div class="flex-col header-title ellipsis">ES6中Decorator修饰器</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -100,6 +165,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#修饰器"><span class="post-toc-number">1.</span> <span class="post-toc-text">修饰器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类的修饰"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">类的修饰</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法的修饰"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">方法的修饰</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么修饰器不能用于函数？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">为什么修饰器不能用于函数？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#core-decorators-js"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">core-decorators.js</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用修饰器实现自动发布事件"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">使用修饰器实现自动发布事件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Mixin"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Mixin</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Trait"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Trait</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Babel转码器的支持"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Babel转码器的支持</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-decorator"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -112,6 +184,10 @@
 
 
             
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
             
 
@@ -242,18 +318,26 @@
         <blockquote class="post-copyright">
     <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-17T08:11:15.000Z" itemprop="dateUpdated">2017年1月17日 16:11</time>
+</span><br>
 
-        
+
+        转载请注明出处：<a href="http://microzz.com/2017/01/17/decorator/" target="_blank" rel="external">http://microzz.com/2017/01/17/decorator/</a>
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/" alt="Microzz">
+            <img src="/img/avatar.jpg" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
 
 
         <div class="post-footer">
@@ -262,6 +346,51 @@
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/17/decorator/&title=《ES6中Decorator修饰器》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/17/decorator/&title=《ES6中Decorator修饰器》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/17/decorator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6中Decorator修饰器》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/17/decorator/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/17/decorator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -292,6 +421,18 @@
 
     
 
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="decorator" data-title="ES6中Decorator修饰器" data-url="http://microzz.com/2017/01/17/decorator/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
 
 
 
@@ -300,6 +441,30 @@
 
 </article>
 
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
 
 
 </div>
@@ -307,12 +472,18 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -320,6 +491,52 @@
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/17/decorator/&title=《ES6中Decorator修饰器》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/17/decorator/&title=《ES6中Decorator修饰器》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/17/decorator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6中Decorator修饰器》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/17/decorator/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/17/decorator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwUlEQVR42u3aQW7DMAwEwPz/0ynQa2F1SVpyAoxPgeta4wshcvV6xdf798rv/P29vnPzhYuLO+a+l1dOyf93/QFXz+Di4p7nrovXP6+4+Ph1yVs/c3kfFxf3w7jR6wbbIFxc3G/kJgskpQ0XF/dbuEkD02uQ8m3Qzb0aLi7ugFsdmO74vXG+i4uLW+S+i1eyHUkGIs3VcXFxj3DzADUpQ9Vmqdlc4eLiHuTm7cckiE2OX4x6NVxc3DG3F3YmC1eD1ajk4eLiHuH2xqbVGLVaKJNih4uL+xS3tw1K3rN+Z4TGxcXdxm0egNiQ4RTSYFxc3M3cSbCaNDO98cqWHBgXF/emOjAJX6uFqRyr4OLiHuQmo4pJbckjGVxc3Ke4efHat+kpBDO4uLhHuPlD845qEszg4uKe5FZjzuhgRHA/z3lwcXGf4vaCk7wRmpRCXFzcp7i9wej8QEY5SsHFxT3CvSvT7MUhk7/i4uLu5k4C1LxEVj/7chVcXNyD3MnZp/kYpfAMLi7uh3GT6KUKyse1uLi4n8+tHq7KG6Tbtji4uLhjbu/IVB7NRoeu7h2L4OLiDrjVgWlv05MvmTRRuLi427g/IW/dRDKL2lkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -339,7 +556,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
@@ -348,9 +565,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

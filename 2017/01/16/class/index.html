@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>ES6中的Class | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Class">
@@ -32,7 +39,9 @@
 <meta name="twitter:description" content="ClassClass基本语法概述JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。
 12345678910function Point(x, y) &amp;#123;  this.x = x;  this.y = y;&amp;#125;Point.prototype.toString = function () &amp;#123;  return &apos;(&apos; + this.x + &apos;,">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -40,7 +49,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -48,16 +57,58 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -72,6 +123,20 @@
         </a>
         <div class="flex-col header-title ellipsis">ES6中的Class</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -97,6 +162,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Class"><span class="post-toc-number">1.</span> <span class="post-toc-text">Class</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class基本语法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Class基本语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#constructor方法"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">constructor方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类的实例对象"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">类的实例对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不存在变量提升"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">不存在变量提升</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class表达式"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Class表达式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#私有方法"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">私有方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#this的指向"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">this的指向</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#严格模式"><span class="post-toc-number">1.1.8.</span> <span class="post-toc-text">严格模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#name属性"><span class="post-toc-number">1.1.9.</span> <span class="post-toc-text">name属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的继承"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Class的继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本用法"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">基本用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类的prototype属性和-proto-属性"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">类的prototype属性和__proto__属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Extends-的继承目标"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Extends 的继承目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-getPrototypeOf"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Object.getPrototypeOf()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#super-关键字"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">super 关键字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实例的-proto-属性"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">实例的__proto__属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原生构造函数的继承"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">原生构造函数的继承</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的取值函数（getter）和存值函数（setter）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Class的取值函数（getter）和存值函数（setter）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的Generator方法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Class的Generator方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的静态方法"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Class的静态方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class的静态属性和实例属性"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Class的静态属性和实例属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#new-target属性"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">new.target属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Mixin模式的实现"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Mixin模式的实现</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-class"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -109,6 +181,10 @@
 
 
             
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
             
 
@@ -381,18 +457,26 @@
         <blockquote class="post-copyright">
     <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-16T08:43:55.000Z" itemprop="dateUpdated">2017年1月16日 16:43</time>
+</span><br>
 
-        
+
+        转载请注明出处：<a href="http://microzz.com/2017/01/16/class/" target="_blank" rel="external">http://microzz.com/2017/01/16/class/</a>
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/" alt="Microzz">
+            <img src="/img/avatar.jpg" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
 
 
         <div class="post-footer">
@@ -401,6 +485,51 @@
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/16/class/&title=《ES6中的Class》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/16/class/&title=《ES6中的Class》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/16/class/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6中的Class》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/16/class/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/16/class/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -431,6 +560,18 @@
 
     
 
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="class" data-title="ES6中的Class" data-url="http://microzz.com/2017/01/16/class/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
 
 
 
@@ -439,6 +580,30 @@
 
 </article>
 
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
 
 
 </div>
@@ -446,12 +611,18 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -459,6 +630,52 @@
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/16/class/&title=《ES6中的Class》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/16/class/&title=《ES6中的Class》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/16/class/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6中的Class》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/16/class/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/16/class/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvklEQVR42u3aQY7DIBAEwPz/0851pchsNwTWWhWnSMG48GE0zPB6xeP6Me7+vfv9+ex4tS8MXFzcZe41HMmc5MV3a+YGXFzc89w2PI1ntpTEgIuL+2TuHLr9BLi4uP+Jm6Q+DwpkuLi4Q+5KCtIS59IgXFzck9y8Srnv95b6Li4u7hT3KkeS3MytHL0dFxf3CDcPKEnCkc9Zei8uLu5m7kqQaguj+fWLX0IYLi7uZm4SbuYCVttiWSqO4OLibuC2Rcyk2DH+Nm0Iw8XFfQ73W+2WJKiNN4aLi3uSO344P/zMrVBf+8DFxT3IzQ8zebBri6TRVnFxcY9w2yJI3iZZeTY6/ODi4m7mzjU/2mQov+YVJUO4uLibuXkAynffhrxiJi4u7kHujvSlDXN1fRcXF/cIt22I/sHGcHFxD3JbUNJwzVOZIgHCxcXdzL3KMU4+8gtecz1TXFzcM9w2uLQt0rmyaVsDwcXF3cFdv46ZBKn2UFSc1XBxcbdxV1qhKyXRtkSCi4v7TG6e9OTbq09suLi4D+O2Bdb2ysWWFAcXF3eKm7dGkgNSvtU6jOLi4h7hzjU+54qnK20YXFzcI9w3v4gLCZbLUn0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -478,7 +695,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
@@ -487,9 +704,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

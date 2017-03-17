@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="undefined">
@@ -28,7 +35,9 @@
 <meta name="twitter:title" content="涵月天-microzz.com">
 <meta name="twitter:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -44,16 +53,58 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -68,6 +119,20 @@
         </a>
         <div class="flex-col header-title ellipsis">涵月天-microzz.com</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -120,11 +185,18 @@
 
     
         原生JS实现轮播图效果图
-              ...
+                
+                    
+                    
+                
+                原生JS实现定时自动切换轮播图
+            
+在线预览在线预览地址1 🔗http://microzz.cn/Carousel/
+在线预览地址2 🔗https://mic...
     
 
         <a href="/2017/02/22/carousel/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -167,11 +239,12 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        React.JS学习思维导图ReactJS简介Reac...
+        React.JS学习思维导图ReactJS简介React 是一个用于构建用户界面的 JAVASCRIPT 库。React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。
+思...
     
 
         <a href="/2017/02/21/react-mind-map/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -214,11 +287,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        jQuery实现一个瀑布流布局瀑布流布局概念瀑布流，又...
+        jQuery实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯美：图片的风格以唯美...
     
 
         <a href="/2017/02/20/waterfalljq/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -261,11 +337,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        CSS3实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑...
+        CSS3实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯美：图片的风格以唯美的图...
     
 
         <a href="/2017/02/19/waterfallcss3/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -308,11 +387,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        原生JavaScript实现一个瀑布流布局瀑布流布局概...
+        原生JavaScript实现一个瀑布流布局瀑布流布局概念瀑布流，又称瀑布流式布局。是比较流行的一种网站页面布局，视觉表现为参差不齐的多栏布局，随着页面滚动条向下滚动，这种布局还会不断加载数据块并附加至当前尾部。最早采用此布局的网站是Pinterest，逐渐在国内流行开来。国内大多数清新站基本为这类风格。
+瀑布流布局特点
+琳琅满目：整版以图片为主，大小不一的图片按照一定的规律排列。
+唯美：图片...
     
 
         <a href="/2017/02/17/waterfalljs/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -355,11 +437,30 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Node.js实现一个小爬虫分析我们将用最简单的代码实...
+        Node.js实现一个小爬虫分析我们将用最简单的代码实现一个简单的小爬虫。本示例采用ES6写法。首先我们要安装第三方cheerio模块，在项目目录使用npm install cheerio --save 命令即可。在文件中我们需要引入如下模块：
+
+
+
+模块名
+作用
+
+
+
+
+cheerio
+类似jQuery，方便对DOM内容操作
+
+
+https
+针对https协议，http模块用法类似
+
+
+
+...
     
 
         <a href="/2017/02/14/crawler/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -403,11 +504,14 @@
 
     
         npm scripts 使用指南
-&nbsp;&nbs...
+&nbsp;&nbsp;&nbsp;Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。本文介绍如何使用 npm 脚本（npm scripts）。
+
+一、什么是 npm 脚本？npm 允许在package.json文件里面，使用scripts字段定义脚本命令。
+123456&#123;  // ...  "scripts": &#1...
     
 
         <a href="/2017/02/13/npm-scripts/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -455,11 +559,46 @@
 
 命令名
 功能描述
-使...
+使用举例
+
+
+
+
+mkdir
+创建一个目录
+mkdir dirname
+
+
+rmdir
+删除一个目录
+rmdir dirname
+
+
+mvdir
+移动或重命名一个目录
+mvdir dir1 dir2
+
+
+cd
+改变当前目录
+cd dirname
+
+
+pwd
+显示当前目录的路径名
+pwd
+
+
+ls
+显示当前目录的内容
+ls -la
+
+
+dir...
     
 
         <a href="/2017/02/12/mac-shell/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -502,11 +641,13 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        前端开发面试题前言前端还是一个年轻的行业，新的行业标准...
+        前端开发面试题前言前端还是一个年轻的行业，新的行业标准， 框架， 库都不断在更新和新增，正如赫门在2015深JS大会上的《前端服务化之路》主题演讲中说的一句话：“每18至24个月，前端都会难一倍”，这些变化使前端的能力更加丰富、创造的应用也会更加完美。所以关注各种前端技术，跟上快速变化的节奏，也是身为一个前端程序员必备的技能之一。
+
+面试题目： 根据你的等级和职位的变化，入门级到专家级，广度...
     
 
         <a href="/2017/02/10/interview/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -549,11 +690,14 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        编程风格本章探讨如何将ES6的新语法，运用到编码实践之...
+        编程风格本章探讨如何将ES6的新语法，运用到编码实践之中，与传统的JavaScript语法结合在一起，写出合理的、易于阅读和维护的代码。
+多家公司和组织已经公开了它们的风格规范，具体可参阅jscs.info，下面的内容主要参考了Airbnb的JavaScript风格规范。
+块级作用域（1）let 取代 var
+ES6提出了两个新的声明变量的命令：let和const。其中，let完全可以取代v...
     
 
         <a href="/2017/02/06/es6-style/" class="post-more waves-effect waves-button">
-            
+            阅读全文...
         </a>
     </div>
     
@@ -582,12 +726,18 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -595,6 +745,52 @@
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/page/2/&title=涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/page/2/&title=涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/page/2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=涵月天-microzz.com&url=http://microzz.com/page/2/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/page/2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABXElEQVR42u3aQQ6DQAhAUe9/aZt01cSIHxgXHf6sjG2c5waQ4TjwOr/rev175/qf6/3FS5asjVhnuGJK/LS7V4r3kiVrMisbFO4QcYAge8mSJStm1VKvLFmy3ggQ2W1kyZLFWaRoJhuQVL24lpclawtWJ912gsiL/S1Zsv6KdTYWR6efLEvWMFbcDFr1aVpL9rJkycputuqw8yFAyJI1gNVv8vLnoPAkS9YwFm8DkZfJ0luftbJkjWFla1o+NpTmypI1gEWGe+ISuVNSF89gZcnajlULGdnB2QUJW5asTVm1RhJvGLUilixZw1jZhM0RqIEbt3Rlydqa1Rky4Gk4PdgnS9YwVm2wINsI5k2lYi0vS9YWLBIUaiMIPEA8DOHJkjWGRdJw9sO1daQqS5YsnGI7BfRDuJElSxY+pORhIj2iJ0vWSBYpmnlBzH+VJUtWrZFUu+6MEMmStTXrA4+ZXsZoa0OQAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -614,7 +810,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 
@@ -623,9 +819,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

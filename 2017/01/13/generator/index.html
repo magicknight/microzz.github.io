@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>Generator 函数 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Generator">
@@ -35,7 +42,9 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 Generator函数有多种理解角度。从语法上，首先可以把它理解成，Generator函数是一个状态机，封装了多个内部状态。
 执行Generator函数会返回一个遍历器对象，也就是说，Ge">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -43,7 +52,7 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -51,16 +60,58 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -75,6 +126,20 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
         </a>
         <div class="flex-col header-title ellipsis">Generator 函数</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -100,6 +165,13 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Generator-函数"><span class="post-toc-number">1.</span> <span class="post-toc-text">Generator 函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简介"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本概念"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">基本概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yield语句"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">yield语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#与Iterator接口的关系"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">与Iterator接口的关系</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#next方法的参数"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">next方法的参数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#for…of循环"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">for…of循环</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Generator-prototype-throw"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Generator.prototype.throw()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Generator-prototype-return"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Generator.prototype.return()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#yield-语句"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">yield* 语句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#作为对象属性的Generator函数"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">作为对象属性的Generator函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Generator函数的this"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Generator函数的this</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#含义"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">含义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator与状态机"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">Generator与状态机</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator与协程"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">Generator与协程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#应用"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（1）异步操作的同步化表达"><span class="post-toc-number">1.10.1.</span> <span class="post-toc-text">（1）异步操作的同步化表达</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（2）控制流管理"><span class="post-toc-number">1.10.2.</span> <span class="post-toc-text">（2）控制流管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（3）部署Iterator接口"><span class="post-toc-number">1.10.3.</span> <span class="post-toc-text">（3）部署Iterator接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（4）作为数据结构"><span class="post-toc-number">1.10.4.</span> <span class="post-toc-text">（4）作为数据结构</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-generator"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -112,6 +184,10 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
 
             
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
             
 
@@ -342,18 +418,26 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
         <blockquote class="post-copyright">
     <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-13T06:54:51.049Z" itemprop="dateUpdated">2017年1月13日 14:54</time>
+</span><br>
 
-        
+
+        转载请注明出处：<a href="http://microzz.com/2017/01/13/generator/" target="_blank" rel="external">http://microzz.com/2017/01/13/generator/</a>
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/" alt="Microzz">
+            <img src="/img/avatar.jpg" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
 
 
         <div class="post-footer">
@@ -362,6 +446,51 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/13/generator/&title=《Generator 函数》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/13/generator/&title=《Generator 函数》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/13/generator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Generator 函数》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/13/generator/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/13/generator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -392,6 +521,18 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
     
 
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="generator" data-title="Generator 函数" data-url="http://microzz.com/2017/01/13/generator/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
 
 
 
@@ -400,6 +541,30 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
 </article>
 
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
 
 
 </div>
@@ -407,12 +572,18 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -420,6 +591,52 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/01/13/generator/&title=《Generator 函数》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/01/13/generator/&title=《Generator 函数》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/01/13/generator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Generator 函数》 — 涵月天-microzz.com&url=http://microzz.com/2017/01/13/generator/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/01/13/generator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aS2oDMRAFwNz/0g6ELLKJ/LpbEmOoWZlhbJe9eKg/X1/x9fq5/r5O7uTPb75wcXHH3NfyWn/9/L25ARcX9z53El55qOXP/HsfFxf3YdzkALS+vw44XFzcT+TmAbSOLVxc3E/hJgVMr+BJfsCRWg0XF3fA7TVM974+3t/FxcXdNJVYB0ovznrh+PsuXFzcK9zkQ/NGZ69tWm2h4uLinubmg5B8gDpfv3gTYbi4uFe41WWp5MnqYDWKPFxc3Ivc+aLVpHeRH6dwcXHvcHtj0WpJU22LlNG4uLhbuUlDpNrOmIxqomkwLi7uFe46RHYNXJPDUPk34eLiHuDm6PmaRd5GeXOQwsXFPcyttj+qFVV1gQMXF/c53LwI6X1xdZErmvzg4uIe4/YGokmBVF3qyiW4uLinub3ZS6/NOim0cHFx73N3lTHlBK3GHy4u7kXursWspKTJWy2FSSwuLu5WbjVQmrOaTStcuLi4N7mT8MpLnXnw4eLi3udWVyKqo5Q8Qd88g4uL+zBuTs9BeQji4uJ+Frd6cEnu4OLiPoGbr0wlLc68mKn+Wbi4uHe4vYZp3lStDkvytTBcXNwD3G/G0WzDmjT/6QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -439,7 +656,7 @@ Generator函数有多种理解角度。从语法上，首先可以把它理解�
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
@@ -448,9 +665,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

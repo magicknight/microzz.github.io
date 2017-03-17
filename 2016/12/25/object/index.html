@@ -6,6 +6,11 @@
     
 
     
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
 
 
 
@@ -15,6 +20,8 @@
     
     <title>对象的扩展(Object) | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,Object">
@@ -35,7 +42,9 @@
 123456var foo = &apos;bar&apos;;var baz = &amp;#123;foo&amp;#125;;baz // &amp;#123;foo: &quot;bar&quot;&amp;#125;// 等同于var baz = &amp;#123;foo: foo&amp;#125;;
 上面代码表明，ES6 允许在对象之中，直接写变量。这时，属性名为变量名">
     
-    <link rel="shortcut icon" href="/">
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.4.5">
     <script>window.lazyScripts=[]</script>
 </head>
@@ -43,7 +52,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -51,16 +60,58 @@
     <div class="brand-wrap">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">Microzz</h5>
-          <a href="mailto:903036377@qq.com" title="903036377@qq.com" class="mail">903036377@qq.com</a>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
         </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友情链接
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -75,6 +126,20 @@
         </a>
         <div class="flex-col header-title ellipsis">对象的扩展(Object)</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -100,6 +165,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象的扩展"><span class="post-toc-number">1.</span> <span class="post-toc-text">对象的扩展</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性的简洁表示法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">属性的简洁表示法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性名表达式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">属性名表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法的-name-属性"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">方法的 name 属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Object-is"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Object.is()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Object-assign"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Object.assign()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本用法"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">基本用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意点"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">注意点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见用途"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">常见用途</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性的可枚举性"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">属性的可枚举性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性的遍历"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">属性的遍历</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#proto-属性，Object-setPrototypeOf-，Object-getPrototypeOf"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">__proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Object-keys-，Object-values-，Object-entries"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Object.keys()，Object.values()，Object.entries()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-keys"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">Object.keys()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-values"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">Object.values()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-entries"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">Object.entries</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象的扩展运算符"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">对象的扩展运算符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Object-getOwnPropertyDescriptors"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">Object.getOwnPropertyDescriptors()</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-object"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -112,6 +184,10 @@
 
 
             
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
 
             
 
@@ -384,18 +460,26 @@
         <blockquote class="post-copyright">
     <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-12T08:11:32.965Z" itemprop="dateUpdated">2017年1月12日 16:11</time>
+</span><br>
 
-        
+
+        转载请注明出处：<a href="http://microzz.com/2016/12/25/object/" target="_blank" rel="external">http://microzz.com/2016/12/25/object/</a>
     </div>
     <footer>
         <a href="http://microzz.com">
-            <img src="/" alt="Microzz">
+            <img src="/img/avatar.jpg" alt="Microzz">
             Microzz
         </a>
     </footer>
 </blockquote>
 
         
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
 
 
         <div class="post-footer">
@@ -404,6 +488,51 @@
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2016/12/25/object/&title=《对象的扩展(Object)》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2016/12/25/object/&title=《对象的扩展(Object)》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2016/12/25/object/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《对象的扩展(Object)》 — 涵月天-microzz.com&url=http://microzz.com/2016/12/25/object/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2016/12/25/object/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -434,6 +563,18 @@
 
     
 
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="object" data-title="对象的扩展(Object)" data-url="http://microzz.com/2016/12/25/object/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
 
 
 
@@ -442,6 +583,30 @@
 
 </article>
 
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
 
 
 </div>
@@ -449,12 +614,18 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
     </div>
     <div class="bottom">
         <p>
             <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
-            <span>&copy; 2017</span>
+            <span>&copy; 2015 - 2017</span>
         </p>
     </div>
 </footer>
@@ -462,6 +633,52 @@
     </main>
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2016/12/25/object/&title=《对象的扩展(Object)》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2016/12/25/object/&title=《对象的扩展(Object)》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2016/12/25/object/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《对象的扩展(Object)》 — 涵月天-microzz.com&url=http://microzz.com/2016/12/25/object/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2016/12/25/object/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aS46DQAwFwNz/0jPSbDPAs013iFSsIoFMkYXV/rxe8fXzd73/Prp7dL0/81px4eLijrn5C464SbSju7kBFxd3PzdJXheBWujcgIuL+0zu+REn/4w8OeLi4j6f2ytjjp7BxcV9PrdatCQF0jliea2Gi4s74E4apnf93tTfxcXFHU8l5oOQydDln7fj4uJu4SZB89dXn+y1UHFxcfdwy42JuIBJnkxOMri4uPu5vSNL3iJJUlW++IWLi7uamzQoC98dJKO8JXpY9uDi4i7m5okmL1d6Ec7/rOigg4uLeyu3tzzRbGcUpySFKg0XF3cB966UVG2YltcscHFxt3CrQfPEN2+4NKdAuLi4Y+4k6eTlUDUmLi7up7i9QNVnzhNcMnzFxcXdyb1rDSsfo04KJFxc3D3c6hGkmoaqrZCLmLi4uBu5yZrFfIrba4zi4uJ+irsuYVWXtJqTWFxc3Fu5vWnm6JhyGjO/i4uLu5qbJ6/JGkeeyC5SGy4u7kZudSVinrx6qxi4uLhP4/ZGLHnkqI2Ci4v7VdzeckZ+JMLFxd3P7a1M5etc1UPPDW0RXFzcAXdyKOkNUXrtFVxc3C3cXxbZlYyDsyZOAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
 
 
 <script>
@@ -481,7 +698,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
@@ -490,9 +707,31 @@ var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 <script src="/js/main.min.js?v=1.4.5"></script>
 
 
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
 
 
 
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>
