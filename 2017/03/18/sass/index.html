@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ce268e8f61069a1636a4629acbb82b9a"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>SASS用法指南 | 涵月天-microzz.com | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="SASS,SCSS,CSS">
+    <meta name="description" content="学过CSS的人都知道，它不是一种编程语言。你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。
+很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SASS用法指南">
+<meta property="og:url" content="http://microzz.com/2017/03/18/sass/index.html">
+<meta property="og:site_name" content="涵月天-microzz.com">
+<meta property="og:description" content="学过CSS的人都知道，它不是一种编程语言。你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。
+很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网">
+<meta property="og:updated_time" content="2017-03-18T15:21:56.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SASS用法指南">
+<meta name="twitter:description" content="学过CSS的人都知道，它不是一种编程语言。你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。
+很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网">
+    
+        <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.5">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Microzz</h5>
+          <a href="mailto:zhaohui@microzz.com" title="zhaohui@microzz.com" class="mail">zhaohui@microzz.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/microzz" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://microzz.com/about/friendly.html"  >
+                <i class="icon icon-lg icon-link"></i>
+                友链
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">SASS用法指南</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">SASS用法指南</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-18T15:17:32.000Z" itemprop="datePublished" class="page-time">
+  2017-03-18
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SASS用法指南"><span class="post-toc-number">1.</span> <span class="post-toc-text">SASS用法指南</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、什么是SASS"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、什么是SASS</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、安装和使用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、安装和使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-安装"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1 安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-使用"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2 使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、基本用法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">三、基本用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-变量"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">3.1 变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-计算功能"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">3.2 计算功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-嵌套"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3.3 嵌套</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-注释"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">3.4 注释</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、代码的重用"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">四、代码的重用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-继承"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">4.1 继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-Mixin"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">4.2 Mixin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-颜色函数"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">4.3 颜色函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4-插入文件"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4.4 插入文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、高级用法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">五、高级用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-条件语句"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">5.1 条件语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-循环语句"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">5.2 循环语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-自定义函数"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">5.3 自定义函数</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-sass"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">SASS用法指南</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月18日 23:17" datetime="2017-03-18T15:17:32.000Z"  itemprop="datePublished">2017-03-18</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>学过CSS的人都知道，它不是一种编程语言。<br>你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。</p>
+<p>很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网页样式设计，然后再编译成正常的CSS文件。<br>各种”CSS预处理器”之中，我自己最喜欢SASS，觉得它有很多优点，打算以后都用它来写CSS。下面是我整理的用法总结，供自己开发时参考，相信对其他人也有用。</p>
+</blockquote>
+<p>============================================</p>
+<h1 id="SASS用法指南"><a href="#SASS用法指南" class="headerlink" title="SASS用法指南"></a>SASS用法指南</h1><p>作者：阮一峰</p>
+<h2 id="一、什么是SASS"><a href="#一、什么是SASS" class="headerlink" title="一、什么是SASS"></a>一、什么是SASS</h2><p>SASS是一种CSS的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得CSS的开发，变得简单和可维护。<br>本文总结了SASS的主要用法。我的目标是，有了这篇文章，日常的一般使用就不需要去看官方文档了。</p>
+<h2 id="二、安装和使用"><a href="#二、安装和使用" class="headerlink" title="二、安装和使用"></a>二、安装和使用</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>SASS是Ruby语言写的，但是两者的语法没有关系。不懂Ruby，照样使用。只是必须先安装Ruby，然后再安装SASS。<br>假定你已经安装好了Ruby，接着在命令行输入下面的命令：<br>　　gem install sass<br>然后，就可以使用了。</p>
+<h3 id="2-2-使用"><a href="#2-2-使用" class="headerlink" title="2.2 使用"></a>2.2 使用</h3><p>SASS文件就是普通的文本文件，里面可以直接使用CSS语法。文件后缀名是.scss，意思为Sassy CSS。<br>下面的命令，可以在屏幕上显示.scss文件转化的css代码。（假设文件名为test。）<br>　　sass test.scss<br>如果要将显示结果保存成文件，后面再跟一个.css文件名。<br>　　sass test.scss test.css<br>SASS提供四个编译风格的选项：<br>　　<em> nested：嵌套缩进的css代码，它是默认值。
+　　</em> expanded：没有缩进的、扩展的css代码。<br>　　<em> compact：简洁格式的css代码。
+　　</em> compressed：压缩后的css代码。<br>生产环境当中，一般使用最后一个选项。<br>　　sass –style compressed test.sass test.css<br>你也可以让SASS监听某个文件或目录，一旦源文件有变动，就自动生成编译后的版本。<br>　　// watch a file<br>　　sass –watch input.scss:output.css<br>　　// watch a directory<br>　　sass –watch app/sass:public/stylesheets<br>SASS的官方网站，提供了一个在线转换器。你可以在那里，试运行下面的各种例子。</p>
+<h2 id="三、基本用法"><a href="#三、基本用法" class="headerlink" title="三、基本用法"></a>三、基本用法</h2><h3 id="3-1-变量"><a href="#3-1-变量" class="headerlink" title="3.1 变量"></a>3.1 变量</h3><p>SASS允许使用变量，所有变量以$开头。<br>　　$blue : #1875e7;　<br>　　div {<br>　　　color : $blue;<br>　　}<br>如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。<br>　　$side : left;<br>　　.rounded {<br>　　　　border-#{$side}-radius: 5px;<br>　　}</p>
+<h3 id="3-2-计算功能"><a href="#3-2-计算功能" class="headerlink" title="3.2 计算功能"></a>3.2 计算功能</h3><p>SASS允许在代码中使用算式：<br>　　body {<br>　　　　margin: (14px/2);<br>　　　　top: 50px + 100px;<br>　　　　right: $var * 10%;<br>　　}</p>
+<h3 id="3-3-嵌套"><a href="#3-3-嵌套" class="headerlink" title="3.3 嵌套"></a>3.3 嵌套</h3><p>SASS允许选择器嵌套。比如，下面的CSS代码：<br>　　div h1 {<br>　　　　color : red;<br>　　}<br>可以写成：<br>　　div {<br>　　　　hi {<br>　　　　　　color:red;<br>　　　　}<br>　　}<br>属性也可以嵌套，比如border-color属性，可以写成：<br>　　p {<br>　　　　border: {<br>　　　　　　color: red;<br>　　　　}<br>　　}<br>注意，border后面必须加上冒号。<br>在嵌套的代码块内，可以使用&amp;引用父元素。比如a:hover伪类，可以写成：<br>　　a {<br>　　　　&amp;:hover { color: #ffb3ff; }<br>　　}</p>
+<h3 id="3-4-注释"><a href="#3-4-注释" class="headerlink" title="3.4 注释"></a>3.4 注释</h3><p>SASS共有两种注释风格。<br>标准的CSS注释 /<em> comment </em>/ ，会保留到编译后的文件。<br>单行注释 // comment，只保留在SASS源文件中，编译后被省略。<br>在/<em>后面加一个感叹号，表示这是”重要注释”。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。<br>　　/</em>!<br>　　　　重要注释！<br>　　*/</p>
+<h2 id="四、代码的重用"><a href="#四、代码的重用" class="headerlink" title="四、代码的重用"></a>四、代码的重用</h2><h3 id="4-1-继承"><a href="#4-1-继承" class="headerlink" title="4.1 继承"></a>4.1 继承</h3><p>SASS允许一个选择器，继承另一个选择器。比如，现有class1：<br>　　.class1 {<br>　　　　border: 1px solid #ddd;<br>　　}<br>class2要继承class1，就要使用@extend命令：<br>　　.class2 {<br>　　　　@extend .class1;<br>　　　　font-size:120%;<br>　　}</p>
+<h3 id="4-2-Mixin"><a href="#4-2-Mixin" class="headerlink" title="4.2 Mixin"></a>4.2 Mixin</h3><p>Mixin有点像C语言的宏（macro），是可以重用的代码块。<br>使用@mixin命令，定义一个代码块。<br>　　@mixin left {<br>　　　　float: left;<br>　　　　margin-left: 10px;<br>　　}<br>使用@include命令，调用这个mixin。<br>　　div {<br>　　　　@include left;<br>　　}<br>mixin的强大之处，在于可以指定参数和缺省值。<br>　　@mixin left($value: 10px) {<br>　　　　float: left;<br>　　　　margin-right: $value;<br>　　}<br>使用的时候，根据需要加入参数：<br>　　div {<br>　　　　@include left(20px);<br>　　}<br>下面是一个mixin的实例，用来生成浏览器前缀。<br>　　@mixin rounded($vert, $horz, $radius: 10px) {<br>　　　　border-#{$vert}-#{$horz}-radius: $radius;<br>　　　　-moz-border-radius-#{$vert}#{$horz}: $radius;<br>　　　　-webkit-border-#{$vert}-#{$horz}-radius: $radius;<br>　　}<br>使用的时候，可以像下面这样调用：<br>　　#navbar li { @include rounded(top, left); }<br>　　#footer { @include rounded(top, left, 5px); }</p>
+<h3 id="4-3-颜色函数"><a href="#4-3-颜色函数" class="headerlink" title="4.3 颜色函数"></a>4.3 颜色函数</h3><p>SASS提供了一些内置的颜色函数，以便生成系列颜色。<br>　　lighten(#cc3, 10%) // #d6d65c<br>　　darken(#cc3, 10%) // #a3a329<br>　　grayscale(#cc3) // #808080<br>　　complement(#cc3) // #33c</p>
+<h3 id="4-4-插入文件"><a href="#4-4-插入文件" class="headerlink" title="4.4 插入文件"></a>4.4 插入文件</h3><p>@import命令，用来插入外部文件。<br>　　@import “path/filename.scss”;<br>如果插入的是.css文件，则等同于css的import命令。<br>　　@import “foo.css”;</p>
+<h2 id="五、高级用法"><a href="#五、高级用法" class="headerlink" title="五、高级用法"></a>五、高级用法</h2><h3 id="5-1-条件语句"><a href="#5-1-条件语句" class="headerlink" title="5.1 条件语句"></a>5.1 条件语句</h3><p>@if可以用来判断：<br>　　p {<br>　　　　@if 1 + 1 == 2 { border: 1px solid; }<br>　　　　@if 5 &lt; 3 { border: 2px dotted; }<br>　　}<br>配套的还有@else命令：<br>　　@if lightness($color) &gt; 30% {<br>　　　　background-color: #000;<br>　　} @else {<br>　　　　background-color: #fff;<br>　　}</p>
+<h3 id="5-2-循环语句"><a href="#5-2-循环语句" class="headerlink" title="5.2 循环语句"></a>5.2 循环语句</h3><p>SASS支持for循环：<br>　　@for $i from 1 to 10 {<br>　　　　.border-#{$i} {<br>　　　　　　border: #{$i}px solid blue;<br>　　　　}<br>　　}<br>也支持while循环：<br>　　$i: 6;<br>　　@while $i &gt; 0 {<br>　　　　.item-#{$i} { width: 2em * $i; }<br>　　　　$i: $i - 2;<br>　　}<br>each命令，作用与for类似：<br>　　@each $member in a, b, c, d {<br>　　　　.#{$member} {<br>　　　　　　background-image: url(“/image/#{$member}.jpg”);<br>　　　　}<br>　　}</p>
+<h3 id="5-3-自定义函数"><a href="#5-3-自定义函数" class="headerlink" title="5.3 自定义函数"></a>5.3 自定义函数</h3><p>SASS允许用户编写自己的函数。<br>　　@function double($n) {<br>　　　　@return $n * 2;<br>　　}<br>　　#sidebar {<br>　　　　width: double(5px);<br>　　}</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-18T15:21:56.946Z" itemprop="dateUpdated">2017年3月18日 23:21</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/03/18/sass/" target="_blank" rel="external">http://microzz.com/2017/03/18/sass/</a>
+    </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SCSS/">SCSS</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/18/sass/&title=《SASS用法指南》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/18/sass/&title=《SASS用法指南》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/18/sass/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SASS用法指南》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/18/sass/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/18/sass/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/15/vue-music/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue.js写一个音乐播放器</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="sass" data-title="SASS用法指南" data-url="http://microzz.com/2017/03/18/sass/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'microzz', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.5');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Powered by <a href="http://microzz.com">Zhaohui</a></span>
+            <span>&copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/18/sass/&title=《SASS用法指南》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/18/sass/&title=《SASS用法指南》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/18/sass/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《SASS用法指南》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/18/sass/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/18/sass/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aQWrEMAwF0N7/0lPoaqAk/ZJsTwrPqyFknKcshCXl6yter5/1/vv9SvX61Z3LFi4u7pj7ul2/uUlICfT++mVIuLi4B7l58srDqKa25BXg4uI+jVsN6Qra2x8XF/eZ3KRoyQ8ruLi4z+cmxU81Md0jttdquLi4A26vYbr29/b+Li4u7qKpRH5AmY9koqfj4uIe4d6PQPJhSRWaHIkud8bFxT3OnTdAJ6VU1ILBxcXdzO09oFfYzP+Li4t7kpunkl6Do1pWXSY7XFzcD3GTYqZ3cJkcoS4TGS4u7gZudYs8AfUaqdF4FRcX9wi3176cN0BHn1ng4uJu5uYlULVoyUGFUHFxcTdzCy2JQTBJYYOLi/s0bjXFTAYkk8BwcXHPcCdN0qi5GQeWvw5cXNzd3N4DkuvVY03yRFxc3JPcpCfZA1ULqj9eGS4u7kFuvqpFUTX9NSexuLi4S7mrRrB5IpsEjIuLe5KbtzJ7w9d8n8JMGBcX9wi3l7yq2bF3Dy4u7pO5PUovyMuDFC4u7j/h9hqs+UgGFxf3U9x8697nVvknF8vaIri4uOtPLIVUVf1cozBYxcXFPc39Bu8OTdRYH6FhAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.5"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.5" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
