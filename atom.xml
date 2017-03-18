@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-18T15:34:48.276Z</updated>
+  <updated>2017-03-18T15:36:54.018Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,13 +20,12 @@
     <link href="http://microzz.com/2017/03/18/sass/"/>
     <id>http://microzz.com/2017/03/18/sass/</id>
     <published>2017-03-18T15:17:32.000Z</published>
-    <updated>2017-03-18T15:34:48.276Z</updated>
+    <updated>2017-03-18T15:36:54.018Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>学过CSS的人都知道，它不是一种编程语言。<br>你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。</p>
-<p>很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网页样式设计，然后再编译成正常的CSS文件。<br>各种”CSS预处理器”之中，我自己最喜欢SASS，觉得它有很多优点，打算以后都用它来写CSS。下面是我整理的用法总结，供自己开发时参考，相信对其他人也有用。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;学过CSS的人都知道，它不是一种编程语言。<br>&nbsp;&nbsp;&nbsp;&nbsp;你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当费事。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;很自然地，有人就开始为CSS加入编程元素，这被叫做”CSS预处理器”（css preprocessor）。它的基本思想是，用一种专门的编程语言，进行网页样式设计，然后再编译成正常的CSS文件。<br>&nbsp;&nbsp;&nbsp;&nbsp;各种”CSS预处理器”之中，我自己最喜欢SASS，觉得它有很多优点，打算以后都用它来写CSS。下面是我整理的用法总结，供自己开发时参考，相信对其他人也有用。</p>
 </blockquote>
-<p>============================================</p>
 <h1 id="SASS用法指南"><a href="#SASS用法指南" class="headerlink" title="SASS用法指南"></a>SASS用法指南</h1><p>作者：阮一峰</p>
 <h2 id="一、什么是SASS"><a href="#一、什么是SASS" class="headerlink" title="一、什么是SASS"></a>一、什么是SASS</h2><p>SASS是一种CSS的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得CSS的开发，变得简单和可维护。<br>本文总结了SASS的主要用法。我的目标是，有了这篇文章，日常的一般使用就不需要去看官方文档了。</p>
 <h2 id="二、安装和使用"><a href="#二、安装和使用" class="headerlink" title="二、安装和使用"></a>二、安装和使用</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>SASS是Ruby语言写的，但是两者的语法没有关系。不懂Ruby，照样使用。只是必须先安装Ruby，然后再安装SASS。<br>假定你已经安装好了Ruby，接着在命令行输入下面的命令：<br>　　<code>gem install sass</code><br>然后，就可以使用了。</p>
@@ -88,7 +87,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;学过CSS的人都知道，它不是一种编程语言。&lt;br&gt;你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程序员眼里，CSS是一件很麻烦的东西。它没有变量，也没有条件语句，只是一行行单纯的描述，写起来相当
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;学过CSS的人都知道，它不是一种编程语言。&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;你可以用它开发网页样式，但是没法用它编程。也就是说，CSS基本上是设计师的工具，不是程序员的工具。在程
     
     </summary>
     
