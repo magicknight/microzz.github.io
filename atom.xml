@@ -105,7 +105,7 @@
     <link href="http://microzz.com/2017/03/15/vue-music/"/>
     <id>http://microzz.com/2017/03/15/vue-music/</id>
     <published>2017-03-15T13:44:02.000Z</published>
-    <updated>2017-03-15T14:54:38.426Z</updated>
+    <updated>2017-03-19T15:13:13.591Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue-js写一个音乐播放器"><a href="#Vue-js写一个音乐播放器" class="headerlink" title="Vue.js写一个音乐播放器"></a>Vue.js写一个音乐播放器</h1><h2 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h2><p>在线预览地址1: 🔗<a href="http://microzz.cn/vue-music/" target="_blank" rel="external">http://microzz.cn/vue-music/</a><br>在线预览地址2: 🔗<a href="https://microzz.github.io/vue-music-player/" target="_blank" rel="external">https://microzz.github.io/vue-music-player/</a></p>
 <h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>GitHub地址: 🔗<a href="https://github.com/microzz/vue-music-player" target="_blank" rel="external">https://github.com/microzz/vue-music-player</a><br>欢迎大家follow和star哦😄</p>
@@ -160,6 +160,8 @@
 </ol>
 <hr>
 <h3 id="2017-03-15"><a href="#2017-03-15" class="headerlink" title="2017.03.15"></a>2017.03.15</h3><p>1.0.0正式版发布</p>
+<hr>
+<h3 id="2017-03-19"><a href="#2017-03-19" class="headerlink" title="2017.03.19"></a>2017.03.19</h3><p>2.0.0版本筹划…</p>
 <h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>个人网站：🔗<a href="https://microzz.com/">https://microzz.com/</a><br>GitHub：🔗<a href="https://github.com/microzz" target="_blank" rel="external">https://github.com/microzz</a></p>
 ]]></content>
     
