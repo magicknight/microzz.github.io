@@ -39,7 +39,7 @@
 父组件监听一个事件，子组件触发该事件，并且可以传递自身数据。比如
 
 12345678910111213141516171819202122232425262728293031323334353637// 父组件引入子组件&amp;lt;child v-on:tellFather=&quot;fatherFunc&quot;&amp;gt;&amp;lt;/child&amp;gt;// 父组件 d">
-<meta property="og:updated_time" content="2017-03-20T14:31:38.320Z">
+<meta property="og:updated_time" content="2017-03-20T14:32:52.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js2.0学习笔记">
 <meta name="twitter:description" content="Vue.js2.0学习笔记1.父子组件如何通信？
@@ -203,7 +203,7 @@
 <p>2.子组件中使用<code>this.$parent.message</code>可以获取父亲data里面的message<br>3.<code>this.$refs.img</code>可以获取ref属性为img的DOM元素<br>4.有时也需要在内联语句处理器中访问原生 DOM 事件。可以用特殊变量 <code>$event</code> 把它传入方法：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;button v-on:click="warn('Form cannot be submitted yet.', $event)"&gt;Submit&lt;/button&gt;</div><div class="line">// ...</div><div class="line">methods: &#123;</div><div class="line">  warn: function (message, event) &#123;</div><div class="line">    // 现在我们可以访问原生事件对象</div><div class="line">    if (event) event.preventDefault()</div><div class="line">    alert(message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>5.在事件处理程序中调用 <code>event.preventDefault()</code> 或 <code>event.stopPropagation()</code> 是非常常见的需求。尽管我们可以在 methods 中轻松实现这点，但更好的方式是：methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。<br>为了解决这个问题， Vue.js 为<code>v-on</code> 提供了 事件修饰符。通过由点(.)表示的指令后缀来调用修饰符。<br><code>.stop</code><br><code>.prevent</code><br><code>.capture</code><br><code>.self</code><br><code>.once</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">&lt;!-- 提交事件不再重载页面 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">"onSubmit"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></div><div class="line">&lt;!-- 修饰符可以串联  --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">"doThat"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">&lt;!-- 只有修饰符 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></div><div class="line">&lt;!-- 添加事件侦听器时使用事件捕获模式 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.capture</span>=<span class="string">"doThis"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.self</span>=<span class="string">"doThat"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line">&lt;a v-on:click.stop="doThis"&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 提交事件不再重载页面 --&gt;</div><div class="line">&lt;form v-on:submit.prevent="onSubmit"&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 修饰符可以串联  --&gt;</div><div class="line">&lt;a v-on:click.stop.prevent="doThat"&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 只有修饰符 --&gt;</div><div class="line">&lt;form v-on:submit.prevent&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 添加事件侦听器时使用事件捕获模式 --&gt;</div><div class="line">&lt;div v-on:click.capture="doThis"&gt;...&lt;/div&gt;</div><div class="line">&lt;!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 --&gt;</div><div class="line">&lt;div v-on:click.self="doThat"&gt;...&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>6.一开始好多人会忽视 <code>name</code> 的属性，为什么要给组件写上 <code>name</code> 呢？</p>
 <ul>
 <li><p>允许组件模板递归地调用自身。注意，组件在全局用 <code>Vue.component()</code> 注册时，全局 ID 自动作为组件的 name。</p>
@@ -211,6 +211,7 @@
 <li><p>指定 <code>name</code> 选项的另一个好处是便于调试。有名字的组件有更友好的警告信息。另外，当在有 vue-devtools, 未命名组件将显示成 <code>&lt;AnonymousComponent&gt;</code>, 这很没有语义。通过提供 <code>name</code> 选项，可以获得更有语义信息的组件树。</p>
 </li>
 </ul>
+<p><strong><em>未完待续…</em></strong></p>
 
         </div>
 
@@ -218,7 +219,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-20T14:31:38.320Z" itemprop="dateUpdated">2017年3月20日 22:31</time>
+    最后更新时间：<time datetime="2017-03-20T14:32:52.199Z" itemprop="dateUpdated">2017年3月20日 22:32</time>
 </span><br>
 
 
