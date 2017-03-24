@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://microzz.com/2017/03/24/create-arr/</loc>
+    <lastmod>2017-03-24T11:41:37.710Z</lastmod>
+    <data>
+        <display>
+        <title>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</title>
+        <pubTime>2017-03-24T10:57:25.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Array</tag>
+         
+        <tag>ECMAScrpt6</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://microzz.com/2017/03/20/vue-note/</loc>
     <lastmod>2017-03-21T15:15:17.377Z</lastmod>
     <data>

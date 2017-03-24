@@ -18,22 +18,26 @@
     
     
     
-    <title>标签: ReactJS | 涵月天-microzz.com | IT技术分享</title>
+    <title>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="undefined">
-    <meta name="description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="涵月天-microzz.com">
-<meta property="og:url" content="http://microzz.com/tags/ReactJS/index.html">
+    <meta name="keywords" content="JavaScript,JS,ES6,Array,ECMAScrpt6">
+    <meta name="description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标">
+<meta property="og:url" content="http://microzz.com/2017/03/24/create-arr/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
-<meta property="og:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta property="og:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
+<meta property="og:updated_time" content="2017-03-24T11:41:37.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="涵月天-microzz.com">
-<meta name="twitter:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta name="twitter:title" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标">
+<meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -45,7 +49,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -110,7 +114,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">标签: ReactJS</div>
+        <div class="flex-col header-title ellipsis">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -129,340 +133,207 @@
         
     </div>
 </header>
-<header class="content-header tags-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">标签: ReactJS</h1>
+        <h1 class="title">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2017-03-24T10:57:25.000Z" itemprop="datePublished" class="page-time">
+  2017-03-24
+</time>
+
+
             
         </h5>
     </div>
 
-     
-<div class="tabs-bar container">
-    <nav class="tags-list">
-        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-            ">全部</a>
-         
-
-            <a href="/tags/API/" style="-webkit-order:20;order:20" class="tags-list-item waves-effect waves-button waves-light">API</a>
-
-         
-
-            <a href="/tags/开发者/" style="-webkit-order:21;order:21" class="tags-list-item waves-effect waves-button waves-light">开发者</a>
-
-         
-
-            <a href="/tags/JavaScript/" style="-webkit-order:22;order:22" class="tags-list-item waves-effect waves-button waves-light">JavaScript</a>
-
-         
-
-            <a href="/tags/HTML5/" style="-webkit-order:23;order:23" class="tags-list-item waves-effect waves-button waves-light">HTML5</a>
-
-         
-
-            <a href="/tags/WebApp/" style="-webkit-order:24;order:24" class="tags-list-item waves-effect waves-button waves-light">WebApp</a>
-
-         
-
-            <a href="/tags/ECMAScript6/" style="-webkit-order:25;order:25" class="tags-list-item waves-effect waves-button waves-light">ECMAScript6</a>
-
-         
-
-            <a href="/tags/JS/" style="-webkit-order:26;order:26" class="tags-list-item waves-effect waves-button waves-light">JS</a>
-
-         
-
-            <a href="/tags/ES6/" style="-webkit-order:27;order:27" class="tags-list-item waves-effect waves-button waves-light">ES6</a>
-
-         
-
-            <a href="/tags/Array/" style="-webkit-order:28;order:28" class="tags-list-item waves-effect waves-button waves-light">Array</a>
-
-         
-
-            <a href="/tags/Async/" style="-webkit-order:29;order:29" class="tags-list-item waves-effect waves-button waves-light">Async</a>
-
-         
-
-            <a href="/tags/Carousel/" style="-webkit-order:30;order:30" class="tags-list-item waves-effect waves-button waves-light">Carousel</a>
-
-         
-
-            <a href="/tags/Class/" style="-webkit-order:31;order:31" class="tags-list-item waves-effect waves-button waves-light">Class</a>
-
-         
-
-            <a href="/tags/Nodejs/" style="-webkit-order:32;order:32" class="tags-list-item waves-effect waves-button waves-light">Nodejs</a>
-
-         
-
-            <a href="/tags/爬虫/" style="-webkit-order:33;order:33" class="tags-list-item waves-effect waves-button waves-light">爬虫</a>
-
-         
-
-            <a href="/tags/ECMAScrpt6/" style="-webkit-order:34;order:34" class="tags-list-item waves-effect waves-button waves-light">ECMAScrpt6</a>
-
-         
-
-            <a href="/tags/Decorator/" style="-webkit-order:35;order:35" class="tags-list-item waves-effect waves-button waves-light">Decorator</a>
-
-         
-
-            <a href="/tags/深拷贝/" style="-webkit-order:36;order:36" class="tags-list-item waves-effect waves-button waves-light">深拷贝</a>
-
-         
-
-            <a href="/tags/Destructuring/" style="-webkit-order:37;order:37" class="tags-list-item waves-effect waves-button waves-light">Destructuring</a>
-
-         
-
-            <a href="/tags/规范/" style="-webkit-order:38;order:38" class="tags-list-item waves-effect waves-button waves-light">规范</a>
-
-         
-
-            <a href="/tags/原型链/" style="-webkit-order:39;order:39" class="tags-list-item waves-effect waves-button waves-light">原型链</a>
-
-         
-
-            <a href="/tags/函数/" style="-webkit-order:40;order:40" class="tags-list-item waves-effect waves-button waves-light">函数</a>
-
-         
-
-            <a href="/tags/Function/" style="-webkit-order:41;order:41" class="tags-list-item waves-effect waves-button waves-light">Function</a>
-
-         
-
-            <a href="/tags/Generator/" style="-webkit-order:42;order:42" class="tags-list-item waves-effect waves-button waves-light">Generator</a>
-
-         
-
-            <a href="/tags/面试/" style="-webkit-order:43;order:43" class="tags-list-item waves-effect waves-button waves-light">面试</a>
-
-         
-
-            <a href="/tags/前端/" style="-webkit-order:44;order:44" class="tags-list-item waves-effect waves-button waves-light">前端</a>
-
-         
-
-            <a href="/tags/Web/" style="-webkit-order:45;order:45" class="tags-list-item waves-effect waves-button waves-light">Web</a>
-
-         
-
-            <a href="/tags/求职/" style="-webkit-order:46;order:46" class="tags-list-item waves-effect waves-button waves-light">求职</a>
-
-         
-
-            <a href="/tags/Iterator/" style="-webkit-order:47;order:47" class="tags-list-item waves-effect waves-button waves-light">Iterator</a>
-
-         
-
-            <a href="/tags/for/" style="-webkit-order:48;order:48" class="tags-list-item waves-effect waves-button waves-light">for</a>
-
-         
-
-            <a href="/tags/Iterators/" style="-webkit-order:49;order:49" class="tags-list-item waves-effect waves-button waves-light">Iterators</a>
-
-         
-
-            <a href="/tags/Ajax/" style="-webkit-order:50;order:50" class="tags-list-item waves-effect waves-button waves-light">Ajax</a>
-
-         
-
-            <a href="/tags/性能优化/" style="-webkit-order:51;order:51" class="tags-list-item waves-effect waves-button waves-light">性能优化</a>
-
-         
-
-            <a href="/tags/const/" style="-webkit-order:52;order:52" class="tags-list-item waves-effect waves-button waves-light">const</a>
-
-         
-
-            <a href="/tags/let/" style="-webkit-order:53;order:53" class="tags-list-item waves-effect waves-button waves-light">let</a>
-
-         
-
-            <a href="/tags/事件/" style="-webkit-order:54;order:54" class="tags-list-item waves-effect waves-button waves-light">事件</a>
-
-         
-
-            <a href="/tags/event/" style="-webkit-order:55;order:55" class="tags-list-item waves-effect waves-button waves-light">event</a>
-
-         
-
-            <a href="/tags/原型/" style="-webkit-order:56;order:56" class="tags-list-item waves-effect waves-button waves-light">原型</a>
-
-         
-
-            <a href="/tags/Shell/" style="-webkit-order:57;order:57" class="tags-list-item waves-effect waves-button waves-light">Shell</a>
-
-         
-
-            <a href="/tags/Mac/" style="-webkit-order:58;order:58" class="tags-list-item waves-effect waves-button waves-light">Mac</a>
-
-         
-
-            <a href="/tags/Linux/" style="-webkit-order:59;order:59" class="tags-list-item waves-effect waves-button waves-light">Linux</a>
-
-         
-
-            <a href="/tags/Unix/" style="-webkit-order:60;order:60" class="tags-list-item waves-effect waves-button waves-light">Unix</a>
-
-         
-
-            <a href="/tags/Module/" style="-webkit-order:61;order:61" class="tags-list-item waves-effect waves-button waves-light">Module</a>
-
-         
-
-            <a href="/tags/npm/" style="-webkit-order:62;order:62" class="tags-list-item waves-effect waves-button waves-light">npm</a>
-
-         
-
-            <a href="/tags/js/" style="-webkit-order:63;order:63" class="tags-list-item waves-effect waves-button waves-light">js</a>
-
-         
-
-            <a href="/tags/Number/" style="-webkit-order:64;order:64" class="tags-list-item waves-effect waves-button waves-light">Number</a>
-
-         
-
-            <a href="/tags/Object/" style="-webkit-order:65;order:65" class="tags-list-item waves-effect waves-button waves-light">Object</a>
-
-         
-
-            <a href="/tags/Promise/" style="-webkit-order:66;order:66" class="tags-list-item waves-effect waves-button waves-light">Promise</a>
-
-         
-
-            <a href="/tags/Proxy/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Proxy</a>
-
-         
-
-            <a href="/tags/ReactJS/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">ReactJS</a>
-
-         
-
-            <a href="/tags/Reflect/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Reflect</a>
-
-         
-
-            <a href="/tags/RegExp/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">RegExp</a>
-
-         
-
-            <a href="/tags/正则表达式/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">正则表达式</a>
-
-         
-
-            <a href="/tags/CSS3/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">CSS3</a>
-
-         
-
-            <a href="/tags/Responsive/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">Responsive</a>
-
-         
-
-            <a href="/tags/响应式设计/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">响应式设计</a>
-
-         
-
-            <a href="/tags/SASS/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">SASS</a>
-
-         
-
-            <a href="/tags/SCSS/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">SCSS</a>
-
-         
-
-            <a href="/tags/CSS/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">CSS</a>
-
-         
-
-            <a href="/tags/Set/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">Set</a>
-
-         
-
-            <a href="/tags/Map/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">Map</a>
-
-         
-
-            <a href="/tags/Unicode/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">Unicode</a>
-
-         
-
-            <a href="/tags/Symbol/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">Symbol</a>
-
-         
-
-            <a href="/tags/Vue-js/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">Vue.js</a>
-
-         
-
-            <a href="/tags/Vuex/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">Vuex</a>
-
-         
-
-            <a href="/tags/waterfall/" style="-webkit-order:17;order:17" class="tags-list-item waves-effect waves-button waves-light">waterfall</a>
-
-         
-
-            <a href="/tags/瀑布流/" style="-webkit-order:18;order:18" class="tags-list-item waves-effect waves-button waves-light">瀑布流</a>
-
-         
-
-            <a href="/tags/jQuery/" style="-webkit-order:19;order:19" class="tags-list-item waves-effect waves-button waves-light">jQuery</a>
-
-        
-    </nav>
-    <!-- PC show more-->
-    <div class="tags-list-more">
-        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
-    </div>
-</div>
-
+    
 
 </header>
 
-<div class="container body-wrap fade">
+
+<div class="container body-wrap">
     
-            <div class="waterfall">
-          
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><span class="post-toc-number">1.</span> <span class="post-toc-text">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#传统for循环"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">传统for循环</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#不用for循环"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">不用for循环</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES5的实现"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">ES5的实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6的实现"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">ES6的实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#普通实现"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">普通实现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#优雅进阶-扩展运算符"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">优雅进阶 - 扩展运算符</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-create-arr"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
-            <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月21日 21:41" datetime="2017-02-21T13:41:34.000Z"  itemprop="datePublished">Feb 21, 2017</time>
+    <div class="post-card">
+        <h1 class="post-card-title">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月24日 18:57" datetime="2017-03-24T10:57:25.000Z"  itemprop="datePublished">2017-03-24</time>
 
-      
+            
 
 
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
+<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><h3 id="ES5的实现"><a href="#ES5的实现" class="headerlink" title="ES5的实现"></a>ES5的实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;));  </div><div class="line"><span class="comment">// ["0", "1", "2", ..., "98", "99"]</span></div></pre></td></tr></table></figure>
+<p>这样似乎的确完成了功能，但是还有一个问题，此时值是字符串类型，所以我们可以用ES5的map方法进行处理一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;)).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> +item;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这里用了一个小技巧，字符串前面加一个 “+” 就可以转成数字。如果你不喜欢这样，可以使用parseInt，也是一样的效果。</p>
+<h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><h4 id="普通实现"><a href="#普通实现" class="headerlink" title="普通实现"></a>普通实现</h4><p>ES6中数组实例有<code>keys</code>、<code>values</code>、<code>entries</code>方法，分别用于遍历数组的索引、键值、键值对，它们都返回<strong>遍历器对象</strong>（详细👉<a href="https://microzz.com/2017/01/12/iterator/">Iterator和for…of循环</a>）</p>
+<p>因此我们可以用ES6的<code>Array.from</code>转成数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>).keys());</div></pre></td></tr></table></figure>
+<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> 扩展运算符，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
+<p>因此我们可以更加优雅地实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array(<span class="number">100</span>).keys()]</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;).keys()]</div></pre></td></tr></table></figure>
+<p>思路就是这样，当然我们还可以混合搭配出各种解法，甚至ES5、ES6混合😂</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-24T11:41:37.710Z" itemprop="dateUpdated">2017年3月24日 19:41</time>
+</span><br>
+
+
+        转载请注明出处：<a href="http://microzz.com/2017/03/24/create-arr/" target="_blank" rel="external">http://microzz.com/2017/03/24/create-arr/</a>
     </div>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScrpt6/">ECMAScrpt6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/24/create-arr/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/24/create-arr/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
 
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/21/react-mind-map/">React.JS学习思维导图</a>
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/20/vue-note/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue.js2.0学习笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
     </h3>
-  
-
-
-
-    
-    <div class="post-footer">
+    <ul class="reward-items">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactJS/">ReactJS</a></li></ul>
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
 
-    </div>
-    
-  </article>
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
 </div>
 
-        
-            </div>
-        
-    
-</div>
 
+
+</div>
 
         <footer class="footer">
     <div class="top" style="padding:7px;">
@@ -502,7 +373,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/tags/ReactJS/&title=涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -512,22 +383,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/tags/ReactJS/&title=涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/tags/ReactJS/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/24/create-arr/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=涵月天-microzz.com&url=http://microzz.com/tags/ReactJS/&via=http://microzz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/tags/ReactJS/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/24/create-arr/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -538,7 +409,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3aQYrDMAwF0N7/0pltYWj6JdmeMDyvSijNcxfC/tLrFa/rbb0/+fS5+mTxwsXFHXOv2/UbdP87yVbvN/nJgIuLe557//rqNnqlLfoLcHFxH8lNilSySVxc3P/BrV6H8kMPLi7uM7nJ5efLtaT1zY13NVxc3AE3Tyn3fd6S7+Li4ra412D1wtPJe3Fxcc9wq0UnQeTHnWZogouLe5xbbaIk0Ul+VIr+IFxc3M3canHJo8/qyEVULnFxcY9w8/GpPELthSB5ycPFxd3NXZuwJiUsH+ModINxcXGXcndfb+bjGlFPGBcXdwM3Dzfz0GR7bxQXF3czt3exmZSzyZAHLi7uGW6eneRhaG9L1SEPXFzcHdy8sZEfYqrN2kILBxcX9wi3GkkktTAfxhoda3Bxcbdx8yAjOQyVz1PVyw8uLu4RbnK4mbdDqg3dL5vHxcXdzO01NqpXpmoIUm6s4uLiLuXOh656RS0PZ3Fxcf+KmxevyRhWHqFGKS8uLu4R7rzQ5EefXtHExcV9JncefEyKIy4u7jO5k6ZIdfPNVisuLu5Sbn75yVssyYarES0uLu4Z7mQwIm+vTrjNfBcXF7fD/QFkF3ady1VPEgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABy0lEQVR42u3awY7DIAxF0fz/T0+l2bak99ngyUiXVaQiOOnCIs9cFx4/v+P9efXrarzPuU4MuXLltrl8gxV3tQ55GW6QK1fuPJcUL7TcLWtVyIhBrly5z+T2N6sVR7ly5T6Zy7e/L1ty5cr9L1weZNzHGbU5R77V5MqV2+B2AtNdz0P5rly5cttdCRJt8CgkjVo+rCZXrtwRLgkveLMkjU5qUYtcuXLnuaQ8pbj0+kXQZJUrV+4BLo8e0gsZaWMVrSZXrtxB7rb2ZykMDRowcuXKHeT2yxOJWXksskTLlSv3j7hkIbR0qVUTdIPlypV7jJtOTUOTNHDZ/GZy5cptcNP2SVrI+FWtoK0iV67cY9xOa6RzSKq1bOXKlTvJ5WcJsgF5sdpnlVy5cme48aUo0vBonLPQ8UiuXLmHuWkUUjus8CjkS2mTK1fuIJez0i35mqhQypUrd5DLB79y0flkins+cuXK3crt9DR5ESRhR/qrXLlyT3P7lyc6n0bxYUiuXLmD3Fogwosdr6Bf5siVK/dhXH61Im3cBk0auXLlPpJL0OmFjOCPkCtX7iC3tn16zYIfejbEInLlyu3WpeKhpNZwDRqrcuXKnea+AF6HJQvy28gKAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -561,7 +432,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-21T15:15:17.377Z</updated>
+  <updated>2017-03-24T11:41:37.710Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</title>
+    <link href="http://microzz.com/2017/03/24/create-arr/"/>
+    <id>http://microzz.com/2017/03/24/create-arr/</id>
+    <published>2017-03-24T10:57:25.000Z</published>
+    <updated>2017-03-24T11:41:37.710Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
+<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><h3 id="ES5的实现"><a href="#ES5的实现" class="headerlink" title="ES5的实现"></a>ES5的实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;));  </div><div class="line"><span class="comment">// ["0", "1", "2", ..., "98", "99"]</span></div></pre></td></tr></table></figure>
+<p>这样似乎的确完成了功能，但是还有一个问题，此时值是字符串类型，所以我们可以用ES5的map方法进行处理一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;)).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> +item;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这里用了一个小技巧，字符串前面加一个 “+” 就可以转成数字。如果你不喜欢这样，可以使用parseInt，也是一样的效果。</p>
+<h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><h4 id="普通实现"><a href="#普通实现" class="headerlink" title="普通实现"></a>普通实现</h4><p>ES6中数组实例有<code>keys</code>、<code>values</code>、<code>entries</code>方法，分别用于遍历数组的索引、键值、键值对，它们都返回<strong>遍历器对象</strong>（详细👉<a href="https://microzz.com/2017/01/12/iterator/">Iterator和for…of循环</a>）</p>
+<p>因此我们可以用ES6的<code>Array.from</code>转成数组：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>).keys());</div></pre></td></tr></table></figure>
+<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> 扩展运算符，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
+<p>因此我们可以更加优雅地实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array(<span class="number">100</span>).keys()]</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;).keys()]</div></pre></td></tr></table></figure>
+<p>思路就是这样，当然我们还可以混合搭配出各种解法，甚至ES5、ES6混合😂</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标&quot;&gt;&lt;a href=&quot;#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标&quot; class=&quot;headerlink&quot; title=&quot;不用循环创建一个长度为100的数组，并且每个元素的值等于
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="ES6" scheme="http://microzz.com/tags/ES6/"/>
+    
+      <category term="Array" scheme="http://microzz.com/tags/Array/"/>
+    
+      <category term="ECMAScrpt6" scheme="http://microzz.com/tags/ECMAScrpt6/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue.js2.0学习笔记</title>
@@ -35,7 +77,7 @@
 <h2 id="event"><a href="#event" class="headerlink" title="$event"></a>$event</h2><p>4.有时也需要在内联语句处理器中访问原生 DOM 事件。可以用特殊变量 <code>$event</code> 把它传入方法：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;button v-on:click="warn('Form cannot be submitted yet.', $event)"&gt;Submit&lt;/button&gt;</div><div class="line">// ...</div><div class="line">methods: &#123;</div><div class="line">  warn: function (message, event) &#123;</div><div class="line">    // 现在我们可以访问原生事件对象</div><div class="line">    if (event) event.preventDefault()</div><div class="line">    alert(message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><p>5.在事件处理程序中调用 <code>event.preventDefault()</code> 或 <code>event.stopPropagation()</code> 是非常常见的需求。尽管我们可以在 methods 中轻松实现这点，但更好的方式是：methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。<br>为了解决这个问题， Vue.js 为<code>v-on</code> 提供了 事件修饰符。通过由点(.)表示的指令后缀来调用修饰符。<br><code>.stop</code><br><code>.prevent</code><br><code>.capture</code><br><code>.self</code><br><code>.once</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line">&lt;a v-on:click.stop="doThis"&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 提交事件不再重载页面 --&gt;</div><div class="line">&lt;form v-on:submit.prevent="onSubmit"&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 修饰符可以串联  --&gt;</div><div class="line">&lt;a v-on:click.stop.prevent="doThat"&gt;&lt;/a&gt;</div><div class="line">&lt;!-- 只有修饰符 --&gt;</div><div class="line">&lt;form v-on:submit.prevent&gt;&lt;/form&gt;</div><div class="line">&lt;!-- 添加事件侦听器时使用事件捕获模式 --&gt;</div><div class="line">&lt;div v-on:click.capture="doThis"&gt;...&lt;/div&gt;</div><div class="line">&lt;!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 --&gt;</div><div class="line">&lt;div v-on:click.self="doThat"&gt;...&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 阻止单击事件冒泡 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">&lt;!-- 提交事件不再重载页面 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">"onSubmit"</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></div><div class="line">&lt;!-- 修饰符可以串联  --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">"doThat"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div><div class="line">&lt;!-- 只有修饰符 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></div><div class="line">&lt;!-- 添加事件侦听器时使用事件捕获模式 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.capture</span>=<span class="string">"doThis"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 --&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.self</span>=<span class="string">"doThat"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
 <h2 id="name"><a href="#name" class="headerlink" title="name"></a>name</h2><p>6.一开始好多人会忽视 <code>name</code> 的属性，为什么要给组件写上 <code>name</code> 呢？</p>
 <ul>
 <li><p>允许组件模板递归地调用自身。注意，组件在全局用 <code>Vue.component()</code> 注册时，全局 ID 自动作为组件的 name。</p>
