@@ -37,7 +37,7 @@
 12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
 想必大家都没什么问题👍
 不用for循环但是如何不用fo">
-<meta property="og:updated_time" content="2017-03-24T11:44:59.133Z">
+<meta property="og:updated_time" content="2017-03-24T11:46:45.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【面试题】创建长度为100的数组">
 <meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
@@ -200,7 +200,7 @@
 <h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><h4 id="普通实现"><a href="#普通实现" class="headerlink" title="普通实现"></a>普通实现</h4><p>ES6中数组实例有<code>keys</code>、<code>values</code>、<code>entries</code>方法，分别用于遍历数组的索引、键值、键值对，它们都返回<strong>遍历器对象</strong>（详细👉<a href="https://microzz.com/2017/01/12/iterator/">Iterator和for…of循环</a>）</p>
 <p>因此我们可以用ES6的<code>Array.from</code>转成数组：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>).keys());</div></pre></td></tr></table></figure>
-<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> 扩展运算符，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
+<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> <strong>扩展运算符</strong>，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
 <p>因此我们可以更加优雅地实现：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array(<span class="number">100</span>).keys()]</div></pre></td></tr></table></figure>
 <p>或者</p>
@@ -213,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-24T11:44:59.133Z" itemprop="dateUpdated">2017年3月24日 19:44</time>
+    最后更新时间：<time datetime="2017-03-24T11:46:45.699Z" itemprop="dateUpdated">2017年3月24日 19:46</time>
 </span><br>
 
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-24T11:44:59.133Z</updated>
+  <updated>2017-03-24T11:46:45.699Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/03/24/create-arr/"/>
     <id>http://microzz.com/2017/03/24/create-arr/</id>
     <published>2017-03-24T10:57:25.000Z</published>
-    <updated>2017-03-24T11:44:59.133Z</updated>
+    <updated>2017-03-24T11:46:45.699Z</updated>
     
     <content type="html"><![CDATA[<h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><p>先来说一下传统的for循环：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
@@ -33,7 +33,7 @@
 <h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><h4 id="普通实现"><a href="#普通实现" class="headerlink" title="普通实现"></a>普通实现</h4><p>ES6中数组实例有<code>keys</code>、<code>values</code>、<code>entries</code>方法，分别用于遍历数组的索引、键值、键值对，它们都返回<strong>遍历器对象</strong>（详细👉<a href="https://microzz.com/2017/01/12/iterator/">Iterator和for…of循环</a>）</p>
 <p>因此我们可以用ES6的<code>Array.from</code>转成数组：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>).keys());</div></pre></td></tr></table></figure>
-<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> 扩展运算符，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
+<h4 id="优雅进阶-扩展运算符"><a href="#优雅进阶-扩展运算符" class="headerlink" title="优雅进阶 - 扩展运算符"></a>优雅进阶 - 扩展运算符</h4><p>ES6新增 <code>...</code> <strong>扩展运算符</strong>，极大方便了相关操作(详见👉<a href="扩展运算符">函数的扩展</a>里面的扩展运算符)</p>
 <p>因此我们可以更加优雅地实现：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[...Array(<span class="number">100</span>).keys()]</div></pre></td></tr></table></figure>
 <p>或者</p>
