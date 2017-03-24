@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://microzz.com/2017/03/24/create-arr/</loc>
-    <lastmod>2017-03-24T11:41:37.710Z</lastmod>
+    <lastmod>2017-03-24T11:44:59.133Z</lastmod>
     <data>
         <display>
-        <title>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</title>
+        <title>【面试题】创建长度为100的数组</title>
         <pubTime>2017-03-24T10:57:25.000Z</pubTime>
         
         <tag>JavaScript</tag>

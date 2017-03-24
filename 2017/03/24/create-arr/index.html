@@ -18,26 +18,32 @@
     
     
     
-    <title>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标 | 涵月天-microzz.com | IT技术分享</title>
+    <title>【面试题】创建长度为100的数组 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="JavaScript,JS,ES6,Array,ECMAScrpt6">
-    <meta name="description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
+    <meta name="description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
+12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+想必大家都没什么问题👍
+不用for循环但是如何不用fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标">
+<meta property="og:title" content="【面试题】创建长度为100的数组">
 <meta property="og:url" content="http://microzz.com/2017/03/24/create-arr/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
-<meta property="og:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
-<meta property="og:updated_time" content="2017-03-24T11:41:37.710Z">
+<meta property="og:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
+12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+想必大家都没什么问题👍
+不用for循环但是如何不用fo">
+<meta property="og:updated_time" content="2017-03-24T11:44:59.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标">
-<meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-不用for循环ES5的实现12Object.keys(Array.from(&amp;#123">
+<meta name="twitter:title" content="【面试题】创建长度为100的数组">
+<meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
+12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
+想必大家都没什么问题👍
+不用for循环但是如何不用fo">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -114,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</div>
+        <div class="flex-col header-title ellipsis">【面试题】创建长度为100的数组</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,7 +142,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1>
+        <h1 class="title">【面试题】创建长度为100的数组</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-03-24T10:57:25.000Z" itemprop="datePublished" class="page-time">
@@ -166,7 +172,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1>
+        <h1 class="post-card-title">【面试题】创建长度为100的数组</h1>
         <div class="post-meta">
             <time class="post-time" title="2017年03月24日 18:57" datetime="2017-03-24T10:57:25.000Z"  itemprop="datePublished">2017-03-24</time>
 
@@ -183,8 +189,11 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
-<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><h3 id="ES5的实现"><a href="#ES5的实现" class="headerlink" title="ES5的实现"></a>ES5的实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;));  </div><div class="line"><span class="comment">// ["0", "1", "2", ..., "98", "99"]</span></div></pre></td></tr></table></figure>
+            <h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><p>先来说一下传统的for循环：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
+<p>想必大家都没什么问题👍</p>
+<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><p>但是如何不用for循环实现呢？</p>
+<h3 id="ES5的实现"><a href="#ES5的实现" class="headerlink" title="ES5的实现"></a>ES5的实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;));  </div><div class="line"><span class="comment">// ["0", "1", "2", ..., "98", "99"]</span></div></pre></td></tr></table></figure>
 <p>这样似乎的确完成了功能，但是还有一个问题，此时值是字符串类型，所以我们可以用ES5的map方法进行处理一下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;)).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> +item;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>这里用了一个小技巧，字符串前面加一个 “+” 就可以转成数字。如果你不喜欢这样，可以使用parseInt，也是一样的效果。</p>
@@ -204,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-24T11:41:37.710Z" itemprop="dateUpdated">2017年3月24日 19:41</time>
+    最后更新时间：<time datetime="2017-03-24T11:44:59.133Z" itemprop="dateUpdated">2017年3月24日 19:44</time>
 </span><br>
 
 
@@ -237,7 +246,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -247,7 +256,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -257,7 +266,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -373,7 +382,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/24/create-arr/&title=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -383,7 +392,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/24/create-arr/&title=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -393,7 +402,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【面试题】创建长度为100的数组》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/24/create-arr/&via=http://microzz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>

@@ -167,7 +167,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/24/create-arr/">不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</a>
+      <a class="post-title-link" href="/2017/03/24/create-arr/">【面试题】创建长度为100的数组</a>
     </h3>
   
 
@@ -177,8 +177,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环12345var arr = new Array(100)for (var i = 0; i &lt; arr.length; i++) &#123;  arr[i] = i;&#125;arr; // [0, 1, ..., 99]
-不用for循环ES5的实现12Object.keys(Array.from(&#...
+        不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
+12345var arr = new Array(100)for (var i = 0; i &lt; arr.length; i++) &#123;  arr[i] = i;&#125;arr; // [0, 1, ..., 99]
+想必大家都没什么问题👍
+不用for循环但是如何不...
     
 
         <a href="/2017/03/24/create-arr/" class="post-more waves-effect waves-button">
