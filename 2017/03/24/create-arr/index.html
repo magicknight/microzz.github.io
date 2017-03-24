@@ -25,25 +25,19 @@
     
     
     <meta name="keywords" content="JavaScript,JS,ES6,Array,ECMAScrpt6">
-    <meta name="description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
-12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-想必大家都没什么问题👍
-不用for循环但是如何不用fo">
+    <meta name="description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标先来说一下最直接的解法…
+1var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【面试题】创建长度为100的数组">
 <meta property="og:url" content="http://microzz.com/2017/03/24/create-arr/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
-<meta property="og:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
-12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-想必大家都没什么问题👍
-不用for循环但是如何不用fo">
-<meta property="og:updated_time" content="2017-03-24T11:59:44.454Z">
+<meta property="og:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标先来说一下最直接的解法…
+1var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 3">
+<meta property="og:updated_time" content="2017-03-24T12:04:21.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【面试题】创建长度为100的数组">
-<meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标传统for循环先来说一下传统的for循环：
-12345var arr = new Array(100)for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;  arr[i] = i;&amp;#125;arr; // [0, 1, ..., 99]
-想必大家都没什么问题👍
-不用for循环但是如何不用fo">
+<meta name="twitter:description" content="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标先来说一下最直接的解法…
+1var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 3">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -189,14 +183,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><p>先来说一下传统的for循环：</p>
+            <h1 id="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"><a href="#不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标" class="headerlink" title="不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标"></a>不用循环创建一个长度为100的数组，并且每个元素的值等于它的下标</h1><p>先来说一下最直接的解法…</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>, <span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">19</span>, <span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">24</span>, <span class="number">25</span>, <span class="number">26</span>, <span class="number">27</span>, <span class="number">28</span>, <span class="number">29</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">32</span>, <span class="number">33</span>, <span class="number">34</span>, <span class="number">35</span>, <span class="number">36</span>, <span class="number">37</span>, <span class="number">38</span>, <span class="number">39</span>, <span class="number">40</span>, <span class="number">41</span>, <span class="number">42</span>, <span class="number">43</span>, <span class="number">44</span>, <span class="number">45</span>, <span class="number">46</span>, <span class="number">47</span>, <span class="number">48</span>, <span class="number">49</span>, <span class="number">50</span>, <span class="number">51</span>, <span class="number">52</span>, <span class="number">53</span>, <span class="number">54</span>, <span class="number">55</span>, <span class="number">56</span>, <span class="number">57</span>, <span class="number">58</span>, <span class="number">59</span>, <span class="number">60</span>, <span class="number">61</span>, <span class="number">62</span>, <span class="number">63</span>, <span class="number">64</span>, <span class="number">65</span>, <span class="number">66</span>, <span class="number">67</span>, <span class="number">68</span>, <span class="number">69</span>, <span class="number">70</span>, <span class="number">71</span>, <span class="number">72</span>, <span class="number">73</span>, <span class="number">74</span>, <span class="number">75</span>, <span class="number">76</span>, <span class="number">77</span>, <span class="number">78</span>, <span class="number">79</span>, <span class="number">80</span>, <span class="number">81</span>, <span class="number">82</span>, <span class="number">83</span>, <span class="number">84</span>, <span class="number">85</span>, <span class="number">86</span>, <span class="number">87</span>, <span class="number">88</span>, <span class="number">89</span>, <span class="number">90</span>, <span class="number">91</span>, <span class="number">92</span>, <span class="number">93</span>, <span class="number">94</span>, <span class="number">95</span>, <span class="number">96</span>, <span class="number">97</span>, <span class="number">98</span>, <span class="number">99</span>];</div></pre></td></tr></table></figure>
+<p>…</p>
+<p>接下来转入正题。。。</p>
+<h2 id="传统for循环"><a href="#传统for循环" class="headerlink" title="传统for循环"></a>传统for循环</h2><p>来说一下传统的for循环：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">100</span>)</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">  arr[i] = i;</div><div class="line">&#125;</div><div class="line">arr; <span class="comment">// [0, 1, ..., 99]</span></div></pre></td></tr></table></figure>
 <p>想必大家都没什么问题👍</p>
-<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><p>但是如何不用for循环实现呢？</p>
+<h2 id="不用for循环"><a href="#不用for循环" class="headerlink" title="不用for循环"></a>不用for循环</h2><p>但是如何不用<code>for</code>循环实现呢？</p>
 <h3 id="ES5的实现"><a href="#ES5的实现" class="headerlink" title="ES5的实现"></a>ES5的实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;));  </div><div class="line"><span class="comment">// ["0", "1", "2", ..., "98", "99"]</span></div></pre></td></tr></table></figure>
-<p>什么？Array.from是ES6的？没事，我们可以换成ES5的😄</p>
-<p>Object.keys(<br>Array.apply(null,{ length: 100 }));</p>
-<p>这样似乎的确完成了功能，但是还有一个问题，此时值是字符串类型，所以我们可以用ES5的map方法进行处理一下：</p>
+<p>什么？<code>Array.from</code>是ES6的？没事，我们可以换成ES5的😄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Object.keys(</div><div class="line">Array.apply(null,&#123; length: 100 &#125;));</div></pre></td></tr></table></figure>
+<p>这样似乎的确完成了功能，但是还有一个问题，此时值是字符串类型，所以我们可以用ES5的<code>map</code>方法进行处理一下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;)).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> +item;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>这里用了一个小技巧，字符串前面加一个 “+” 就可以转成数字。如果你不喜欢这样，可以使用parseInt，也是一样的效果。</p>
 <h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><h4 id="普通实现"><a href="#普通实现" class="headerlink" title="普通实现"></a>普通实现</h4><p>ES6中数组实例有<code>keys</code>、<code>values</code>、<code>entries</code>方法，分别用于遍历数组的索引、键值、键值对，它们都返回<strong>遍历器对象</strong>（详细👉<a href="https://microzz.com/2017/01/12/iterator/">Iterator和for…of循环</a>）</p>
@@ -215,7 +213,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-03-24T11:59:44.454Z" itemprop="dateUpdated">2017年3月24日 19:59</time>
+    最后更新时间：<time datetime="2017-03-24T12:04:21.248Z" itemprop="dateUpdated">2017年3月24日 20:04</time>
 </span><br>
 
 
