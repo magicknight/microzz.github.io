@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-25T12:28:51.543Z</updated>
+  <updated>2017-03-25T12:32:19.542Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://microzz.com/2017/03/25/operator/"/>
     <id>http://microzz.com/2017/03/25/operator/</id>
     <published>2017-03-25T11:32:46.000Z</published>
-    <updated>2017-03-25T12:28:51.543Z</updated>
+    <updated>2017-03-25T12:32:19.542Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript中一个运算符优先级问题引发的思考"><a href="#JavaScript中一个运算符优先级问题引发的思考" class="headerlink" title="JavaScript中一个运算符优先级问题引发的思考"></a>JavaScript中一个运算符优先级问题引发的思考</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
 <p>假设 <code>val</code> 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:</p>
@@ -177,6 +177,7 @@
 <td style="text-align:center"></td>
 <td style="text-align:center">NaN</td>
 <td style="text-align:center">true</td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
