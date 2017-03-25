@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-24T12:04:21.248Z</updated>
+  <updated>2017-03-25T12:28:51.543Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,193 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS中一个运算符优先级问题引发的思考</title>
+    <link href="http://microzz.com/2017/03/25/operator/"/>
+    <id>http://microzz.com/2017/03/25/operator/</id>
+    <published>2017-03-25T11:32:46.000Z</published>
+    <updated>2017-03-25T12:28:51.543Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript中一个运算符优先级问题引发的思考"><a href="#JavaScript中一个运算符优先级问题引发的思考" class="headerlink" title="JavaScript中一个运算符优先级问题引发的思考"></a>JavaScript中一个运算符优先级问题引发的思考</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>假设 <code>val</code> 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'Value is '</span> + (val != <span class="string">'0'</span>) ? <span class="string">'define'</span> : <span class="string">'undefine'</span>);</div></pre></td></tr></table></figure>
+<p>A. <em>Value is define</em><br>B. <em>Value is undefine</em><br>C. <em>define</em><br>D. <em>undefine</em><br>E. <em>Value is define 或者 Value is undefine</em><br>F. <em>define 或者 undefine</em><br>G. <em>其它选项都有可能</em></p>
+<p>如果是你，你会选什么呢？</p>
+<hr>
+<p>可以说，大部分人都会在A、B、E中选择，以为重点在后面的三目运算符，前面字符串原样输出就是了。但是答案是 <strong>C</strong> 。</p>
+<hr>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为我们忽略了运算符的优先级。要知道，加号 <code>+</code> 优先级高于三目运算 <code>? :</code>，低于括号 <code>()</code>。不管 <code>(val != &#39;0&#39;)</code> 的真假，<code>&#39;Value is &#39; + (val != &#39;0&#39;)</code> 是一个字符串并且转换成布尔值一定是 <code>true</code> ！</p>
+<hr>
+<p>下面我们来具体分析里面的每一部分。</p>
+<p>先来看看括号里面的情况，题目已经说了：</p>
+<blockquote>
+<p>假设 <code>val</code> 已经声明,可定义为任何值。</p>
+</blockquote>
+<p>所以，<code>(val != &#39;0&#39;)</code> 的值可以是 <code>true</code> 或者 <code>false</code> ，那么这个就涉及到JavaScript的一些隐式转换逻辑。</p>
+<p>众所周知， </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">0</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">false</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<h2 id="常用的隐式转换逻辑"><a href="#常用的隐式转换逻辑" class="headerlink" title="常用的隐式转换逻辑"></a>常用的隐式转换逻辑</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x+<span class="string">""</span>  <span class="comment">//等价于String（x）</span></div><div class="line"></div><div class="line">+x  <span class="comment">//等价于Number（x），也可以写成x-0</span></div><div class="line"></div><div class="line">!!x  <span class="comment">//等价于Boolean(x)</span></div></pre></td></tr></table></figure>
+<h2 id="附录-Javascript类型转换"><a href="#附录-Javascript类型转换" class="headerlink" title="附录 - Javascript类型转换"></a>附录 - Javascript类型转换</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">值</th>
+<th style="text-align:center">转换为：字符串</th>
+<th style="text-align:center">数字</th>
+<th style="text-align:center">布尔值</th>
+<th style="text-align:center">对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">undefined</td>
+<td style="text-align:center">“undefined”</td>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">throws TypeError</td>
+</tr>
+<tr>
+<td style="text-align:center">null</td>
+<td style="text-align:center">“null”</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">TypeError</td>
+</tr>
+<tr>
+<td style="text-align:center">true</td>
+<td style="text-align:center">“true”</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">new Boolean(true)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">false</td>
+<td style="text-align:center">“false”</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">new Boolean(false)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">“”空字符串</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">new String(“”)</td>
+</tr>
+<tr>
+<td style="text-align:center">“1.2”（非空，数字）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1.2</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">new String(“1.2”)</td>
+</tr>
+<tr>
+<td style="text-align:center">“one”（非空，非数字）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">new String(“one”)</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">“0”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">Number(0)</td>
+</tr>
+<tr>
+<td style="text-align:center">-0</td>
+<td style="text-align:center">“0”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">Number(-0)</td>
+</tr>
+<tr>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">“NaN”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">new Number(NaN)</td>
+</tr>
+<tr>
+<td style="text-align:center">Infinity</td>
+<td style="text-align:center">“Infinity”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">new Number(Infinity)</td>
+</tr>
+<tr>
+<td style="text-align:center">-Infinity</td>
+<td style="text-align:center">“-Infinity”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">new Number(-Infinity)</td>
+</tr>
+<tr>
+<td style="text-align:center">1（无穷大，非零）</td>
+<td style="text-align:center">“1”</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">true</td>
+<td style="text-align:center">new Number(1)</td>
+</tr>
+<tr>
+<td style="text-align:center">{}（任意对象）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">true</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">[]（任意数组）</td>
+<td style="text-align:center">“”</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">[9]（1个数字对象）</td>
+<td style="text-align:center">“9”</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">[‘a’]（其他数组）</td>
+<td style="text-align:center">使用join（）方法</td>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">true</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">function（）｛｝（任意函数）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">true</td>
+</tr>
+</tbody>
+</table>
+<p>回到本题条件永远为真，并且只输出 <code>&#39;define&#39;</code></p>
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>还有一个需要注意的地方</p>
+<p>下面程序的显示结果是？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">if</span> (x) &#123;</div><div class="line">  alert(<span class="string">'hi'</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Boolean</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">if</span> (y) &#123;</div><div class="line">  alert(<span class="string">'hello'</span>); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>x为Boolean对象，在if语句里的判断为true，虽然x的值为false，但是作为对象，if会直接判断为true。y为Boolean值，在if里的判断就是false值。所以会显示 <code>&#39;hi&#39;</code>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript中一个运算符优先级问题引发的思考&quot;&gt;&lt;a href=&quot;#JavaScript中一个运算符优先级问题引发的思考&quot; class=&quot;headerlink&quot; title=&quot;JavaScript中一个运算符优先级问题引发的思考&quot;&gt;&lt;/a&gt;JavaScri
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="Boolean" scheme="http://microzz.com/tags/Boolean/"/>
+    
+  </entry>
   
   <entry>
     <title>【面试题】创建长度为100的数组</title>
