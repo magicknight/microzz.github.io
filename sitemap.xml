@@ -2,48 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://microzz.com/a/index.html</loc>
-    
-    <lastmod>2017-03-27T13:17:09.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/static/style.css</loc>
-    
-    <lastmod>2017-03-27T13:15:40.897Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/static/js/vendor.8ddc9bc181ea42bfcf74.js</loc>
-    
-    <lastmod>2017-03-27T13:15:39.135Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/static/js/manifest.7a7f67ed61adcd2b4556.js</loc>
-    
-    <lastmod>2017-03-27T13:15:38.789Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/static/js/app.39b37c5311f70ea8e002.js</loc>
-    
-    <lastmod>2017-03-27T13:15:38.542Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/static/css/app.5d108a971a821749c1013f73b5d6da4b.css</loc>
-    
-    <lastmod>2017-03-27T13:15:37.858Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://microzz.com/about/static/style.css</loc>
     
     <lastmod>2017-03-27T13:07:24.610Z</lastmod>
