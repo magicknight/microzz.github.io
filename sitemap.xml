@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://microzz.com/a/index.html</loc>
+    
+    <lastmod>2017-03-28T01:00:53.199Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://microzz.com/a/static/style.css</loc>
     
     <lastmod>2017-03-28T00:57:52.895Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://microzz.com/a/static/js/manifest.7a7f67ed61adcd2b4556.js</loc>
     
     <lastmod>2017-03-28T00:57:52.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://microzz.com/a/index.html</loc>
-    
-    <lastmod>2017-03-28T00:57:52.150Z</lastmod>
     
   </url>
   
