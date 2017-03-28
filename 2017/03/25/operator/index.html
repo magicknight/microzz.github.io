@@ -28,7 +28,7 @@
     <meta name="description" content="JavaScript中一个运算符优先级问题引发的思考题目
 假设 val 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:
 
-1console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
+console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
 A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS中一个运算符优先级问题引发的思考">
@@ -37,7 +37,7 @@ A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 <meta property="og:description" content="JavaScript中一个运算符优先级问题引发的思考题目
 假设 val 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:
 
-1console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
+console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
 A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 <meta property="og:updated_time" content="2017-03-25T12:32:19.542Z">
 <meta name="twitter:card" content="summary">
@@ -45,7 +45,7 @@ A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 <meta name="twitter:description" content="JavaScript中一个运算符优先级问题引发的思考题目
 假设 val 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:
 
-1console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
+console.log(&apos;Value is &apos; + (val != &apos;0&apos;) ? &apos;define&apos; : &apos;undefine&apos;);
 A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
@@ -195,7 +195,7 @@ A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
             <h1 id="JavaScript中一个运算符优先级问题引发的思考"><a href="#JavaScript中一个运算符优先级问题引发的思考" class="headerlink" title="JavaScript中一个运算符优先级问题引发的思考"></a>JavaScript中一个运算符优先级问题引发的思考</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
 <p>假设 <code>val</code> 已经声明,可定义为任何值。则下面js代码有可能输出的结果为:</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'Value is '</span> + (val != <span class="string">'0'</span>) ? <span class="string">'define'</span> : <span class="string">'undefine'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'Value is '</span> + (val != <span class="string">'0'</span>) ? <span class="string">'define'</span> : <span class="string">'undefine'</span>);</div></pre></td></tr></table></figure>
 <p>A. <em>Value is define</em><br>B. <em>Value is undefine</em><br>C. <em>define</em><br>D. <em>undefine</em><br>E. <em>Value is define 或者 Value is undefine</em><br>F. <em>define 或者 undefine</em><br>G. <em>其它选项都有可能</em></p>
 <p>如果是你，你会选什么呢？</p>
 <hr>
@@ -210,8 +210,8 @@ A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 </blockquote>
 <p>所以，<code>(val != &#39;0&#39;)</code> 的值可以是 <code>true</code> 或者 <code>false</code> ，那么这个就涉及到JavaScript的一些隐式转换逻辑。</p>
 <p>众所周知， </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">0</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">false</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h2 id="常用的隐式转换逻辑"><a href="#常用的隐式转换逻辑" class="headerlink" title="常用的隐式转换逻辑"></a>常用的隐式转换逻辑</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x+<span class="string">""</span>  <span class="comment">//等价于String（x）</span></div><div class="line"></div><div class="line">+x  <span class="comment">//等价于Number（x），也可以写成x-0</span></div><div class="line"></div><div class="line">!!x  <span class="comment">//等价于Boolean(x)</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="number">0</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span>  <span class="comment">// true</span></div><div class="line"><span class="literal">false</span> == <span class="string">'0'</span>  <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<h2 id="常用的隐式转换逻辑"><a href="#常用的隐式转换逻辑" class="headerlink" title="常用的隐式转换逻辑"></a>常用的隐式转换逻辑</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">x+<span class="string">""</span>  <span class="comment">//等价于String（x）</span></div><div class="line"></div><div class="line">+x  <span class="comment">//等价于Number（x），也可以写成x-0</span></div><div class="line"></div><div class="line">!!x  <span class="comment">//等价于Boolean(x)</span></div></pre></td></tr></table></figure>
 <h2 id="附录-Javascript类型转换"><a href="#附录-Javascript类型转换" class="headerlink" title="附录 - Javascript类型转换"></a>附录 - Javascript类型转换</h2><table>
 <thead>
 <tr>
@@ -354,7 +354,7 @@ A. Value is defineB. Value is undefineC. defineD. undefineE. Value">
 <p>回到本题条件永远为真，并且只输出 <code>&#39;define&#39;</code></p>
 <h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><p>还有一个需要注意的地方</p>
 <p>下面程序的显示结果是？</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">if</span> (x) &#123;</div><div class="line">  alert(<span class="string">'hi'</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Boolean</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">if</span> (y) &#123;</div><div class="line">  alert(<span class="string">'hello'</span>); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">if</span> (x) &#123;</div><div class="line">  alert(<span class="string">'hi'</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> y = <span class="built_in">Boolean</span>(<span class="number">0</span>);</div><div class="line"><span class="keyword">if</span> (y) &#123;</div><div class="line">  alert(<span class="string">'hello'</span>); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>x为Boolean对象，在if语句里的判断为true，虽然x的值为false，但是作为对象，if会直接判断为true。y为Boolean值，在if里的判断就是false值。所以会显示 <code>&#39;hi&#39;</code>。</p>
 
         </div>

@@ -179,7 +179,7 @@
     
         修饰器类的修饰修饰器（Decorator）是一个函数，用来修改类的行为。这是ES7的一个提案，目前Babel转码器已经支持。
 修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。
-12345678function testable(target) &#123;  target.isTestable = true;&#125;@testablecl...
+function testable(target) &#123;  target.isTestable = true;&#125;@testableclass MyTe...
     
 
         <a href="/2017/01/17/decorator/" class="post-more waves-effect waves-button">
@@ -227,7 +227,7 @@
 
     
         ClassClass基本语法概述JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。
-12345678910function Point(x, y) &#123;  this.x = x;  this.y = y;&#125;Point.prototype.toString = function () &#123;  return '(' + this.x +...
+function Point(x, y) &#123;  this.x = x;  this.y = y;&#125;Point.prototype.toString = function () &#123;  return '(' + this.x + ', ' + thi...
     
 
         <a href="/2017/01/16/class/" class="post-more waves-effect waves-button">
@@ -572,7 +572,7 @@ Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界�
     
         Set和Map数据结构Set基本用法ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
 Set本身是一个构造函数，用来生成Set数据结构。
-12345678var s = new Set();[2, 3, 5, 4, 5, 2, 2].map(x =&gt; s.add(x));for (let i of s) &#123;  console.log(i);...
+var s = new Set();[2, 3, 5, 4, 5, 2, 2].map(x =&gt; s.add(x));for (let i of s) &#123;  console.log(i);&#125;//...
     
 
         <a href="/2017/01/05/set-map/" class="post-more waves-effect waves-button">
