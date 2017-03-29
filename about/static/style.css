@@ -12,5 +12,13 @@ html, body {
 body {
   background-color: #030303;
   color: #3bfc31;
-  /*cursor: url('http://ongvu1bz5.bkt.clouddn.com/bitbug_favicon.ico'),auto;*/
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

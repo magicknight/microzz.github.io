@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://microzz.com/about.html</loc>
+    <loc>http://microzz.com/about/static/style.css</loc>
     
-    <lastmod>2017-03-29T07:58:42.057Z</lastmod>
+    <lastmod>2017-03-29T08:52:50.149Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://microzz.com/about/static/style.css</loc>
+    <loc>http://microzz.com/about/static/script.js</loc>
     
-    <lastmod>2017-03-29T07:40:46.505Z</lastmod>
+    <lastmod>2017-03-29T08:52:50.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://microzz.com/about.html</loc>
+    
+    <lastmod>2017-03-29T07:58:42.057Z</lastmod>
     
   </url>
   
