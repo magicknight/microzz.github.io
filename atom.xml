@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-29T12:17:36.231Z</updated>
+  <updated>2017-03-29T12:18:52.653Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>react-news</title>
+    <title>ReactJS新闻App</title>
     <link href="http://microzz.com/2017/03/29/react-news/"/>
     <id>http://microzz.com/2017/03/29/react-news/</id>
     <published>2017-03-29T11:58:19.000Z</published>
-    <updated>2017-03-29T12:17:36.231Z</updated>
+    <updated>2017-03-29T12:18:52.653Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ReactNewsApp"><a href="#ReactNewsApp" class="headerlink" title="ReactNewsApp"></a>ReactNewsApp</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个由React.js编写的新闻WebApp。<br>A news WebApp by React.js.<br>本应用仅供学习，请不要用于商业用途，供学习交流😁<br>因为技术有限，所以可能有好多不足，欢迎提建议哦😄<br> 👉 <a href="https://github.com/microzz/news-app-by-react.js" target="_blank" rel="external">项目地址</a></p>
 <h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><h3 id="React-js组件化开发"><a href="#React-js组件化开发" class="headerlink" title="React.js组件化开发"></a>React.js组件化开发</h3><p>项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。</p>
