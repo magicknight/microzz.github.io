@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://microzz.com/2017/03/29/react-news/</loc>
+    
+    <lastmod>2017-03-29T12:17:36.231Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://microzz.com/about/static/style.css</loc>
     
-    <lastmod>2017-03-29T08:52:50.149Z</lastmod>
+    <lastmod>2017-03-29T11:41:36.108Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://microzz.com/about/static/script.js</loc>
     
-    <lastmod>2017-03-29T08:52:50.055Z</lastmod>
+    <lastmod>2017-03-29T11:41:36.022Z</lastmod>
     
   </url>
   

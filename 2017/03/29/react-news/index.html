@@ -18,22 +18,32 @@
     
     
     
-    <title>文章列表 | 涵月天-microzz.com | IT技术分享</title>
+    <title>react-news | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="undefined">
-    <meta name="description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="涵月天-microzz.com">
-<meta property="og:url" content="http://microzz.com/archives/page/5/index.html">
+    <meta name="keywords" content="JavaScript,ECMAScript6,JS,ES6,ReactJS">
+    <meta name="description" content="ReactNewsApp介绍一个由React.js编写的新闻WebApp。A news WebApp by React.js.本应用仅供学习，请不要用于商业用途，供学习交流😁因为技术有限，所以可能有好多不足，欢迎提建议哦😄 👉 项目地址
+技术栈React.js组件化开发项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。
+react-router路由管理路由库Rea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-news">
+<meta property="og:url" content="http://microzz.com/2017/03/29/react-news/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
-<meta property="og:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta property="og:description" content="ReactNewsApp介绍一个由React.js编写的新闻WebApp。A news WebApp by React.js.本应用仅供学习，请不要用于商业用途，供学习交流😁因为技术有限，所以可能有好多不足，欢迎提建议哦😄 👉 项目地址
+技术栈React.js组件化开发项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。
+react-router路由管理路由库Rea">
+<meta property="og:image" content="http://onksrzpe8.bkt.clouddn.com/pc-index.png">
+<meta property="og:image" content="http://onksrzpe8.bkt.clouddn.com/phone.png">
+<meta property="og:updated_time" content="2017-03-29T12:17:36.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="涵月天-microzz.com">
-<meta name="twitter:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta name="twitter:title" content="react-news">
+<meta name="twitter:description" content="ReactNewsApp介绍一个由React.js编写的新闻WebApp。A news WebApp by React.js.本应用仅供学习，请不要用于商业用途，供学习交流😁因为技术有限，所以可能有好多不足，欢迎提建议哦😄 👉 项目地址
+技术栈React.js组件化开发项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。
+react-router路由管理路由库Rea">
+<meta name="twitter:image" content="http://onksrzpe8.bkt.clouddn.com/pc-index.png">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -45,7 +55,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -117,7 +127,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">文章列表</div>
+        <div class="flex-col header-title ellipsis">react-news</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -136,11 +146,17 @@
         
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">文章列表</h1>
+        <h1 class="title">react-news</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2017-03-29T11:58:19.000Z" itemprop="datePublished" class="page-time">
+  2017-03-29
+</time>
+
+
             
         </h5>
     </div>
@@ -149,318 +165,205 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
 
+<div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ReactNewsApp"><span class="post-toc-number">1.</span> <span class="post-toc-text">ReactNewsApp</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#技术栈"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">技术栈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-js组件化开发"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">React.js组件化开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-router路由管理"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">react-router路由管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#antd使页面更加美观"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">antd使页面更加美观</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Webpack"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">Webpack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ES6语法"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text">ES6语法</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">开始</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#预览"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">预览</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-react-news"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">react-news</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月29日 19:58" datetime="2017-03-29T11:58:19.000Z"  itemprop="datePublished">2017-03-29</time>
+
             
-            <h3 class="archive-separator">January, 2017</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年01月01日 13:43" datetime="2017-01-01T05:43:19.000Z"  itemprop="datePublished">Jan 1</time>
-
-      
 
 
-    </div>
-    
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/01/01/symbol/">Symbol</a>
-    </h3>
-  
+            
 
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="ReactNewsApp"><a href="#ReactNewsApp" class="headerlink" title="ReactNewsApp"></a>ReactNewsApp</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个由React.js编写的新闻WebApp。<br>A news WebApp by React.js.<br>本应用仅供学习，请不要用于商业用途，供学习交流😁<br>因为技术有限，所以可能有好多不足，欢迎提建议哦😄<br> 👉 <a href="https://github.com/microzz/news-app-by-react.js" target="_blank" rel="external">项目地址</a></p>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><h3 id="React-js组件化开发"><a href="#React-js组件化开发" class="headerlink" title="React.js组件化开发"></a>React.js组件化开发</h3><p>项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。</p>
+<h3 id="react-router路由管理"><a href="#react-router路由管理" class="headerlink" title="react-router路由管理"></a>react-router路由管理</h3><p>路由库React-Router，它是官方维护的，事实上也是唯一可选的路由库。它通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到，特别是SPA(单页应用)</p>
+<h3 id="antd使页面更加美观"><a href="#antd使页面更加美观" class="headerlink" title="antd使页面更加美观"></a>antd使页面更加美观</h3><p>Ant Design 是蚂蚁金服开发和正在使用的一套企业级的前端设计语言和基于 React 的前端框架实现。</p>
+<ul>
+<li>特性</li>
+</ul>
+<p>企业级金融产品的交互语言和视觉体系。</p>
+<p>丰富实用的 React UI 组件。</p>
+<p>基于 React 的组件化开发模式。</p>
+<p>背靠 npm 生态圈。</p>
+<p>基于 webpack 的调试构建方案，支持 ES6。</p>
+<h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><p>Webpack作为构建工具</p>
+<h4 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h4><p>全面采用ES6语法</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>本项目以慕课网视频为原型开发，大家可以发挥想象改进功能😄 </p>
+<p>下载下来之后： </p>
+<p><code>npm run dev</code> or <code>npm run build</code></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>PC端<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://onksrzpe8.bkt.clouddn.com/pc-index.png" alt="react-news" title="">
+                </div>
+                <div class="image-caption">react-news</div>
+            </figure></p>
+<p>手机端</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://onksrzpe8.bkt.clouddn.com/phone.png" alt="react-news" title="">
+                </div>
+                <div class="image-caption">react-news</div>
+            </figure>
+<p>👉 <a href="https://microzz.com/">个人技术网站</a><br>👉<a href="https://github.com/microzz" target="_blank" rel="external">GitHub</a></p>
 
+        </div>
 
-    
-    <div class="post-footer">
+        <blockquote class="post-copyright">
+    <div class="content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Symbol/">Symbol</a></li></ul>
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-29T12:17:36.231Z" itemprop="dateUpdated">2017年3月29日 20:17</time>
+</span><br>
 
+
+        转载请注明出处：<a href="http://microzz.com/2017/03/29/react-news/" target="_blank" rel="external">http://microzz.com/2017/03/29/react-news/</a>
     </div>
-    
-  </article>
+    <footer>
+        <a href="http://microzz.com">
+            <img src="/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
-    
-            </div> 
-            <h3 class="archive-separator">December, 2016</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年12月25日 12:45" datetime="2016-12-25T04:45:19.000Z"  itemprop="datePublished">Dec 25</time>
-
-      
 
 
-    </div>
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactJS/">ReactJS</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/29/react-news/&title=《react-news》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/29/react-news/&title=《react-news》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/29/react-news/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react-news》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/29/react-news/&via=http://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/29/react-news/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/12/25/object/">对象的扩展(Object)</a>
-    </h3>
-  
 
 
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/">Object</a></li></ul>
-
-    </div>
-    
-  </article>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年12月10日 15:45" datetime="2016-12-10T07:45:19.000Z"  itemprop="datePublished">Dec 10</time>
-
-      
 
 
+        </div>
     </div>
+
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/12/10/function/">函数的扩展(Function)</a>
-    </h3>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-            </div> 
-            <h3 class="archive-separator">November, 2016</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月30日 12:45" datetime="2016-11-30T04:45:19.000Z"  itemprop="datePublished">Nov 30</time>
-
-      
-
-
-    </div>
-    
-
-
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/30/array/">数组的扩展(Array)</a>
-    </h3>
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/25/operator/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JS中一个运算符优先级问题引发的思考</h4>
+      </a>
+    </div>
   
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月25日 17:45" datetime="2016-11-25T09:45:19.000Z"  itemprop="datePublished">Nov 25</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/25/number/">数值的扩展</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Number/">Number</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月20日 15:57" datetime="2016-11-20T07:57:19.000Z"  itemprop="datePublished">Nov 20</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/20/regex/">正则的扩展(RegExp)</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RegExp/">RegExp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月15日 15:45" datetime="2016-11-15T07:45:19.000Z"  itemprop="datePublished">Nov 15</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/15/string/">字符串的扩展</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unicode/">Unicode</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月13日 15:16" datetime="2016-11-13T07:16:19.000Z"  itemprop="datePublished">Nov 13</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/13/destructuring/">变量的解构赋值(Destructuring)</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Destructuring/">Destructuring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2016年11月12日 15:16" datetime="2016-11-12T07:16:19.000Z"  itemprop="datePublished">Nov 12</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/11/12/let/">let和const命令</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/const/">const</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/let/">let</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-    </div>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/archives/page/4/">上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span>
-    </div>
 </nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
 
 </div>
 
@@ -502,7 +405,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/archives/page/5/&title=涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://microzz.com/2017/03/29/react-news/&title=《react-news》 — 涵月天-microzz.com&pic=http://microzz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -512,22 +415,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/archives/page/5/&title=涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://microzz.com/2017/03/29/react-news/&title=《react-news》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/archives/page/5/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://microzz.com/2017/03/29/react-news/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=涵月天-microzz.com&url=http://microzz.com/archives/page/5/&via=http://microzz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react-news》 — 涵月天-microzz.com&url=http://microzz.com/2017/03/29/react-news/&via=http://microzz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/archives/page/5/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://microzz.com/2017/03/29/react-news/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -538,7 +441,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuElEQVR42u3aQZKDMAwEQP7/6d0PLF6NhE1S1ZxShISGg0oa+7rKx0941P/z2nHg4uKOuZUb9769u/Luc+nhcXFxD3LXhSa9Zv3b9WP8Y8PFxf0S7lOlEBcX93u5T403uLi4n89Nh5Z6CFL57ZZZDRcXd8BNS9KOz1vyXVxc3BZ3skBSKXOVM8HdcXFxj3DrBWWNTomj++Li4h7h1i+dxKbrUlh5Bbi4uCe5adHpbcyqvK2gxcHFxd3G7RWplLJ+EfWGCRcX911u7/Yppd4G4eLinuf2gsteSRptCMPFxT3CnYebvZEmbW5GsxouLm7InUQVvSXVdPPWH8MPLi7uZm46wNwVtV7k2tu6gYuLe4ZboVTGknRwSreK4uLinuTWY4sdrUxaInFxcc9z64jKmV54Whp+cHFxX+XWB6RJK9PswnBxcTdwn1peTYtavcDh4uKe56bFJY1We4FLuoiLi4u7g5tGnL1vK21T6b3i4uIe5KbhZuWv0zi11DDh4uJ+JDcNTSZRS5Ca4OLivsoNFkQfik0fqLu4uLgtbi8k7Z0Z1SVcXNwj3FFZaUWi6wfrjUy4uLgPcX8B4OJxsAUUKIoAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aS27DMAwFwNz/0i7QVYC0yiP1iQOMVoWdWmMvCOlRj0c8rt8xvvJ8/flucmXxwMXFneZew/GKS36Z/29uwMXFPc8dF68qbjzl+JXe2HBxcW/GHU+Z3B0XOFxc3G/kJguX8eIp/xy4uLh34OZbmiQiGUceh/ZquLi4E9xqYLrj7435Li4ubpF7FcdMFJIHr/8+DRcX9wi310DNi10SrFQjVFxc3M9yeyOnJGFrlOLg4uJu4PbijJnwtLopKhQ1XFzcpdxVByl6aUbepsXFxT3DnZmyulla8DlwcXE3c1dtb/LX7n2OqT0ZLi7uNDcvQNXClIQv5XfCxcXdwK3ies/Jl1BRWwUXF3cztxdSJC9Q3djg4uLek9t7UK/F0ns+Li7uGW4hkmidf8ibrIWoBRcXdzM3KRxJ2Vq1VHpT2nBxcQ9yqyc1eg2VXqMFFxf3U9yZ9moeauTXy1kLLi7uUm61oFS5yYJmbTsHFxd3FbdXvNa2TJLYFBcX9zy3eiRipvk69RtcXNybcfMWSNIgSWb/4y4uLu4tufk01cMWUUsGFxf3IHf+yFQvGC1/LFxc3CPcXmBaPVa19ggXLi7uNu4P8Ff8M2T0W9EAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
@@ -561,7 +464,7 @@
 
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 

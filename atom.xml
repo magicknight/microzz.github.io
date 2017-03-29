@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://microzz.com/"/>
-  <updated>2017-03-25T12:32:19.542Z</updated>
+  <updated>2017-03-29T12:17:36.231Z</updated>
   <id>http://microzz.com/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react-news</title>
+    <link href="http://microzz.com/2017/03/29/react-news/"/>
+    <id>http://microzz.com/2017/03/29/react-news/</id>
+    <published>2017-03-29T11:58:19.000Z</published>
+    <updated>2017-03-29T12:17:36.231Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ReactNewsApp"><a href="#ReactNewsApp" class="headerlink" title="ReactNewsApp"></a>ReactNewsApp</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个由React.js编写的新闻WebApp。<br>A news WebApp by React.js.<br>本应用仅供学习，请不要用于商业用途，供学习交流😁<br>因为技术有限，所以可能有好多不足，欢迎提建议哦😄<br> 👉 <a href="https://github.com/microzz/news-app-by-react.js" target="_blank" rel="external">项目地址</a></p>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><h3 id="React-js组件化开发"><a href="#React-js组件化开发" class="headerlink" title="React.js组件化开发"></a>React.js组件化开发</h3><p>项目采用组件化的思想，把大的功能模块划分成一个个小的模块，便于团队合作和维护。</p>
+<h3 id="react-router路由管理"><a href="#react-router路由管理" class="headerlink" title="react-router路由管理"></a>react-router路由管理</h3><p>路由库React-Router，它是官方维护的，事实上也是唯一可选的路由库。它通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到，特别是SPA(单页应用)</p>
+<h3 id="antd使页面更加美观"><a href="#antd使页面更加美观" class="headerlink" title="antd使页面更加美观"></a>antd使页面更加美观</h3><p>Ant Design 是蚂蚁金服开发和正在使用的一套企业级的前端设计语言和基于 React 的前端框架实现。</p>
+<ul>
+<li>特性</li>
+</ul>
+<p>企业级金融产品的交互语言和视觉体系。</p>
+<p>丰富实用的 React UI 组件。</p>
+<p>基于 React 的组件化开发模式。</p>
+<p>背靠 npm 生态圈。</p>
+<p>基于 webpack 的调试构建方案，支持 ES6。</p>
+<h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><p>Webpack作为构建工具</p>
+<h4 id="ES6语法"><a href="#ES6语法" class="headerlink" title="ES6语法"></a>ES6语法</h4><p>全面采用ES6语法</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>本项目以慕课网视频为原型开发，大家可以发挥想象改进功能😄 </p>
+<p>下载下来之后： </p>
+<p><code>npm run dev</code> or <code>npm run build</code></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>PC端<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://onksrzpe8.bkt.clouddn.com/pc-index.png" alt="react-news" title="">
+                </div>
+                <div class="image-caption">react-news</div>
+            </figure></p>
+<p>手机端</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://onksrzpe8.bkt.clouddn.com/phone.png" alt="react-news" title="">
+                </div>
+                <div class="image-caption">react-news</div>
+            </figure>
+<p>👉 <a href="https://microzz.com/">个人技术网站</a><br>👉<a href="https://github.com/microzz" target="_blank" rel="external">GitHub</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ReactNewsApp&quot;&gt;&lt;a href=&quot;#ReactNewsApp&quot; class=&quot;headerlink&quot; title=&quot;ReactNewsApp&quot;&gt;&lt;/a&gt;ReactNewsApp&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://microzz.com/tags/JavaScript/"/>
+    
+      <category term="ECMAScript6" scheme="http://microzz.com/tags/ECMAScript6/"/>
+    
+      <category term="JS" scheme="http://microzz.com/tags/JS/"/>
+    
+      <category term="ES6" scheme="http://microzz.com/tags/ES6/"/>
+    
+      <category term="ReactJS" scheme="http://microzz.com/tags/ReactJS/"/>
+    
+  </entry>
   
   <entry>
     <title>JS中一个运算符优先级问题引发的思考</title>
