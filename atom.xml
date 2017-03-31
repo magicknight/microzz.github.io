@@ -454,32 +454,32 @@
     <link href="https://microzz.com/2017/03/15/vue-music/"/>
     <id>https://microzz.com/2017/03/15/vue-music/</id>
     <published>2017-03-15T13:44:02.000Z</published>
-    <updated>2017-03-19T15:13:13.591Z</updated>
+    <updated>2017-03-31T08:26:16.175Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue-js写一个音乐播放器"><a href="#Vue-js写一个音乐播放器" class="headerlink" title="Vue.js写一个音乐播放器"></a>Vue.js写一个音乐播放器</h1><h2 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h2><p>在线预览地址1: 🔗<a href="http://microzz.cn/vue-music/" target="_blank" rel="external">http://microzz.cn/vue-music/</a><br>在线预览地址2: 🔗<a href="https://microzz.github.io/vue-music-player/" target="_blank" rel="external">https://microzz.github.io/vue-music-player/</a></p>
 <h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>GitHub地址: 🔗<a href="https://github.com/microzz/vue-music-player" target="_blank" rel="external">https://github.com/microzz/vue-music-player</a><br>欢迎大家follow和star哦😄</p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>学习Vue.js后，决定做个小项目锻炼一下，于是选择了典型的音乐播放器上手。其中遇到了很多坑，也学到了很多。代码可能还有瑕疵，欢迎大家到我的<a href="https://github.com/microzz/vue-music-player" target="_blank" rel="external">GitHub</a>反馈，相互交流学习。同时也欢迎大家follow和star😄<br>预览图：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://omratag7g.bkt.clouddn.com/red.png" alt="红色皮肤-microzz.com" title="">
+                    <img src="https://icdn.microzz.com/20170315_vue_music/red.png" alt="红色皮肤-microzz.com" title="">
                 </div>
                 <div class="image-caption">红色皮肤-microzz.com</div>
             </figure><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://omratag7g.bkt.clouddn.com/green.png" alt="绿色皮肤-microzz.com" title="">
+                    <img src="https://icdn.microzz.com/20170315_vue_music/green.png" alt="绿色皮肤-microzz.com" title="">
                 </div>
                 <div class="image-caption">绿色皮肤-microzz.com</div>
             </figure><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://omratag7g.bkt.clouddn.com/blue.png" alt="蓝色皮肤-microzz.com" title="">
+                    <img src="https://icdn.microzz.com/20170315_vue_music/blue.png" alt="蓝色皮肤-microzz.com" title="">
                 </div>
                 <div class="image-caption">蓝色皮肤-microzz.com</div>
             </figure><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://omratag7g.bkt.clouddn.com/black.png" alt="黑色皮肤-microzz.com" title="">
+                    <img src="https://icdn.microzz.com/20170315_vue_music/black.png" alt="黑色皮肤-microzz.com" title="">
                 </div>
                 <div class="image-caption">黑色皮肤-microzz.com</div>
             </figure></p>

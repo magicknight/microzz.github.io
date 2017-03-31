@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://microzz.com/2017/03/15/vue-music/</loc>
+    <lastmod>2017-03-31T08:26:16.175Z</lastmod>
+    <data>
+        <display>
+        <title>Vue.js写一个音乐播放器</title>
+        <pubTime>2017-03-15T13:44:02.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>ECMAScript6</tag>
+         
+        <tag>JS</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Vue.js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://microzz.com/2017/02/21/react-mind-map/</loc>
     <lastmod>2017-03-31T08:16:54.550Z</lastmod>
     <data>
@@ -118,33 +145,6 @@
         <tag>Vue.js</tag>
          
         <tag>Vuex</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://microzz.com/2017/03/15/vue-music/</loc>
-    <lastmod>2017-03-19T15:13:13.591Z</lastmod>
-    <data>
-        <display>
-        <title>Vue.js写一个音乐播放器</title>
-        <pubTime>2017-03-15T13:44:02.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>HTML5</tag>
-         
-        <tag>ECMAScript6</tag>
-         
-        <tag>JS</tag>
-         
-        <tag>ES6</tag>
-         
-        <tag>Vue.js</tag>
          
          
            

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://microzz.com/2017/03/15/vue-music/</loc>
+    
+    <lastmod>2017-03-31T08:26:16.175Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://microzz.com/2017/02/21/react-mind-map/</loc>
     
     <lastmod>2017-03-31T08:16:54.550Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://microzz.com/2017/03/20/vue-note/</loc>
     
     <lastmod>2017-03-21T15:15:17.377Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://microzz.com/2017/03/15/vue-music/</loc>
-    
-    <lastmod>2017-03-19T15:13:13.591Z</lastmod>
     
   </url>
   
