@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://microzz.com/2017/04/01/array-uniq/</loc>
+    
+    <lastmod>2017-04-01T14:59:58.980Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://microzz.com/2017/03/01/flow-info/</loc>
     
     <lastmod>2017-03-31T13:16:11.113Z</lastmod>
@@ -46,14 +53,14 @@
   <url>
     <loc>https://microzz.com/about/static/style.css</loc>
     
-    <lastmod>2017-03-29T11:41:36.108Z</lastmod>
+    <lastmod>2017-03-29T12:30:54.346Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://microzz.com/about/static/script.js</loc>
     
-    <lastmod>2017-03-29T11:41:36.022Z</lastmod>
+    <lastmod>2017-03-29T12:30:54.257Z</lastmod>
     
   </url>
   

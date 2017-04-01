@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://microzz.com/"/>
-  <updated>2017-03-30T11:51:16.855Z</updated>
+  <updated>2017-04-01T14:59:58.980Z</updated>
   <id>https://microzz.com/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为 Array 对象添加一个去除重复项的方法</title>
+    <link href="https://microzz.com/2017/04/01/array-uniq/"/>
+    <id>https://microzz.com/2017/04/01/array-uniq/</id>
+    <published>2017-04-01T14:34:16.000Z</published>
+    <updated>2017-04-01T14:59:58.980Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="为-Array-对象添加一个去除重复项的方法"><a href="#为-Array-对象添加一个去除重复项的方法" class="headerlink" title="为 Array 对象添加一个去除重复项的方法"></a>为 Array 对象添加一个去除重复项的方法</h1><h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="literal">NaN</span>].uniq()</div></pre></td></tr></table></figure>
+<h2 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>]</div></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题目要求给 Array 添加方法，所以我们需要用到 <code>prototype</code>。数组去重本身算法不是很难，但是在 JavaScript 中很多人会忽视 <code>NaN</code> 的存在，因为在 JS 中 <code>NaN !== NaN</code> 。但是在去重中我们又不能保留两个 NaN ，所以需要进行一下判断，这是很多人容易忽视的。ES5的实现如下：</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.uniq = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = [];</div><div class="line">  <span class="keyword">var</span> flag = <span class="literal">true</span>;</div><div class="line">  <span class="keyword">this</span>.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="comment">// 排除 NaN (重要！！！)</span></div><div class="line">    <span class="keyword">if</span> (item != item) &#123;</div><div class="line">      flag &amp;&amp; arr.indexOf(item) === <span class="number">-1</span> ? arr.push(item) : <span class="string">''</span>;</div><div class="line">      flag = <span class="literal">false</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      arr.indexOf(item) === <span class="number">-1</span> ? arr.push(item) : <span class="string">''</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>我们只需要在数组上直接调用 <code>uniq</code> 方法就可以了，如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="literal">NaN</span>].uniq()</div></pre></td></tr></table></figure>
+<p>结果为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>]</div></pre></td></tr></table></figure>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="ES6的实现"><a href="#ES6的实现" class="headerlink" title="ES6的实现"></a>ES6的实现</h3><p>ES6新增了 <code>Set</code> 对象，也就是我们所说的“集合”，它类似于数组，但是成员的值都是唯一的，没有重复的值。所以可以方便去重。<br>Set本身是一个构造函数，用来生成Set数据结构。(详看👉<a href="https://microzz.com/2017/01/05/set-map/">Set和Map数据结构</a>)</p>
+<p>如果用ES6为 Array 对象添加一个去除重复项的方法，则可以如下实现：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.uniq = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(<span class="keyword">this</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>代码中用 <code>Array.from</code> 把 <code>Set</code> 结构转换成数组，当然，你也可以用其他方法，这里不深究。这里去重关键代码只需要一行，是不是非常简单？😄<br>如果你要优雅一点，可以使用 ES6 的扩展运算符。如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.uniq = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> [...new <span class="built_in">Set</span>(<span class="keyword">this</span>)];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;为-Array-对象添加一个去除重复项的方法&quot;&gt;&lt;a href=&quot;#为-Array-对象添加一个去除重复项的方法&quot; class=&quot;headerlink&quot; title=&quot;为 Array 对象添加一个去除重复项的方法&quot;&gt;&lt;/a&gt;为 Array 对象添加一个去除重复项的
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
+      <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
+    
+      <category term="prototype" scheme="https://microzz.com/tags/prototype/"/>
+    
+      <category term="原型链" scheme="https://microzz.com/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>ReactJS新闻App</title>
@@ -66,11 +107,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="ReactJS" scheme="https://microzz.com/tags/ReactJS/"/>
     
@@ -305,9 +346,9 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
-      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
       <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
+      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
     
       <category term="Array" scheme="https://microzz.com/tags/Array/"/>
     
@@ -525,11 +566,11 @@
     
       <category term="HTML5" scheme="https://microzz.com/tags/HTML5/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Vue.js" scheme="https://microzz.com/tags/Vue-js/"/>
     
@@ -547,7 +588,7 @@
 <p>最好先初始化一下package.json文件，输入 <code>npm init -y</code>，然后再执行安装<code>npm install select-plugin</code></p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="默认数据"><a href="#默认数据" class="headerlink" title="默认数据"></a><strong>默认数据</strong></h3><p> 引入js文件。<br> 在html文件中插入<code>&lt;script src=&quot;./node_modules/select-plugin/dist/select-plugin-all.js&quot;&gt;&lt;/script&gt;</code>，<br> 然后<br> <code>&lt;script&gt;new Select()&lt;/script&gt;</code><br> 默认就可以生成中国地区的三级联动数据啦😄</p>
 <h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a><strong>自定义数据</strong></h3><p>如果你<strong>只使用</strong>自定义的数据，建议只引入不包含地区数据的js文件，<br>即<code>&lt;script src=&quot;./node_modules/select-plugin/dist/select-plugin.js&quot;&gt;&lt;/script&gt;</code>，<br>这样文件大小可以减少很多，毕竟大中国地区数据太庞大了😇但是务必传递传递相关参数！<br><br><code>new Select(&#39;.container&#39;, data, id, text);</code> <br><br><strong>参数依次是插入父容器位置（默认是body，参数是CSS3选择器的形式，如’#id’ , ‘ .className’），数据，在DOM元素的id，显示的文本</strong></p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>三级联动生成器插件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./node_modules/select-plugin/dist/select-plugin-all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">  // 不传任何参数,默认生成中国地区三级联动</div><div class="line">    new Select();</div><div class="line"></div><div class="line">  // 自定义数据</div><div class="line">    var data = &#123;</div><div class="line">                One: ['a1', 'a2', 'a3'],</div><div class="line">                Two: [</div><div class="line">                  ['a11', 'a12', 'a13'],</div><div class="line">                  ['a21', 'a22'],</div><div class="line">                  ['a31', 'a32']</div><div class="line">                ],</div><div class="line">                Three:  [</div><div class="line">                  [['a111', 'a112'], ['a121', 'a122'], ['a131', 'a132']],</div><div class="line">                  [['a211', 'a212'], ['a221', 'a222']],</div><div class="line">                  [['a311'], ['a312']]</div><div class="line">                ]</div><div class="line">              &#125;;</div><div class="line">    var id = ['one', 'two', 'three'];</div><div class="line">    var text = ['选项1', '选项2', '选项3'];</div><div class="line">    // 参数依次是插入父容器位置，数据，DOM的id，显示的文本</div><div class="line">    new Select('.container', data, id, text);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>三级联动生成器插件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./node_modules/select-plugin/dist/select-plugin-all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="comment">// 不传任何参数,默认生成中国地区三级联动</span></div><div class="line">    <span class="keyword">new</span> Select();</div><div class="line"></div><div class="line">  <span class="comment">// 自定义数据</span></div><div class="line">    <span class="keyword">var</span> data = &#123;</div><div class="line">                <span class="attr">One</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</div><div class="line">                <span class="attr">Two</span>: [</div><div class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</div><div class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</div><div class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</div><div class="line">                ],</div><div class="line">                <span class="attr">Three</span>:  [</div><div class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</div><div class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</div><div class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</div><div class="line">                ]</div><div class="line">              &#125;;</div><div class="line">    <span class="keyword">var</span> id = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</div><div class="line">    <span class="keyword">var</span> text = [<span class="string">'选项1'</span>, <span class="string">'选项2'</span>, <span class="string">'选项3'</span>];</div><div class="line">    <span class="comment">// 参数依次是插入父容器位置，数据，DOM的id，显示的文本</span></div><div class="line">    <span class="keyword">new</span> Select(<span class="string">'.container'</span>, data, id, text);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -568,11 +609,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="npm" scheme="https://microzz.com/tags/npm/"/>
     
@@ -608,11 +649,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Vue.js" scheme="https://microzz.com/tags/Vue-js/"/>
     
@@ -644,11 +685,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
-      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
       <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="原型链" scheme="https://microzz.com/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
+      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
     
   </entry>
   
@@ -1046,11 +1087,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="ReactJS" scheme="https://microzz.com/tags/ReactJS/"/>
     
@@ -1234,11 +1275,11 @@
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Nodejs" scheme="https://microzz.com/tags/Nodejs/"/>
     
@@ -3872,11 +3913,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="规范" scheme="https://microzz.com/tags/%E8%A7%84%E8%8C%83/"/>
     
@@ -4105,11 +4146,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Iterators" scheme="https://microzz.com/tags/Iterators/"/>
     
@@ -4149,11 +4190,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="深拷贝" scheme="https://microzz.com/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
@@ -4182,11 +4223,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Destructuring" scheme="https://microzz.com/tags/Destructuring/"/>
     
@@ -4528,11 +4569,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Module" scheme="https://microzz.com/tags/Module/"/>
     
@@ -4675,11 +4716,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Decorator" scheme="https://microzz.com/tags/Decorator/"/>
     
@@ -4964,11 +5005,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Class" scheme="https://microzz.com/tags/Class/"/>
     
@@ -5295,11 +5336,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Async" scheme="https://microzz.com/tags/Async/"/>
     
@@ -5497,11 +5538,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Promise" scheme="https://microzz.com/tags/Promise/"/>
     
@@ -5744,11 +5785,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Generator" scheme="https://microzz.com/tags/Generator/"/>
     
@@ -5928,11 +5969,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Iterator" scheme="https://microzz.com/tags/Iterator/"/>
     
@@ -6042,11 +6083,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Reflect" scheme="https://microzz.com/tags/Reflect/"/>
     
@@ -6272,11 +6313,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Proxy" scheme="https://microzz.com/tags/Proxy/"/>
     
@@ -6500,11 +6541,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Set" scheme="https://microzz.com/tags/Set/"/>
     
@@ -6690,11 +6731,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Symbol" scheme="https://microzz.com/tags/Symbol/"/>
     
@@ -6979,11 +7020,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Object" scheme="https://microzz.com/tags/Object/"/>
     
@@ -7305,11 +7346,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Function" scheme="https://microzz.com/tags/Function/"/>
     
@@ -7454,11 +7495,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Array" scheme="https://microzz.com/tags/Array/"/>
     
@@ -7618,11 +7659,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Number" scheme="https://microzz.com/tags/Number/"/>
     
@@ -7782,11 +7823,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="RegExp" scheme="https://microzz.com/tags/RegExp/"/>
     
@@ -8013,11 +8054,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Unicode" scheme="https://microzz.com/tags/Unicode/"/>
     
@@ -8191,11 +8232,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="Destructuring" scheme="https://microzz.com/tags/Destructuring/"/>
     
@@ -8362,11 +8403,11 @@ fork表示你想要补充完善这个项目的内容。
     
       <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
     
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
       <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
     
       <category term="JS" scheme="https://microzz.com/tags/JS/"/>
-    
-      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
     
       <category term="const" scheme="https://microzz.com/tags/const/"/>
     

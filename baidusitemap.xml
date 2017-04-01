@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://microzz.com/2017/04/01/array-uniq/</loc>
+    <lastmod>2017-04-01T14:59:58.980Z</lastmod>
+    <data>
+        <display>
+        <title>为 Array 对象添加一个去除重复项的方法</title>
+        <pubTime>2017-04-01T14:34:16.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>ECMAScript6</tag>
+         
+        <tag>prototype</tag>
+         
+        <tag>原型链</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://microzz.com/2017/03/01/flow-info/</loc>
     <lastmod>2017-03-31T13:16:11.113Z</lastmod>
     <data>
@@ -32,11 +57,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>npm</tag>
          
@@ -59,11 +84,11 @@
          
         <tag>HTML5</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Vue.js</tag>
          
@@ -84,11 +109,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>ReactJS</tag>
          
@@ -110,11 +135,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>ReactJS</tag>
          
@@ -159,9 +184,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>JS</tag>
-         
         <tag>ES6</tag>
+         
+        <tag>JS</tag>
          
         <tag>Array</tag>
          
@@ -228,11 +253,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Vue.js</tag>
          
@@ -253,11 +278,11 @@
         
         <tag>JavaScript</tag>
          
-        <tag>JS</tag>
-         
         <tag>ES6</tag>
          
         <tag>原型链</tag>
+         
+        <tag>JS</tag>
          
          
            
@@ -364,11 +389,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Nodejs</tag>
          
@@ -579,11 +604,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>规范</tag>
          
@@ -623,11 +648,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Iterators</tag>
          
@@ -648,11 +673,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>深拷贝</tag>
          
@@ -673,11 +698,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Destructuring</tag>
          
@@ -723,11 +748,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Module</tag>
          
@@ -748,11 +773,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Decorator</tag>
          
@@ -773,11 +798,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Class</tag>
          
@@ -798,11 +823,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Async</tag>
          
@@ -823,11 +848,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Promise</tag>
          
@@ -848,11 +873,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Generator</tag>
          
@@ -876,11 +901,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Iterator</tag>
          
@@ -903,11 +928,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Reflect</tag>
          
@@ -928,11 +953,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Proxy</tag>
          
@@ -953,11 +978,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Set</tag>
          
@@ -980,11 +1005,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Symbol</tag>
          
@@ -1005,11 +1030,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Object</tag>
          
@@ -1030,11 +1055,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Array</tag>
          
@@ -1055,11 +1080,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Function</tag>
          
@@ -1080,11 +1105,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Number</tag>
          
@@ -1105,11 +1130,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>RegExp</tag>
          
@@ -1132,11 +1157,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Unicode</tag>
          
@@ -1157,11 +1182,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>Destructuring</tag>
          
@@ -1182,11 +1207,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>ES6</tag>
+         
         <tag>ECMAScript6</tag>
          
         <tag>JS</tag>
-         
-        <tag>ES6</tag>
          
         <tag>const</tag>
          
