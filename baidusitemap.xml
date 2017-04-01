@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>https://microzz.com/2017/03/04/WebReader/</loc>
+    <lastmod>2017-04-01T15:20:04.088Z</lastmod>
+    <data>
+        <display>
+        <title>基于HTML5的Web阅读器</title>
+        <pubTime>2017-03-04T12:11:26.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>HTML5</tag>
+         
+        <tag>WebApp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://microzz.com/2017/04/01/array-uniq/</loc>
     <lastmod>2017-04-01T15:12:01.342Z</lastmod>
     <data>
@@ -304,27 +325,6 @@
         <tag>JS</tag>
          
         <tag>函数</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://microzz.com/2017/03/04/WebReader/</loc>
-    <lastmod>2017-03-04T12:30:35.748Z</lastmod>
-    <data>
-        <display>
-        <title>基于HTML5的Web阅读器</title>
-        <pubTime>2017-03-04T12:11:26.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>HTML5</tag>
-         
-        <tag>WebApp</tag>
          
          
            

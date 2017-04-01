@@ -732,13 +732,13 @@
     <link href="https://microzz.com/2017/03/04/WebReader/"/>
     <id>https://microzz.com/2017/03/04/WebReader/</id>
     <published>2017-03-04T12:11:26.000Z</published>
-    <updated>2017-03-04T12:30:35.748Z</updated>
+    <updated>2017-04-01T15:20:04.088Z</updated>
     
     <content type="html"><![CDATA[<h1 id="基于HTML5的Web阅读器"><a href="#基于HTML5的Web阅读器" class="headerlink" title="基于HTML5的Web阅读器"></a>基于HTML5的Web阅读器</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是基于HTML5开发的简单的轻量级 WebApp在线阅读器，可以进行简单的个性化设置，适配了手机和电脑。运行需要一个Web服务器的支持。欢迎大家在我的<a href="https://github.com/microzz/WebReader" target="_blank" rel="external">GitHub</a>上Star，也可以提出宝贵意见哦😄</p>
 <h2 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://microzz.cn/web-reader/web-reader.png" alt="基于HTML5的Web阅读器" title="">
+                    <img src="https://icdn.microzz.com/20170304_WebReader/web-reader.png" alt="基于HTML5的Web阅读器" title="">
                 </div>
                 <div class="image-caption">基于HTML5的Web阅读器</div>
             </figure>
