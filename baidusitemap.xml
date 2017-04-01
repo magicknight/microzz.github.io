@@ -5,10 +5,10 @@
     
   <url>
     <loc>https://microzz.com/2017/04/01/array-uniq/</loc>
-    <lastmod>2017-04-01T14:59:58.980Z</lastmod>
+    <lastmod>2017-04-01T15:12:01.342Z</lastmod>
     <data>
         <display>
-        <title>为 Array 对象添加一个去除重复项的方法</title>
+        <title>为Array对象添加一个去除重复项的方法</title>
         <pubTime>2017-04-01T14:34:16.000Z</pubTime>
         
         <tag>JavaScript</tag>

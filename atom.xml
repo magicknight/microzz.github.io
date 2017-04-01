@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://microzz.com/"/>
-  <updated>2017-04-01T14:59:58.980Z</updated>
+  <updated>2017-04-01T15:12:01.342Z</updated>
   <id>https://microzz.com/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为 Array 对象添加一个去除重复项的方法</title>
+    <title>为Array对象添加一个去除重复项的方法</title>
     <link href="https://microzz.com/2017/04/01/array-uniq/"/>
     <id>https://microzz.com/2017/04/01/array-uniq/</id>
     <published>2017-04-01T14:34:16.000Z</published>
-    <updated>2017-04-01T14:59:58.980Z</updated>
+    <updated>2017-04-01T15:12:01.342Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="为-Array-对象添加一个去除重复项的方法"><a href="#为-Array-对象添加一个去除重复项的方法" class="headerlink" title="为 Array 对象添加一个去除重复项的方法"></a>为 Array 对象添加一个去除重复项的方法</h1><h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="literal">NaN</span>].uniq()</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h1 id="为-Array-对象上添加一个去除重复项的方法"><a href="#为-Array-对象上添加一个去除重复项的方法" class="headerlink" title="为 Array 对象上添加一个去除重复项的方法"></a>为 Array 对象上添加一个去除重复项的方法</h1><h2 id="输入例子"><a href="#输入例子" class="headerlink" title="输入例子"></a>输入例子</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>, <span class="string">'a'</span>, <span class="literal">NaN</span>].uniq()</div></pre></td></tr></table></figure>
 <h2 id="输出例子"><a href="#输出例子" class="headerlink" title="输出例子"></a>输出例子</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">[<span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="literal">NaN</span>, <span class="number">0</span>, <span class="number">1</span>, &#123;&#125;, &#123;&#125;, <span class="string">'a'</span>]</div></pre></td></tr></table></figure>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>题目要求给 Array 添加方法，所以我们需要用到 <code>prototype</code>。数组去重本身算法不是很难，但是在 JavaScript 中很多人会忽视 <code>NaN</code> 的存在，因为在 JS 中 <code>NaN !== NaN</code> 。但是在去重中我们又不能保留两个 NaN ，所以需要进行一下判断，这是很多人容易忽视的。ES5的实现如下：</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.uniq = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = [];</div><div class="line">  <span class="keyword">var</span> flag = <span class="literal">true</span>;</div><div class="line">  <span class="keyword">this</span>.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="comment">// 排除 NaN (重要！！！)</span></div><div class="line">    <span class="keyword">if</span> (item != item) &#123;</div><div class="line">      flag &amp;&amp; arr.indexOf(item) === <span class="number">-1</span> ? arr.push(item) : <span class="string">''</span>;</div><div class="line">      flag = <span class="literal">false</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      arr.indexOf(item) === <span class="number">-1</span> ? arr.push(item) : <span class="string">''</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -39,7 +39,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;为-Array-对象添加一个去除重复项的方法&quot;&gt;&lt;a href=&quot;#为-Array-对象添加一个去除重复项的方法&quot; class=&quot;headerlink&quot; title=&quot;为 Array 对象添加一个去除重复项的方法&quot;&gt;&lt;/a&gt;为 Array 对象添加一个去除重复项的
+      &lt;h1 id=&quot;为-Array-对象上添加一个去除重复项的方法&quot;&gt;&lt;a href=&quot;#为-Array-对象上添加一个去除重复项的方法&quot; class=&quot;headerlink&quot; title=&quot;为 Array 对象上添加一个去除重复项的方法&quot;&gt;&lt;/a&gt;为 Array 对象上添加一个去除
     
     </summary>
     
