@@ -1031,12 +1031,12 @@
     <link href="https://microzz.com/2017/02/22/carousel/"/>
     <id>https://microzz.com/2017/02/22/carousel/</id>
     <published>2017-02-22T02:05:02.000Z</published>
-    <updated>2017-02-22T02:31:44.566Z</updated>
+    <updated>2017-04-04T14:38:59.446Z</updated>
     
     <content type="html"><![CDATA[<h1 id="原生JS实现轮播图"><a href="#原生JS实现轮播图" class="headerlink" title="原生JS实现轮播图"></a>原生JS实现轮播图</h1><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://raw.githubusercontent.com/microzz/carousel/master/preview.gif" alt="原生JS实现定时自动切换轮播图" title="">
+                    <img src="https://icdn.microzz.com/20170222_carousel/preview.gif" alt="原生JS实现定时自动切换轮播图" title="">
                 </div>
                 <div class="image-caption">原生JS实现定时自动切换轮播图</div>
             </figure>
