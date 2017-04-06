@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://microzz.com/"/>
-  <updated>2017-04-01T15:12:01.342Z</updated>
+  <updated>2017-04-06T15:19:39.019Z</updated>
   <id>https://microzz.com/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>原生JS中DOM节点相关API合集</title>
+    <link href="https://microzz.com/2017/04/06/jsdom/"/>
+    <id>https://microzz.com/2017/04/06/jsdom/</id>
+    <published>2017-04-06T12:14:10.000Z</published>
+    <updated>2017-04-06T15:19:39.019Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="原生JS中DOM节点相关API合集"><a href="#原生JS中DOM节点相关API合集" class="headerlink" title="原生JS中DOM节点相关API合集"></a>原生JS中DOM节点相关API合集</h1><h2 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h2><p>Node.nodeName   //返回节点名称，只读<br>Node.nodeType   //返回节点类型的常数值，只读<br>Node.nodeValue  //返回Text或Comment节点的文本值，只读<br>Node.textContent  //返回当前节点和它的所有后代节点的文本内容，可读写<br>Node.baseURI    //返回当前网页的绝对路径</p>
+<p>Node.ownerDocument  //返回当前节点所在的顶层文档对象，即document<br>Node.nextSibling  //返回紧跟在当前节点后面的第一个兄弟节点<br>Node.previousSibling  //返回当前节点前面的、距离最近的一个兄弟节点<br>Node.parentNode   //返回当前节点的父节点<br>Node.parentElement  //返回当前节点的父Element节点<br>Node.childNodes   //返回当前节点的所有子节点<br>Node.firstChild  //返回当前节点的第一个子节点<br>Node.lastChild   //返回当前节点的最后一个子节点</p>
+<p>//parentNode接口<br>Node.children  //返回指定节点的所有Element子节点<br>Node.firstElementChild  //返回当前节点的第一个Element子节点<br>Node.lastElementChild   //返回当前节点的最后一个Element子节点<br>Node.childElementCount  //返回当前节点所有Element子节点的数目。<br>1.2 操作</p>
+<p>Node.appendChild(node)   //向节点添加最后一个子节点<br>Node.hasChildNodes()   //返回布尔值，表示当前节点是否有子节点<br>Node.cloneNode(true);  // 默认为false(克隆节点), true(克隆节点及其属性，以及后代)<br>Node.insertBefore(newNode,oldNode)  // 在指定子节点之前插入新的子节点<br>Node.removeChild(node)   //删除节点，在要删除节点的父节点上操作<br>Node.replaceChild(newChild,oldChild)  //替换节点<br>Node.contains(node)  //返回一个布尔值，表示参数节点是否为当前节点的后代节点。<br>Node.compareDocumentPosition(node)   //返回一个7个比特位的二进制值，表示参数节点和当前节点的关系<br>Node.isEqualNode(noe)  //返回布尔值，用于检查两个节点是否相等。所谓相等的节点，指的是两个节点的类型相同、属性相同、子节点相同。<br>Node.normalize()   //用于清理当前节点内部的所有Text节点。它会去除空的文本节点，并且将毗邻的文本节点合并成一个。</p>
+<p>//ChildNode接口<br>Node.remove()  //用于删除当前节点<br>Node.before()  //<br>Node.after()<br>Node.replaceWith()</p>
+<h2 id="Document节点"><a href="#Document节点" class="headerlink" title="Document节点"></a>Document节点</h2><h3 id="Document节点的属性"><a href="#Document节点的属性" class="headerlink" title="Document节点的属性"></a>Document节点的属性</h3><p>document.doctype   //<br>document.documentElement  //返回当前文档的根节点<br>document.defaultView   //返回document对象所在的window对象<br>document.body   //返回当前文档的<body>节点<br>document.head   //返回当前文档的<head>节点<br>document.activeElement  //返回当前文档中获得焦点的那个元素。</head></body></p>
+<p>//节点集合属性<br>document.links  //返回当前文档的所有a元素<br>document.forms  //返回页面中所有表单元素<br>document.images  //返回页面中所有图片元素<br>document.embeds  //返回网页中所有嵌入对象<br>document.scripts  //返回当前文档的所有脚本<br>document.styleSheets  //返回当前网页的所有样式表</p>
+<p>//文档信息属性<br>document.documentURI  //表示当前文档的网址<br>document.URL  //返回当前文档的网址<br>document.domain  //返回当前文档的域名<br>document.lastModified  //返回当前文档最后修改的时间戳<br>document.location  //返回location对象，提供当前文档的URL信息<br>document.referrer  //返回当前文档的访问来源<br>document.title    //返回当前文档的标题<br>document.characterSet属性返回渲染当前文档的字符集，比如UTF-8、ISO-8859-1。<br>document.readyState  //返回当前文档的状态<br>document.designMode  //控制当前文档是否可编辑，可读写<br>document.compatMode  //返回浏览器处理文档的模式<br>document.cookie   //用来操作Cookie</p>
+<h3 id="Document节点的方法"><a href="#Document节点的方法" class="headerlink" title="Document节点的方法"></a>Document节点的方法</h3><p>（1）读写方法</p>
+<p>document.open()   //用于新建并打开一个文档<br>document.close()   //不安比open方法所新建的文档<br>document.write()   //用于向当前文档写入内容<br>document.writeIn()  //用于向当前文档写入内容，尾部添加换行符。<br>（2）查找节点</p>
+<p>document.querySelector(selectors)   //接受一个CSS选择器作为参数，返回第一个匹配该选择器的元素节点。<br>document.querySelectorAll(selectors)  //接受一个CSS选择器作为参数，返回所有匹配该选择器的元素节点。<br>document.getElementsByTagName(tagName)  //返回所有指定HTML标签的元素<br>document.getElementsByClassName(className)   //返回包括了所有class名字符合指定条件的元素<br>document.getElementsByName(name)   //用于选择拥有name属性的HTML元素（比如<form>、<radio>、<img>、<frame>、<embed>和<object>等）<br>document.getElementById(id)   //返回匹配指定id属性的元素节点。<br>document.elementFromPoint(x,y)  //返回位于页面指定位置最上层的Element子节点。<br>（3）生成节点</object></radio></form></p>
+<p>document.createElement(tagName)   //用来生成HTML元素节点。<br>document.createTextNode(text)   //用来生成文本节点<br>document.createAttribute(name)  //生成一个新的属性对象节点，并返回它。<br>document.createDocumentFragment()  //生成一个DocumentFragment对象<br>（4）事件方法</p>
+<p>document.createEvent(type)   //生成一个事件对象，该对象能被element.dispatchEvent()方法使用<br>document.addEventListener(type,listener,capture)  //注册事件<br>document.removeEventListener(type,listener,capture)  //注销事件<br>document.dispatchEvent(event)  //触发事件<br>（5）其他</p>
+<p>document.hasFocus()   //返回一个布尔值，表示当前文档之中是否有元素被激活或获得焦点。<br>document.adoptNode(externalNode)  //将某个节点，从其原来所在的文档移除，插入当前文档，并返回插入后的新节点。<br>document.importNode(externalNode, deep)   //从外部文档拷贝指定节点，插入当前文档。</p>
+<h2 id="Element节点"><a href="#Element节点" class="headerlink" title="Element节点"></a>Element节点</h2><h3 id="Element节点的属性"><a href="#Element节点的属性" class="headerlink" title="Element节点的属性"></a>Element节点的属性</h3><p>（1）特性属性</p>
+<p>Element.attributes  //返回当前元素节点的所有属性节点<br>Element.id  //返回指定元素的id属性，可读写<br>Element.tagName  //返回指定元素的大写标签名<br>Element.innerHTML   //返回该元素包含的HTML代码，可读写<br>Element.outerHTML  //返回指定元素节点的所有HTML代码，包括它自身和包含的的所有子元素，可读写<br>Element.className  //返回当前元素的class属性，可读写<br>Element.classList  //返回当前元素节点的所有class集合<br>Element.dataset   //返回元素节点中所有的data-*属性。<br>（2）尺寸属性</p>
+<p>Element.clientHeight   //返回元素节点可见部分的高度<br>Element.clientWidth   //返回元素节点可见部分的宽度<br>Element.clientLeft   //返回元素节点左边框的宽度<br>Element.clientTop   //返回元素节点顶部边框的宽度<br>Element.scrollHeight  //返回元素节点的总高度<br>Element.scrollWidth  //返回元素节点的总宽度<br>Element.scrollLeft   //返回元素节点的水平滚动条向右滚动的像素数值,通过设置这个属性可以改变元素的滚动位置<br>Element.scrollTop   //返回元素节点的垂直滚动向下滚动的像素数值<br>Element.offsetHeight   //返回元素的垂直高度(包含border,padding)<br>Element.offsetWidth    //返回元素的水平宽度(包含border,padding)<br>Element.offsetLeft    //返回当前元素左上角相对于Element.offsetParent节点的垂直偏移<br>Element.offsetTop   //返回水平位移<br>Element.style  //返回元素节点的行内样式<br>（3）节点相关属性</p>
+<p>Element.children   //包括当前元素节点的所有子元素<br>Element.childElementCount   //返回当前元素节点包含的子HTML元素节点的个数<br>Element.firstElementChild  //返回当前节点的第一个Element子节点<br>Element.lastElementChild   //返回当前节点的最后一个Element子节点<br>Element.nextElementSibling  //返回当前元素节点的下一个兄弟HTML元素节点<br>Element.previousElementSibling  //返回当前元素节点的前一个兄弟HTML节点<br>Element.offsetParent   //返回当前元素节点的最靠近的、并且CSS的position属性不等于static的父元素。</p>
+<h3 id="Element节点的方法"><a href="#Element节点的方法" class="headerlink" title="Element节点的方法"></a>Element节点的方法</h3><p>（1）位置方法</p>
+<p>getBoundingClientRect()<br>// getBoundingClientRect返回一个对象，包含top,left,right,bottom,width,height // width、height 元素自身宽高<br>// top 元素上外边界距窗口最上面的距离<br>// right 元素右外边界距窗口最上面的距离<br>// bottom 元素下外边界距窗口最上面的距离<br>// left 元素左外边界距窗口最上面的距离<br>// width 元素自身宽(包含border,padding)<br>// height 元素自身高(包含border,padding) </p>
+<p>getClientRects()   //返回当前元素在页面上形参的所有矩形。</p>
+<p>// 元素在页面上的偏移量<br>var rect = el.getBoundingClientRect()<br>return {<br>  top: rect.top + document.body.scrollTop,<br>  left: rect.left + document.body.scrollLeft<br>}<br>（2）属性方法</p>
+<p>Element.getAttribute()：读取指定属性<br>Element.setAttribute()：设置指定属性<br>Element.hasAttribute()：返回一个布尔值，表示当前元素节点是否有指定的属性<br>Element.removeAttribute()：移除指定属性<br>（3）查找方法</p>
+<p>Element.querySelector()<br>Element.querySelectorAll()<br>Element.getElementsByTagName()<br>Element.getElementsByClassName()<br>（4）事件方法</p>
+<p>Element.addEventListener()：添加事件的回调函数<br>Element.removeEventListener()：移除事件监听函数<br>Element.dispatchEvent()：触发事件</p>
+<p>//ie8<br>Element.attachEvent(oneventName,listener)<br>Element.detachEvent(oneventName,listener)</p>
+<p>// event对象<br>var event = window.event||event;    </p>
+<p>// 事件的目标节点<br>var target = event.target || event.srcElement;</p>
+<p>// 事件代理<br>ul.addEventListener(‘click’, function(event) {<br>  if (event.target.tagName.toLowerCase() === ‘li’) {<br>    console.log(event.target.innerHTML)<br>  }<br>});<br>（5）其他</p>
+<p>Element.scrollIntoView()   //滚动当前元素，进入浏览器的可见区域</p>
+<p>//解析HTML字符串，然后将生成的节点插入DOM树的指定位置。<br>Element.insertAdjacentHTML(where, htmlString);<br>Element.insertAdjacentHTML(‘beforeBegin’, htmlString); // 在该元素前插入<br>Element.insertAdjacentHTML(‘afterBegin’, htmlString); // 在该元素第一个子元素前插入<br>Element.insertAdjacentHTML(‘beforeEnd’, htmlString); // 在该元素最后一个子元素后面插入<br>Element.insertAdjacentHTML(‘afterEnd’, htmlString); // 在该元素后插入</p>
+<p>Element.remove()  //用于将当前元素节点从DOM中移除<br>Element.focus()   //用于将当前页面的焦点，转移到指定元素上</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;原生JS中DOM节点相关API合集&quot;&gt;&lt;a href=&quot;#原生JS中DOM节点相关API合集&quot; class=&quot;headerlink&quot; title=&quot;原生JS中DOM节点相关API合集&quot;&gt;&lt;/a&gt;原生JS中DOM节点相关API合集&lt;/h1&gt;&lt;h2 id=&quot;节点属性&quot;
+    
+    </summary>
+    
+    
+      <category term="API" scheme="https://microzz.com/tags/API/"/>
+    
+      <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
+    
+      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
+    
+      <category term="DOM" scheme="https://microzz.com/tags/DOM/"/>
+    
+  </entry>
   
   <entry>
     <title>为Array对象添加一个去除重复项的方法</title>
