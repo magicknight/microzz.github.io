@@ -13,22 +13,34 @@
     
     
     
-    <title>文章列表: 2017 | 涵月天-microzz.com | IT技术分享</title>
+    <title>Vue.js音乐播放器升级版 | 涵月天-microzz.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="undefined">
-    <meta name="description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="涵月天-microzz.com">
-<meta property="og:url" content="https://microzz.com/archives/2017/page/2/index.html">
+    <meta name="keywords" content="JavaScript,HTML5,ES6,ECMAScript6,JS,SASS,SCSS,Vue.js">
+    <meta name="description" content="Vue.js音乐播放器2.0升级版之前初学Vue做了一个音乐播放器，受到不少人的喜欢。现在升级版来了！功能更强，技术栈更多。
+源代码源代码地址：👉 GitHub欢迎大家star和follow😄
+预览在线预览在线预览地址：👉 Vue音乐播放器
+预览图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.js音乐播放器升级版">
+<meta property="og:url" content="https://microzz.com/2017/04/08/vue-music2/index.html">
 <meta property="og:site_name" content="涵月天-microzz.com">
-<meta property="og:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta property="og:description" content="Vue.js音乐播放器2.0升级版之前初学Vue做了一个音乐播放器，受到不少人的喜欢。现在升级版来了！功能更强，技术栈更多。
+源代码源代码地址：👉 GitHub欢迎大家star和follow😄
+预览在线预览在线预览地址：👉 Vue音乐播放器
+预览图">
+<meta property="og:image" content="https://icdn.microzz.com/20170408_vue_music/preview.gif">
+<meta property="og:updated_time" content="2017-04-07T23:51:26.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="涵月天-microzz.com">
-<meta name="twitter:description" content="HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS">
+<meta name="twitter:title" content="Vue.js音乐播放器升级版">
+<meta name="twitter:description" content="Vue.js音乐播放器2.0升级版之前初学Vue做了一个音乐播放器，受到不少人的喜欢。现在升级版来了！功能更强，技术栈更多。
+源代码源代码地址：👉 GitHub欢迎大家star和follow😄
+预览在线预览在线预览地址：👉 Vue音乐播放器
+预览图">
+<meta name="twitter:image" content="https://icdn.microzz.com/20170408_vue_music/preview.gif">
     
         <link rel="alternative" href="/atom.xml" title="涵月天-microzz.com" type="application/atom+xml">
     
@@ -41,7 +53,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -113,7 +125,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">文章列表</div>
+        <div class="flex-col header-title ellipsis">Vue.js音乐播放器升级版</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -132,11 +144,17 @@
         
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">文章列表</h1>
+        <h1 class="title">Vue.js音乐播放器升级版</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2017-04-07T23:08:28.000Z" itemprop="datePublished" class="page-time">
+  2017-04-08
+</time>
+
+
             
         </h5>
     </div>
@@ -145,346 +163,183 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
 
+<div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>快捷导航</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue-js音乐播放器2-0升级版"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue.js音乐播放器2.0升级版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源代码"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">源代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#预览"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">预览</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在线预览"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">在线预览</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#预览图"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">预览图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#技术栈"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">技术栈</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-vue-music2"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Vue.js音乐播放器升级版</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月08日 7:08" datetime="2017-04-07T23:08:28.000Z"  itemprop="datePublished">2017-04-08</time>
+
             
-            <h3 class="archive-separator">March, 2017</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月09日 22:51" datetime="2017-03-09T14:51:14.000Z"  itemprop="datePublished">Mar 9</time>
-
-      
 
 
-    </div>
-    
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/09/vue-begin/">Vue.js初体验-TodoList</a>
-    </h3>
-  
+            
 
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Vue-js音乐播放器2-0升级版"><a href="#Vue-js音乐播放器2-0升级版" class="headerlink" title="Vue.js音乐播放器2.0升级版"></a>Vue.js音乐播放器2.0升级版</h1><p>之前初学Vue做了一个音乐播放器，受到不少人的喜欢。现在升级版来了！功能更强，技术栈更多。</p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>源代码地址：👉 <a href="https://github.com/microzz/vue-music-player" target="_blank" rel="external">GitHub</a><br>欢迎大家star和follow😄</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><h3 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h3><p>在线预览地址：👉 <a href="https://microzz.com:3000/vue-music/">Vue音乐播放器</a></p>
+<h3 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://icdn.microzz.com/20170408_vue_music/preview.gif" alt="Vue音乐播放器升级版" title="">
+                </div>
+                <div class="image-caption">Vue音乐播放器升级版</div>
+            </figure>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p><strong>Vue2</strong>：采用最新Vue2的语法<br><strong>Vuex</strong>：实现不同组件之间的状态共享<br><strong>vue-router</strong>：单页应用路由管理必备<br><strong>axios</strong>：发起http请求<br><strong>SASS(SCSS)</strong>：css预处理语言<br><strong>Express</strong>(上线版本是<strong>Koa2</strong>)：因为vue-cli是用的Express做服务器，所以开源的开发版本是Express，自己生产环境用的是Koa2。<br><strong>Webpack</strong>：自动化构建工具，大部分配置vue-cli脚手架已经弄好了。<br><strong>ES6</strong>：采用ES6语法，这是趋势。<br><strong>localStorage(HTML5)</strong>：本地存储，保存用户个性化设置。<br><strong>CSS3</strong>：CSS3样式及相关动画。</p>
 
+        </div>
 
-    
-    <div class="post-footer">
+        <blockquote class="post-copyright">
+    <div class="content">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-07T23:51:26.152Z" itemprop="dateUpdated">2017年4月8日 7:51</time>
+</span><br>
 
+
+        转载请注明出处：<a href="https://microzz.com/2017/04/08/vue-music2/" target="_blank" rel="external">https://microzz.com/2017/04/08/vue-music2/</a>
     </div>
-    
-  </article>
+    <footer>
+        <a href="https://microzz.com">
+            <img src="https://icdn.microzz.com/microzz/img/avatar.jpg" alt="Microzz">
+            Microzz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
 
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SCSS/">SCSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
 
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月06日 21:44" datetime="2017-03-06T13:44:25.000Z"  itemprop="datePublished">Mar 6</time>
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://microzz.com/2017/04/08/vue-music2/&title=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&pic=https://icdn.microzz.com/microzz/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://microzz.com/2017/04/08/vue-music2/&title=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://microzz.com/2017/04/08/vue-music2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&url=https://microzz.com/2017/04/08/vue-music2/&via=https://microzz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://microzz.com/2017/04/08/vue-music2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
 
-      
 
 
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/06/extend/">JavaScript实现继承的几种方法</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型链/">原型链</a></li></ul>
-
-    </div>
-    
-  </article>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
 
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月05日 19:49" datetime="2017-03-05T11:49:42.000Z"  itemprop="datePublished">Mar 5</time>
-
-      
 
 
+        </div>
     </div>
+
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/05/func/">JS中的高阶函数和偏函数</a>
-    </h3>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数/">函数</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月04日 20:11" datetime="2017-03-04T12:11:26.000Z"  itemprop="datePublished">Mar 4</time>
-
-      
-
-
-    </div>
-    
-
-
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/04/WebReader/">基于HTML5的Web阅读器</a>
-    </h3>
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/06/jsdom/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">原生JS中DOM节点相关API合集</h4>
+      </a>
+    </div>
   
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebApp/">WebApp</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月02日 22:55" datetime="2017-03-02T14:55:31.000Z"  itemprop="datePublished">Mar 2</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/02/responsive/">响应式网页设计</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Responsive/">Responsive</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/响应式设计/">响应式设计</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年03月01日 15:42" datetime="2017-03-01T07:42:04.000Z"  itemprop="datePublished">Mar 1</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/03/01/flow-info/">JS实现文字信息无缝滚动效果</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-            </div> 
-            <h3 class="archive-separator">February, 2017</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月26日 20:02" datetime="2017-02-26T12:02:20.000Z"  itemprop="datePublished">Feb 26</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/26/interview2/">前端工作面试问题</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/求职/">求职</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月23日 14:55" datetime="2017-02-23T06:55:16.000Z"  itemprop="datePublished">Feb 23</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/23/lazy-func/">JS惰性函数实现Ajax封装</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/性能优化/">性能优化</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月22日 10:05" datetime="2017-02-22T02:05:02.000Z"  itemprop="datePublished">Feb 22</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/22/carousel/">原生JS实现轮播图</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Carousel/">Carousel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月21日 21:41" datetime="2017-02-21T13:41:34.000Z"  itemprop="datePublished">Feb 21</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/21/react-mind-map/">React.JS学习思维导图</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactJS/">ReactJS</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-    
-    </div>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/archives/2017/">上一页</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2017/page/3/">3</a><a class="page-number" href="/archives/2017/page/4/">4</a><a class="page-number" href="/archives/2017/page/5/">5</a><a class="extend next" rel="next" href="/archives/2017/page/3/">下一页</a>
-    </div>
 </nav>
+
+
+
+    
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃辣条~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="https://icdn.microzz.com/microzz/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="https://icdn.microzz.com/microzz/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
 
 </div>
 
@@ -526,7 +381,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://microzz.com/archives/2017/page/2/&title=涵月天-microzz.com&pic=https://icdn.microzz.com/microzz/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://microzz.com/2017/04/08/vue-music2/&title=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&pic=https://icdn.microzz.com/microzz/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -536,22 +391,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://microzz.com/archives/2017/page/2/&title=涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://microzz.com/2017/04/08/vue-music2/&title=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&source=HTML/HTML5 CSS/CSS3 JavaScript React Vue Angular Node.js ES6 JS" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://microzz.com/archives/2017/page/2/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://microzz.com/2017/04/08/vue-music2/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=涵月天-microzz.com&url=https://microzz.com/archives/2017/page/2/&via=https://microzz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue.js音乐播放器升级版》 — 涵月天-microzz.com&url=https://microzz.com/2017/04/08/vue-music2/&via=https://microzz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://microzz.com/archives/2017/page/2/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://microzz.com/2017/04/08/vue-music2/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -562,7 +417,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxElEQVR42u3aza6CMBAGUN7/pblbE6/1myktmJyujFQ4uJjMT48jXufLev3m/ep45/s9jxULFxd3mnsO1ydu78HJ/T/twcXF3c8dI6qfc1w52OHi4j6Y+yXcDH+VvCouLu5vcRNQkvTg4uI+n5u3NnopTi844uLi3sXN2xnrPi/p7+Li4ra4Z3FdFch6CxcXdw83Dyj5AHVcxvQKJFxc3P3cvFzJB64z2VbhlXBxcRdwx2EouTrTGK2mPri4uHu4yegiL4Hyq72/BhcXdw93/nhEPmqt7vlHhYuLexO3GqSqjdFq+fSx+MHFxV3GLWdArTZKXiwVWjC4uLjLuPlj8nKolypFoRMXF3cLt/eY/HBGXiCNWye4uLj7uRfMZlvHLPIXu3qUjIuL+507Q8nbqTND2fI5Mlxc3Eu5vSMRSYJSfaUvxQ8uLu5G7kxjtJfQlHfi4uIu5p7F1Utoqg3WY+bWuLi409x8JW3NavC6ajSLi4u7gjsTvHpHM6vDWlxc3Lu41UBTTX0u24OLi/tIbjMAXTXKxcXFfTC3OnydaYJMpTi4uLgT3OoYNQ9kM41XXFzcu7jVUJKDellKcrADFxd3GfcP4gwz0kNOnW8AAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwklEQVR42u3aQY7CMAwFUO5/aUaa1UhQ+m03oSM9r6rShgcLK7bzeMTx/I3XO38jv3+05mWBi4s75j4/xuvSR89UWZ/XPFofFxd3JzdZLklk1WSXG3Bxce/JnaSt5Afg4uL+R251g5KUT7i4uHfmJsVPvlnJY2GthouLO+BWG6Yrrhf2d3FxcYvcZyuqZVIveb15CxcXdwv3c8vjqgSXZ6foXVxc3C9xk1bpfFfVa6Dg4uKu5ibD0WoNMnn+pO2Ci4t7A251yHHZAYujvwwXF/cG3HyMmo9Xk43USUMEFxd3C7c3QJ1MQEbzHFxc3K9yq1/f+3mFjREuLu5Gbj4sqW5NegewcHFx78NN0s18ENublr5pmOLi4i7j9oaskxZq7/gFLi7ufu4krVRTYX684yR14uLibuFWG6nzxsdlaFxc3MXcasP0gs3KoHzCxcVdwX0Wo9f4qCa1ky4OLi7uYm4v8+XHsJLEl7yFi4u7n1sdfOb/QQ/UPLiJi4u7gFttcU6SVC914uLi3pnbG4dMolxp4eLibuTmoMmxjGjOg4uLu4WbFD9J2/SqY16Hn+Li4m7hTkqR6nUvO13Q38XFxU25P6FOLuUzOxfcAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -587,7 +442,7 @@ console.log("%c Powered by Zhaohui - microzz.com","background-image:-webkit-grad
     <!-- <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script> -->
 <script src="https://icdn.microzz.com/microzz/js/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 

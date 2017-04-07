@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://microzz.com/"/>
-  <updated>2017-04-06T15:26:39.177Z</updated>
+  <updated>2017-04-07T23:51:26.152Z</updated>
   <id>https://microzz.com/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue.js音乐播放器升级版</title>
+    <link href="https://microzz.com/2017/04/08/vue-music2/"/>
+    <id>https://microzz.com/2017/04/08/vue-music2/</id>
+    <published>2017-04-07T23:08:28.000Z</published>
+    <updated>2017-04-07T23:51:26.152Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue-js音乐播放器2-0升级版"><a href="#Vue-js音乐播放器2-0升级版" class="headerlink" title="Vue.js音乐播放器2.0升级版"></a>Vue.js音乐播放器2.0升级版</h1><p>之前初学Vue做了一个音乐播放器，受到不少人的喜欢。现在升级版来了！功能更强，技术栈更多。</p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>源代码地址：👉 <a href="https://github.com/microzz/vue-music-player" target="_blank" rel="external">GitHub</a><br>欢迎大家star和follow😄</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><h3 id="在线预览"><a href="#在线预览" class="headerlink" title="在线预览"></a>在线预览</h3><p>在线预览地址：👉 <a href="https://microzz.com:3000/vue-music/">Vue音乐播放器</a></p>
+<h3 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://icdn.microzz.com/20170408_vue_music/preview.gif" alt="Vue音乐播放器升级版" title="">
+                </div>
+                <div class="image-caption">Vue音乐播放器升级版</div>
+            </figure>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p><strong>Vue2</strong>：采用最新Vue2的语法<br><strong>Vuex</strong>：实现不同组件之间的状态共享<br><strong>vue-router</strong>：单页应用路由管理必备<br><strong>axios</strong>：发起http请求<br><strong>SASS(SCSS)</strong>：css预处理语言<br><strong>Express</strong>(上线版本是<strong>Koa2</strong>)：因为vue-cli是用的Express做服务器，所以开源的开发版本是Express，自己生产环境用的是Koa2。<br><strong>Webpack</strong>：自动化构建工具，大部分配置vue-cli脚手架已经弄好了。<br><strong>ES6</strong>：采用ES6语法，这是趋势。<br><strong>localStorage(HTML5)</strong>：本地存储，保存用户个性化设置。<br><strong>CSS3</strong>：CSS3样式及相关动画。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Vue-js音乐播放器2-0升级版&quot;&gt;&lt;a href=&quot;#Vue-js音乐播放器2-0升级版&quot; class=&quot;headerlink&quot; title=&quot;Vue.js音乐播放器2.0升级版&quot;&gt;&lt;/a&gt;Vue.js音乐播放器2.0升级版&lt;/h1&gt;&lt;p&gt;之前初学Vue做了一
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://microzz.com/tags/JavaScript/"/>
+    
+      <category term="HTML5" scheme="https://microzz.com/tags/HTML5/"/>
+    
+      <category term="ES6" scheme="https://microzz.com/tags/ES6/"/>
+    
+      <category term="ECMAScript6" scheme="https://microzz.com/tags/ECMAScript6/"/>
+    
+      <category term="JS" scheme="https://microzz.com/tags/JS/"/>
+    
+      <category term="SASS" scheme="https://microzz.com/tags/SASS/"/>
+    
+      <category term="SCSS" scheme="https://microzz.com/tags/SCSS/"/>
+    
+      <category term="Vue.js" scheme="https://microzz.com/tags/Vue-js/"/>
+    
+  </entry>
   
   <entry>
     <title>原生JS中DOM节点相关API合集</title>
