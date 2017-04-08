@@ -12,7 +12,7 @@ function drawCircle (x, y, r, changeX, changeY) {
     context.beginPath();
     context.arc(x, y, r, 0, 2 * Math.PI);
     context.closePath();
-    context.fillStyle = "rgba(255,255,255,.1)";
+    context.fillStyle = "rgba(255,255,255,.4)";
     context.fill();
 
     return {x: x, y: y, r: r, changeX: changeX, changeY: changeY};
